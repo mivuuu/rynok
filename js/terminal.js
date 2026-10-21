@@ -727,13 +727,16 @@ class RynokTerminal {
     if (!fromSelect || !toSelect) return;
 
     const sorted = Object.values(COUNTRIES).sort((a, b) => a.stats.ranks.gdp - b.stats.ranks.gdp);
-    const optionsHtml = sorted.map(c => `<option value="${c.ticker}">${c.ticker} (${c.countryName})</option>`).join('');
+    const optionsHtml = [
+      `<option value="USD">USD ($ Доллар)</option>`,
+      ...sorted.map(c => `<option value="${c.ticker}">${c.ticker} (${c.countryName})</option>`)
+    ].join('');
 
     fromSelect.innerHTML = optionsHtml;
     toSelect.innerHTML = optionsHtml;
 
     fromSelect.value = 'ETH';
-    toSelect.value = 'VYN';
+    toSelect.value = 'USD';
 
     const amountInput = document.getElementById('convAmountInput');
     amountInput?.addEventListener('input', () => this.updateConverter());
@@ -759,9 +762,7 @@ class RynokTerminal {
     // Open converter modal
     document.getElementById('btnOpenConverter')?.addEventListener('click', () => {
       if (fromSelect) fromSelect.value = this.activeTicker;
-      if (toSelect && toSelect.value === this.activeTicker) {
-        toSelect.value = this.activeTicker === 'ETH' ? 'VYN' : 'ETH';
-      }
+      if (toSelect) toSelect.value = this.activeTicker === 'USD' ? 'ETH' : 'USD';
       this.updateConverter();
       document.getElementById('converterModal')?.classList.add('open');
     });
@@ -795,8 +796,13 @@ class RynokTerminal {
     const fromTicker = fromSelect.value;
     const toTicker = toSelect.value;
 
-    const pFrom = this.lastPrices[fromTicker] || COUNTRIES[fromTicker]?.basePrice || 1;
-    const pTo = this.lastPrices[toTicker] || COUNTRIES[toTicker]?.basePrice || 1;
+    const getPrice = (ticker) => {
+      if (ticker === 'USD') return 1.0;
+      return this.lastPrices[ticker] || COUNTRIES[ticker]?.basePrice || 1;
+    };
+
+    const pFrom = getPrice(fromTicker);
+    const pTo = getPrice(toTicker);
 
     const crossRate = pFrom / pTo;
     const result = amount * crossRate;
@@ -807,8 +813,8 @@ class RynokTerminal {
     });
 
     if (rateFormula) rateFormula.textContent = `1 ${fromTicker} = ${crossRate.toFixed(4)} ${toTicker}`;
-    if (fromRateHint) fromRateHint.textContent = `Курс: ${pFrom.toFixed(2)}`;
-    if (toRateHint) toRateHint.textContent = `Курс: ${pTo.toFixed(2)}`;
+    if (fromRateHint) fromRateHint.textContent = fromTicker === 'USD' ? 'Эталон: $1.00' : `Курс: ${pFrom.toFixed(2)}`;
+    if (toRateHint) toRateHint.textContent = toTicker === 'USD' ? 'Эталон: $1.00' : `Курс: ${pTo.toFixed(2)}`;
   }
 }
 
