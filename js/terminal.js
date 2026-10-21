@@ -24,6 +24,7 @@ class RynokTerminal {
     await this.loadMarketData();
     this.renderWatchlist();
     this.initChart();
+    this.initConverter();
     this.switchCurrency(this.activeTicker);
     this.renderEventFeed();
 
@@ -394,6 +395,12 @@ class RynokTerminal {
       leaderEl.textContent = `${maxGainTicker} ${sign}${maxGainPct.toFixed(2)}%`;
       leaderEl.style.color = maxGainPct >= 0 ? 'var(--color-positive)' : 'var(--color-negative)';
     }
+
+    // Update live converter if open
+    const convModal = document.getElementById('converterModal');
+    if (convModal && convModal.classList.contains('open')) {
+      this.updateConverter();
+    }
   }
 
   renderWatchlist() {
@@ -709,8 +716,99 @@ class RynokTerminal {
     window.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') {
         document.getElementById('dossierModal')?.classList.remove('open');
+        document.getElementById('converterModal')?.classList.remove('open');
       }
     });
+  }
+
+  initConverter() {
+    const fromSelect = document.getElementById('convFromSelect');
+    const toSelect = document.getElementById('convToSelect');
+    if (!fromSelect || !toSelect) return;
+
+    const sorted = Object.values(COUNTRIES).sort((a, b) => a.stats.ranks.gdp - b.stats.ranks.gdp);
+    const optionsHtml = sorted.map(c => `<option value="${c.ticker}">${c.ticker} (${c.countryName})</option>`).join('');
+
+    fromSelect.innerHTML = optionsHtml;
+    toSelect.innerHTML = optionsHtml;
+
+    fromSelect.value = 'ETH';
+    toSelect.value = 'VYN';
+
+    const amountInput = document.getElementById('convAmountInput');
+    amountInput?.addEventListener('input', () => this.updateConverter());
+    fromSelect.addEventListener('change', () => this.updateConverter());
+    toSelect.addEventListener('change', () => this.updateConverter());
+
+    // Swap button
+    document.getElementById('btnConvSwap')?.addEventListener('click', () => {
+      const tmp = fromSelect.value;
+      fromSelect.value = toSelect.value;
+      toSelect.value = tmp;
+      this.updateConverter();
+    });
+
+    // Preset buttons
+    document.querySelectorAll('.conv-preset-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        if (amountInput) amountInput.value = btn.dataset.val;
+        this.updateConverter();
+      });
+    });
+
+    // Open converter modal
+    document.getElementById('btnOpenConverter')?.addEventListener('click', () => {
+      if (fromSelect) fromSelect.value = this.activeTicker;
+      if (toSelect && toSelect.value === this.activeTicker) {
+        toSelect.value = this.activeTicker === 'ETH' ? 'VYN' : 'ETH';
+      }
+      this.updateConverter();
+      document.getElementById('converterModal')?.classList.add('open');
+    });
+
+    // Close converter modal
+    document.getElementById('btnCloseConverter')?.addEventListener('click', () => {
+      document.getElementById('converterModal')?.classList.remove('open');
+    });
+
+    document.getElementById('converterModal')?.addEventListener('click', (e) => {
+      if (e.target.id === 'converterModal') {
+        document.getElementById('converterModal')?.classList.remove('open');
+      }
+    });
+
+    this.updateConverter();
+  }
+
+  updateConverter() {
+    const amountInput = document.getElementById('convAmountInput');
+    const fromSelect = document.getElementById('convFromSelect');
+    const toSelect = document.getElementById('convToSelect');
+    const resultOutput = document.getElementById('convResultOutput');
+    const rateFormula = document.getElementById('convRateFormula');
+    const fromRateHint = document.getElementById('convFromRate');
+    const toRateHint = document.getElementById('convToRate');
+
+    if (!amountInput || !fromSelect || !toSelect || !resultOutput) return;
+
+    const amount = parseFloat(amountInput.value) || 0;
+    const fromTicker = fromSelect.value;
+    const toTicker = toSelect.value;
+
+    const pFrom = this.lastPrices[fromTicker] || COUNTRIES[fromTicker]?.basePrice || 1;
+    const pTo = this.lastPrices[toTicker] || COUNTRIES[toTicker]?.basePrice || 1;
+
+    const crossRate = pFrom / pTo;
+    const result = amount * crossRate;
+
+    resultOutput.textContent = result.toLocaleString('en-US', {
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2
+    });
+
+    if (rateFormula) rateFormula.textContent = `1 ${fromTicker} = ${crossRate.toFixed(4)} ${toTicker}`;
+    if (fromRateHint) fromRateHint.textContent = `Курс: ${pFrom.toFixed(2)}`;
+    if (toRateHint) toRateHint.textContent = `Курс: ${pTo.toFixed(2)}`;
   }
 }
 

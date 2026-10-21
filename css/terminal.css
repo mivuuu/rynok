@@ -161,6 +161,26 @@ button:focus-visible, input:focus-visible {
   gap: var(--space-md);
 }
 
+.btn-converter {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-primary);
+  padding: 4px 11px;
+  border-radius: var(--radius-control);
+  font-size: 11px;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  transition: all 0.15s ease;
+}
+
+.btn-converter:hover {
+  background-color: var(--bg-elevated);
+  border-color: var(--accent-primary);
+  color: var(--accent-primary);
+}
+
 .status-indicator {
   display: inline-flex;
   align-items: center;
@@ -962,6 +982,187 @@ button:focus-visible, input:focus-visible {
 
 .dossier-profile-box strong {
   color: var(--text-primary);
+}
+
+/* Converter Modal Component */
+.modal-converter-card {
+  max-width: 460px;
+}
+
+.converter-modal-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: var(--accent-primary);
+}
+
+.converter-modal-body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: var(--space-lg);
+}
+
+.converter-box {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-control);
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.converter-box-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 11px;
+  color: var(--text-secondary);
+}
+
+.converter-rate-hint {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--text-muted);
+}
+
+.converter-input-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.converter-num-input {
+  background: transparent;
+  border: none;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-primary);
+  width: 100%;
+  outline: none;
+  font-family: var(--font-mono);
+}
+
+.converter-num-input::-webkit-outer-spin-button,
+.converter-num-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.converter-select {
+  background-color: var(--bg-elevated);
+  color: var(--text-primary);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 6px 10px;
+  font-size: 12px;
+  font-family: var(--font-sans);
+  font-weight: 500;
+  cursor: pointer;
+  outline: none;
+  flex-shrink: 0;
+  max-width: 180px;
+  transition: border-color 0.15s ease;
+}
+
+.converter-select:focus {
+  border-color: var(--accent-primary);
+}
+
+.converter-swap-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 4px;
+  margin: -2px 0;
+}
+
+.converter-rate-badge {
+  font-size: 11px;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-family: var(--font-mono);
+}
+
+.converter-rate-badge .lbl {
+  color: var(--text-muted);
+}
+
+.btn-swap-circle {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  color: var(--accent-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.15s ease, border-color 0.15s ease, transform 0.2s ease;
+}
+
+.btn-swap-circle:hover {
+  background-color: var(--bg-elevated);
+  border-color: var(--accent-primary);
+  transform: rotate(180deg);
+}
+
+.converter-result-val {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--color-positive);
+  font-family: var(--font-mono);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.converter-presets {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-top: 2px;
+}
+
+.presets-lbl {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-right: 2px;
+}
+
+.conv-preset-btn {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+  font-size: 11px;
+  padding: 3px 8px;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-mono);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.conv-preset-btn:hover {
+  background-color: var(--bg-elevated);
+  color: var(--text-primary);
+  border-color: var(--border-strong);
+}
+
+.converter-footnote {
+  font-size: 11px;
+  color: var(--text-muted);
+  line-height: 1.5;
+  padding-top: 10px;
+  border-top: 1px solid var(--border-subtle);
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
 }
 
 /* ==========================================================================

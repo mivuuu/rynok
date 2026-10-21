@@ -28,6 +28,13 @@
     </div>
 
     <div class="header-status">
+      <button class="btn-converter" id="btnOpenConverter" title="Межгосударственный конвертер валют">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M7 10h14l-4-4m4 8H3l4 4" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span>Конвертер</span>
+      </button>
+
       <div class="status-indicator">
         <span class="status-dot" id="statusDot"></span>
         <span id="syncStatus">Синхронизировано</span>
@@ -198,6 +205,74 @@
       
       <div class="modal-body" id="modalDossierBody">
         <!-- Injected dynamically via JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Currency Converter Modal Dialog -->
+  <div class="modal-overlay" id="converterModal" role="dialog" aria-modal="true" aria-labelledby="modalConverterTitle">
+    <div class="modal-content modal-converter-card">
+      <div class="modal-header">
+        <div class="flex items-center gap-2">
+          <span class="converter-modal-dot"></span>
+          <h2 class="modal-title" id="modalConverterTitle">Конвертер валют RP</h2>
+        </div>
+        <button class="modal-close" id="btnCloseConverter" aria-label="Закрыть">✕</button>
+      </div>
+      
+      <div class="modal-body converter-modal-body">
+        <!-- From Currency Box -->
+        <div class="converter-box">
+          <div class="converter-box-label">
+            <span>Отдаёте</span>
+            <span class="converter-rate-hint" id="convFromRate">Курс: --</span>
+          </div>
+          <div class="converter-input-row">
+            <input type="number" id="convAmountInput" value="10000" class="converter-num-input tabular" placeholder="0.00" min="0" step="any">
+            <select id="convFromSelect" class="converter-select" aria-label="Исходная валюта"></select>
+          </div>
+        </div>
+
+        <!-- Swap Controls Row -->
+        <div class="converter-swap-row">
+          <div class="converter-rate-badge tabular" id="convRateBadge">
+            <span class="lbl">Курс:</span>
+            <span id="convRateFormula">1 ETH = -- VYN</span>
+          </div>
+          <button id="btnConvSwap" class="btn-swap-circle" title="Поменять валюты местами">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M7 10h14l-4-4m4 8H3l4 4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
+
+        <!-- To Currency Box -->
+        <div class="converter-box">
+          <div class="converter-box-label">
+            <span>Получаете</span>
+            <span class="converter-rate-hint" id="convToRate">Курс: --</span>
+          </div>
+          <div class="converter-input-row">
+            <div id="convResultOutput" class="converter-result-val tabular">0.00</div>
+            <select id="convToSelect" class="converter-select" aria-label="Целевая валюта"></select>
+          </div>
+        </div>
+
+        <!-- Quick Amount Presets -->
+        <div class="converter-presets">
+          <span class="presets-lbl">Сумма:</span>
+          <button class="conv-preset-btn tabular" data-val="1000">1K</button>
+          <button class="conv-preset-btn tabular" data-val="10000">10K</button>
+          <button class="conv-preset-btn tabular" data-val="100000">100K</button>
+          <button class="conv-preset-btn tabular" data-val="1000000">1M</button>
+          <button class="conv-preset-btn tabular" data-val="10000000">10M</button>
+        </div>
+
+        <!-- Footnote -->
+        <div class="converter-footnote">
+          <span>⚖️</span>
+          <span>Расчёт ведётся в реальном времени по текущим котировкам терминала RYNOK. Без комиссий и спреда.</span>
+        </div>
       </div>
     </div>
   </div>
