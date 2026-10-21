@@ -205,12 +205,19 @@ class RynokTerminal {
     if (!currRecord || !country) return;
 
     const now = Date.now();
-    // Render last 24 hours of candles by default
-    const historyDuration = 24 * 60 * 60 * 1000;
+    const allAnchors = [...(currRecord.history_anchors || []), currRecord.current_anchor];
+
+    // Adaptive history duration based on selected timeframe
+    let historyDuration = 24 * 60 * 60 * 1000;
+    if (this.activeTimeframe === 1) historyDuration = 8 * 60 * 60 * 1000;       // 8h for 1m
+    else if (this.activeTimeframe === 5) historyDuration = 24 * 60 * 60 * 1000;  // 24h for 5m
+    else if (this.activeTimeframe === 15) historyDuration = 4 * 24 * 60 * 60 * 1000; // 4d for 15m
+    else if (this.activeTimeframe === 60) historyDuration = 30 * 24 * 60 * 60 * 1000; // 30d for 1h
+
     const fromTime = Math.max(this.marketState.genesis_timestamp, now - historyDuration);
 
     const candles = generateCandles(
-      currRecord.current_anchor,
+      allAnchors,
       fromTime,
       now,
       this.activeTimeframe,

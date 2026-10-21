@@ -74,15 +74,28 @@ export function calculateExactPrice(anchor, targetTimestamp, ticker, baseVolatil
   return Number(currentPrice.toFixed(4));
 }
 
-export function generateCandles(anchor, fromTimestamp, toTimestamp, intervalMinutes = 1, ticker, baseVolatility = 0.001) {
+export function generateCandles(anchorInput, fromTimestamp, toTimestamp, intervalMinutes = 1, ticker, baseVolatility = 0.001) {
   const ONE_MINUTE_MS = 60 * 1000;
   const intervalMs = intervalMinutes * ONE_MINUTE_MS;
 
-  const startBoundary = Math.floor(Math.max(anchor.timestamp, fromTimestamp) / intervalMs) * intervalMs;
+  const anchors = Array.isArray(anchorInput) ? [...anchorInput] : [anchorInput];
+  anchors.sort((a, b) => a.timestamp - b.timestamp);
+
+  const earliestAnchor = anchors[0];
+  const effectiveFrom = Math.max(earliestAnchor.timestamp, fromTimestamp);
+
+  const startBoundary = Math.floor(effectiveFrom / intervalMs) * intervalMs;
   const endBoundary = Math.floor(toTimestamp / intervalMs) * intervalMs;
 
   const candles = [];
-  let runningPrice = calculateExactPrice(anchor, startBoundary, ticker, baseVolatility);
+  if (startBoundary > endBoundary) return candles;
+
+  let anchorIdx = 0;
+  while (anchorIdx < anchors.length - 1 && anchors[anchorIdx + 1].timestamp <= startBoundary) {
+    anchorIdx++;
+  }
+
+  let runningPrice = calculateExactPrice(anchors[anchorIdx], startBoundary, ticker, baseVolatility);
 
   for (let t = startBoundary; t <= endBoundary; t += intervalMs) {
     const candleOpen = runningPrice;
@@ -93,8 +106,13 @@ export function generateCandles(anchor, fromTimestamp, toTimestamp, intervalMinu
       const stepTime = t + m * ONE_MINUTE_MS;
       if (stepTime > toTimestamp) break;
 
-      const minutesSinceAnchor = Math.max(1, Math.floor((stepTime - anchor.timestamp) / ONE_MINUTE_MS));
-      const { deltaPct, prng } = getMinuteStep(ticker, stepTime, minutesSinceAnchor, anchor, baseVolatility);
+      while (anchorIdx < anchors.length - 1 && stepTime >= anchors[anchorIdx + 1].timestamp) {
+        anchorIdx++;
+      }
+
+      const activeAnchor = anchors[anchorIdx];
+      const minutesSinceAnchor = Math.max(1, Math.floor((stepTime - activeAnchor.timestamp) / ONE_MINUTE_MS));
+      const { deltaPct, prng } = getMinuteStep(ticker, stepTime, minutesSinceAnchor, activeAnchor, baseVolatility);
 
       runningPrice = Math.max(0.0001, runningPrice * (1 + deltaPct));
 

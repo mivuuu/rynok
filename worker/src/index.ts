@@ -193,7 +193,7 @@ async function commitMarketUpdate(
   }
 
   const fileInfo = (await getRes.json()) as { sha: string; content: string; encoding: string };
-  const rawJson = atob(fileInfo.content.replace(/\n/g, ''));
+  const rawJson = Buffer.from(fileInfo.content, 'base64').toString('utf-8');
   const state: MarketDataState = JSON.parse(rawJson);
 
   const now = Date.now();
@@ -263,7 +263,7 @@ async function commitMarketUpdate(
 
   // 4. Commit updated state back to GitHub REST API
   const updatedJson = JSON.stringify(state, null, 2);
-  const updatedBase64 = btoa(unescape(encodeURIComponent(updatedJson)));
+  const updatedBase64 = Buffer.from(updatedJson, 'utf-8').toString('base64');
 
   const putRes = await fetch(apiUrl, {
     method: 'PUT',

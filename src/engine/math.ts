@@ -19,7 +19,7 @@ export interface MarketAnchor {
 }
 
 export interface CandleOHLC {
-  time: number;      // Unix timestamp in seconds (TradingView standard) or ms
+  time: number;      // Unix timestamp in seconds (TradingView standard)
   open: number;
   high: number;
   low: number;
@@ -58,7 +58,6 @@ export function createMulberry32(seed: number): () => number {
 export function sampleSeededNormal(prng: () => number): number {
   let u1 = prng();
   let u2 = prng();
-  // Avoid log(0)
   while (u1 <= 1e-12) {
     u1 = prng();
   }
@@ -67,12 +66,6 @@ export function sampleSeededNormal(prng: () => number): number {
 
 /**
  * Calculates deterministic step parameters for a specific 1-minute bucket.
- * 
- * @param ticker Currency ticker (e.g. 'ETH', 'VYN')
- * @param minuteTimestamp Timestamp rounded to 1-minute bucket (in ms)
- * @param minutesSinceAnchor Number of minutes elapsed since the event shock anchor
- * @param anchor Active market shock anchor
- * @param baseVolatility Inherent natural volatility of the currency
  */
 export function getMinuteStep(
   ticker: string,
@@ -85,29 +78,20 @@ export function getMinuteStep(
   const seed = hash32(seedString);
   const prng = createMulberry32(seed);
 
-  // Shock drift decays exponentially with each minute
-  // drift_m = μ₀ * (decay ^ m)
+  // Shock drift decays exponentially with each minute: drift_m = μ₀ * (decay ^ m)
   const effectiveDecay = Math.pow(Math.max(0.5, Math.min(0.999, anchor.decay)), Math.max(0, minutesSinceAnchor));
   const shockDrift = anchor.drift * effectiveDecay;
 
   // Total volatility: inherent baseline + decaying shock volatility
   const totalVol = baseVolatility + anchor.volatility * effectiveDecay;
-
-  // Sample Gaussian noise
   const epsilon = sampleSeededNormal(prng);
 
-  // GBM discrete step: ΔP / P = drift + σ * ε
   const deltaPct = shockDrift + totalVol * epsilon;
-
   return { deltaPct, prng };
 }
 
 /**
- * Deterministically computes the exact price of a currency at any target timestamp
- * starting from its anchor checkpoint.
- * 
- * Time complexity: O(Δ minutes). For realistic RP intervals (e.g. hours to days),
- * computing a few hundred/thousand 1-minute steps takes < 2ms in V8.
+ * Computes exact price at targetTimestamp from an anchor
  */
 export function calculateExactPrice(
   anchor: MarketAnchor,
@@ -125,25 +109,19 @@ export function calculateExactPrice(
 
   let currentPrice = anchor.price;
 
-  // Step through each whole elapsed minute
   for (let m = startMinute + 1; m <= endMinute; m++) {
     const minuteTimestamp = m * ONE_MINUTE_MS;
     const minutesSinceAnchor = m - startMinute;
-
     const { deltaPct } = getMinuteStep(ticker, minuteTimestamp, minutesSinceAnchor, anchor, baseVolatility);
-
-    // Apply change with floor protection (price can never go negative or zero)
     currentPrice = Math.max(0.0001, currentPrice * (1 + deltaPct));
   }
 
-  // Fractional minute interpolation (for second-accurate live updates)
   const remainingMs = targetTimestamp - (endMinute * ONE_MINUTE_MS);
   if (remainingMs > 0) {
     const fraction = remainingMs / ONE_MINUTE_MS;
     const nextMinuteTimestamp = (endMinute + 1) * ONE_MINUTE_MS;
     const minutesSinceAnchor = (endMinute + 1) - startMinute;
     const { deltaPct } = getMinuteStep(ticker, nextMinuteTimestamp, minutesSinceAnchor, anchor, baseVolatility);
-
     currentPrice = Math.max(0.0001, currentPrice * (1 + deltaPct * fraction));
   }
 
@@ -151,17 +129,11 @@ export function calculateExactPrice(
 }
 
 /**
- * Deterministically generates OHLC candles for any interval (e.g. 1m, 5m, 15m, 60m).
- * 
- * @param anchor The active market anchor
- * @param fromTimestamp Start timestamp (ms)
- * @param toTimestamp End timestamp (ms)
- * @param intervalMinutes Candle interval in minutes (default: 1)
- * @param ticker Currency ticker
- * @param baseVolatility Currency base volatility
+ * Deterministically generates OHLC candles across multi-anchor history.
+ * Supports rendering full history across events without cutting off past candles!
  */
 export function generateCandles(
-  anchor: MarketAnchor,
+  anchorInput: MarketAnchor | MarketAnchor[],
   fromTimestamp: number,
   toTimestamp: number,
   intervalMinutes: number = 1,
@@ -171,31 +143,47 @@ export function generateCandles(
   const ONE_MINUTE_MS = 60 * 1000;
   const intervalMs = intervalMinutes * ONE_MINUTE_MS;
 
-  // Align start and end to interval boundaries
-  const startBoundary = Math.floor(Math.max(anchor.timestamp, fromTimestamp) / intervalMs) * intervalMs;
+  const anchors = Array.isArray(anchorInput) ? [...anchorInput] : [anchorInput];
+  anchors.sort((a, b) => a.timestamp - b.timestamp);
+
+  const earliestAnchor = anchors[0];
+  const effectiveFrom = Math.max(earliestAnchor.timestamp, fromTimestamp);
+
+  const startBoundary = Math.floor(effectiveFrom / intervalMs) * intervalMs;
   const endBoundary = Math.floor(toTimestamp / intervalMs) * intervalMs;
 
   const candles: CandleOHLC[] = [];
+  if (startBoundary > endBoundary) return candles;
 
-  // First compute price at startBoundary
-  let runningPrice = calculateExactPrice(anchor, startBoundary, ticker, baseVolatility);
+  // Helper to get active anchor at any timestamp t
+  let anchorIdx = 0;
+  while (anchorIdx < anchors.length - 1 && anchors[anchorIdx + 1].timestamp <= startBoundary) {
+    anchorIdx++;
+  }
+
+  // Calculate starting price at startBoundary
+  let runningPrice = calculateExactPrice(anchors[anchorIdx], startBoundary, ticker, baseVolatility);
 
   for (let t = startBoundary; t <= endBoundary; t += intervalMs) {
     const candleOpen = runningPrice;
     let candleHigh = candleOpen;
     let candleLow = candleOpen;
 
-    // Simulate intra-candle 1-minute steps
     for (let m = 0; m < intervalMinutes; m++) {
       const stepTime = t + m * ONE_MINUTE_MS;
       if (stepTime > toTimestamp) break;
 
-      const minutesSinceAnchor = Math.max(1, Math.floor((stepTime - anchor.timestamp) / ONE_MINUTE_MS));
-      const { deltaPct, prng } = getMinuteStep(ticker, stepTime, minutesSinceAnchor, anchor, baseVolatility);
+      // Advance anchor if stepTime passed next anchor
+      while (anchorIdx < anchors.length - 1 && stepTime >= anchors[anchorIdx + 1].timestamp) {
+        anchorIdx++;
+      }
+
+      const activeAnchor = anchors[anchorIdx];
+      const minutesSinceAnchor = Math.max(1, Math.floor((stepTime - activeAnchor.timestamp) / ONE_MINUTE_MS));
+      const { deltaPct, prng } = getMinuteStep(ticker, stepTime, minutesSinceAnchor, activeAnchor, baseVolatility);
 
       runningPrice = Math.max(0.0001, runningPrice * (1 + deltaPct));
 
-      // Generate intra-minute wick spikes for authentic look
       const subVol = baseVolatility * 1.5;
       const wickHigh = runningPrice * (1 + Math.abs(sampleSeededNormal(prng) * subVol));
       const wickLow = runningPrice * (1 - Math.abs(sampleSeededNormal(prng) * subVol));
@@ -208,7 +196,6 @@ export function generateCandles(
 
     const candleClose = runningPrice;
 
-    // Deterministic volume based on price swing & ticker seed
     const candleSeed = hash32(`vol:${ticker}:${t}`);
     const volPrng = createMulberry32(candleSeed);
     const baseVolume = 10000 + volPrng() * 50000;
@@ -216,7 +203,7 @@ export function generateCandles(
     const volume = Math.round(baseVolume * (1 + priceChangePct * 100));
 
     candles.push({
-      time: Math.floor(t / 1000), // TradingView Lightweight Charts uses Unix seconds
+      time: Math.floor(t / 1000),
       open: Number(candleOpen.toFixed(4)),
       high: Number(candleHigh.toFixed(4)),
       low: Number(candleLow.toFixed(4)),
