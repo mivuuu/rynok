@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
   
-  <link rel="stylesheet" href="css/terminal.css?v=2.2">
+  <link rel="stylesheet" href="css/terminal.css?v=2.3">
   
   <!-- TradingView Lightweight Charts Library (Free, zero-dependency canvas financial charts) -->
   <script src="https://unpkg.com/lightweight-charts@4.2.1/dist/lightweight-charts.standalone.production.js"></script>
@@ -223,24 +223,26 @@
       <div class="modal-body converter-modal-body">
         <!-- From Currency Box -->
         <div class="converter-box">
-          <div class="converter-box-label">
-            <span>Отдаёте</span>
-            <span class="converter-rate-hint" id="convFromRate">Курс: --</span>
+          <div class="converter-box-header">
+            <div class="converter-box-title-group">
+              <span class="converter-label">Отдаёте</span>
+              <span class="converter-rate-hint" id="convFromRate">Курс: --</span>
+            </div>
+            <select id="convFromSelect" class="converter-select-btn" aria-label="Исходная валюта"></select>
           </div>
-          <div class="converter-input-row">
+          <div class="converter-input-wrapper">
             <input type="number" id="convAmountInput" value="10000" class="converter-num-input tabular" placeholder="0.00" min="0" step="any">
-            <select id="convFromSelect" class="converter-select" aria-label="Исходная валюта"></select>
           </div>
         </div>
 
         <!-- Swap Controls Row -->
         <div class="converter-swap-row">
           <div class="converter-rate-badge tabular" id="convRateBadge">
-            <span class="lbl">Курс:</span>
+            <span class="lbl">Курс обмена:</span>
             <span id="convRateFormula">1 ETH = -- VYN</span>
           </div>
           <button id="btnConvSwap" class="btn-swap-circle" title="Поменять валюты местами">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M7 10h14l-4-4m4 8H3l4 4" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
           </button>
@@ -248,13 +250,15 @@
 
         <!-- To Currency Box -->
         <div class="converter-box">
-          <div class="converter-box-label">
-            <span>Получаете</span>
-            <span class="converter-rate-hint" id="convToRate">Курс: --</span>
+          <div class="converter-box-header">
+            <div class="converter-box-title-group">
+              <span class="converter-label">Получаете</span>
+              <span class="converter-rate-hint" id="convToRate">Курс: --</span>
+            </div>
+            <select id="convToSelect" class="converter-select-btn" aria-label="Целевая валюта"></select>
           </div>
-          <div class="converter-input-row">
+          <div class="converter-input-wrapper">
             <div id="convResultOutput" class="converter-result-val tabular">0.00</div>
-            <select id="convToSelect" class="converter-select" aria-label="Целевая валюта"></select>
           </div>
         </div>
 
@@ -278,6 +282,6 @@
   </div>
 
   <!-- Terminal Logic Script -->
-  <script type="module" src="js/terminal.js?v=2.2"></script>
+  <script type="module" src="js/terminal.js?v=2.3"></script>
 </body>
 </html>
