@@ -256,9 +256,9 @@ export const COUNTRIES: Record<string, CountryConfig> = {
   },
   FRT: {
     ticker: 'FRT',
-    currencyName: 'Фартмарка',
+    currencyName: 'Фертмарка',
     countryName: 'Фертенберг',
-    aliases: ['фертенберг', 'фертенберга', 'фертенбергу', 'фертенберге', 'фертенбергом', 'fertenberg', 'фартмарка', 'фартмарки', 'фартмарку', 'фартмарке', 'фартмаркой', 'фартмарок', 'fartmarka', 'frt', 'энланди', 'энландией', 'энландию', 'enlandia', 'end'],
+    aliases: ['фертенберг', 'фертенберга', 'фертенбергу', 'фертенберге', 'фертенбергом', 'fertenberg', 'фертмарка', 'фертмарки', 'фертмарку', 'фертмарке', 'фертмаркой', 'фертмарок', 'fertmarka', 'фартмарка', 'frt', 'энланди', 'энландией', 'энландию', 'enlandia', 'end'],
     basePrice: 16.00,
     sectors: ['agriculture', 'industry'],
     stats: {

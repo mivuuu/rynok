@@ -191,7 +191,7 @@ export const COUNTRIES = {
   },
   FRT: {
     ticker: 'FRT',
-    currencyName: 'Фартмарка',
+    currencyName: 'Фертмарка',
     countryName: 'Фертенберг',
     basePrice: 16.00,
     sectors: ['agriculture', 'industry'],
