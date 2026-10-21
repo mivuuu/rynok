@@ -322,7 +322,7 @@ export default {
         return new Response('Invalid JSON payload', { status: 400 });
       }
 
-      const msg = update.message || update.channel_post;
+      const msg = update.message || update.channel_post || update.edited_message || update.edited_channel_post;
       if (!msg) {
         return new Response(JSON.stringify({ ok: true, skipped: 'no_message' }), {
           status: 200,
@@ -330,8 +330,18 @@ export default {
         });
       }
 
-      const minBoldLen = parseInt(env.MIN_BOLD_LENGTH || '15', 10);
-      const { hasBold, boldText, fullText } = extractBoldContent(msg, minBoldLen);
+      const minBoldLen = parseInt(env.MIN_BOLD_LENGTH || '1', 10);
+      let { hasBold, boldText, fullText } = extractBoldContent(msg, minBoldLen);
+
+      console.log(`[Update ${update.update_id}] Chat: ${msg.chat?.id} (${msg.chat?.type}), Text: "${fullText.substring(0, 80)}"`);
+
+      // If user sends in private chat with bot or mentions bot, trigger automatically
+      const isPrivate = msg.chat?.type === 'private';
+      const mentionsBot = /@rynokrpbot/i.test(fullText);
+      if (isPrivate || mentionsBot) {
+        hasBold = true;
+        if (!boldText) boldText = fullText;
+      }
 
       // Check admin commands
       const adminIds = (env.ADMIN_USER_IDS || '')
@@ -350,11 +360,12 @@ export default {
         eventPayloadText = fullText;
       } else if (hasBold) {
         // Trigger condition satisfied!
-        // We evaluate both bold header and context
         eventPayloadText = boldText.length >= fullText.length ? boldText : `${boldText}\n\n${fullText}`;
+        console.log(`[Triggered Event] Analyzing: "${eventPayloadText.substring(0, 80)}..."`);
         targetAnalysis = await analyzeRPEvent(eventPayloadText, env.GROQ_API_KEY);
       } else {
         // Silent ignore normal chatter
+        console.log(`[Skipped] No bold text and not private/mention`);
         return new Response(JSON.stringify({ ok: true, skipped: 'no_trigger' }), {
           status: 200,
           headers: { 'Content-Type': 'application/json' }

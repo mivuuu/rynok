@@ -8,7 +8,7 @@ GITHUB_OWNER = "mivuuu"
 GITHUB_REPO = "rynok"
 GITHUB_BRANCH = "main"
 ADMIN_USER_IDS = ""
-MIN_BOLD_LENGTH = "15"
+MIN_BOLD_LENGTH = "1"
 
 # Secrets to be configured via `wrangler secret put <NAME>`:
 # - GROQ_API_KEY
