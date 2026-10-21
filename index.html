@@ -3,88 +3,142 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RYNOK // Межгосударственный Валютный Рынок</title>
+  <title>RYNOK — Межгосударственный Валютный Рынок</title>
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
   
   <link rel="stylesheet" href="css/terminal.css">
   
-  <!-- TradingView Lightweight Charts Library (Free, zero-dependency, ultra-fast canvas chart) -->
+  <!-- TradingView Lightweight Charts Library (Free, zero-dependency canvas financial charts) -->
   <script src="https://unpkg.com/lightweight-charts@4.2.1/dist/lightweight-charts.standalone.production.js"></script>
 </head>
 <body class="terminal-body">
 
-  <!-- Top System Bar -->
-  <header class="system-bar">
-    <div class="brand">
-      <span class="brand-glitch">RYNOK</span>
-      <span class="brand-sub">GEOPOLITICAL EXCHANGE // СИНХРОНИЗИРОВАННЫЙ ТЕРМИНАЛ</span>
+  <!-- Application Header -->
+  <header class="app-header">
+    <div class="brand-section">
+      <div class="brand-logo">
+        <span class="brand-title">RYNOK</span>
+        <span class="brand-dot"></span>
+      </div>
+      <div class="brand-divider"></div>
+      <span class="brand-desc">Межгосударственный валютный рынок</span>
     </div>
 
-    <div class="system-metrics">
-      <div class="metric-item">
-        <span class="pulse-indicator"></span>
-        <span class="metric-label">СЕТЬ:</span>
-        <span class="metric-val text-green">100% LIVE SYNC</span>
+    <div class="header-status">
+      <div class="status-indicator">
+        <span class="status-dot" id="statusDot"></span>
+        <span id="syncStatus">Синхронизировано</span>
       </div>
-      <div class="metric-item">
-        <span class="metric-label">ВРЕМЯ СЕРВЕРА:</span>
-        <span class="metric-val" id="serverClock">--:--:-- UTC</span>
-      </div>
-      <div class="metric-item">
-        <span class="metric-label">ШОКИ РЫНКА:</span>
-        <span class="metric-val" id="activeShocksCount">0</span>
-      </div>
-      <div class="metric-item status-pill" id="syncStatus">
-        СИНХРОНИЗИРОВАНО
-      </div>
+      <span class="status-clock" id="serverClock">--:--:-- UTC</span>
     </div>
   </header>
 
+  <!-- Market Overview Strip -->
+  <div class="market-overview-strip">
+    <div class="overview-metrics-group">
+      <div class="overview-metric">
+        <span class="metric-lbl">Валют:</span>
+        <span class="metric-val">23</span>
+      </div>
+      <div class="overview-metric">
+        <span class="metric-lbl">Рынок:</span>
+        <span class="metric-val text-green">Открыт (24/7)</span>
+      </div>
+      <div class="overview-metric">
+        <span class="metric-lbl">Активные шоки:</span>
+        <span class="metric-val tabular" id="activeShocksCount">0</span>
+      </div>
+      <div class="overview-metric">
+        <span class="metric-lbl">Лидер роста:</span>
+        <span class="metric-val tabular" id="marketLeader">--</span>
+      </div>
+    </div>
+    <div class="overview-metric">
+      <span class="metric-lbl">Синхронизация:</span>
+      <span class="metric-val tabular">100% Deterministic PRNG</span>
+    </div>
+  </div>
+
+  <!-- Mobile Segmented Navigation Switcher -->
+  <nav class="mobile-view-nav" aria-label="Разделы терминала">
+    <div class="mobile-tabs">
+      <button class="mobile-tab-btn active" data-view="markets" id="tabMarkets">
+        <span>Рынки</span>
+        <span class="tab-badge">23</span>
+      </button>
+      <button class="mobile-tab-btn" data-view="chart" id="tabChart">
+        <span>График</span>
+        <span class="tab-badge" id="mobileActiveTicker">ETH</span>
+      </button>
+      <button class="mobile-tab-btn" data-view="events" id="tabEvents">
+        <span>События</span>
+        <span class="tab-badge" id="mobileEventsCount">0</span>
+      </button>
+    </div>
+  </nav>
+
   <!-- Main Terminal Layout -->
-  <main class="terminal-grid">
+  <main class="terminal-grid" id="terminalGrid" data-active-view="markets">
     
     <!-- LEFT PANEL: Currencies Watchlist -->
-    <aside class="panel watchlist-panel">
+    <aside class="panel watchlist-panel" aria-label="Список валют">
       <div class="panel-header">
-        <div class="panel-title">ГОСУДАРСТВЕННЫЕ ВАЛЮТЫ (23)</div>
-        <input type="text" id="currencySearch" class="terminal-input" placeholder="Поиск (ETH, Люменария)...">
+        <div class="panel-header-row">
+          <span class="panel-title">Котировки валют</span>
+          <span class="panel-count">23 актива</span>
+        </div>
+
+        <div class="search-box">
+          <svg class="search-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="8.5" cy="8.5" r="5.5"></circle>
+            <path d="M12.5 12.5L16.5 16.5" stroke-linecap="round"></path>
+          </svg>
+          <input type="text" id="currencySearch" class="terminal-input" placeholder="Поиск по тикеру или названию..." autocomplete="off">
+        </div>
       </div>
 
+      <!-- Sector Filter Pills -->
       <div class="filter-pills" id="sectorFilterBar">
         <button class="pill active" data-sector="all">Все</button>
-        <button class="pill" data-sector="tech">🔬 Хай-Тек</button>
-        <button class="pill" data-sector="military">⚔️ Военные</button>
-        <button class="pill" data-sector="industry">⚙️ Индустрия</button>
-        <button class="pill" data-sector="finance">🏦 Финансы</button>
-        <button class="pill" data-sector="resources">🛢️ Сырье</button>
-        <button class="pill" data-sector="autarky">🛡️ Автаркии</button>
+        <button class="pill" data-sector="tech">Хай-Тек</button>
+        <button class="pill" data-sector="military">Военные</button>
+        <button class="pill" data-sector="industry">Индустрия</button>
+        <button class="pill" data-sector="finance">Финансы</button>
+        <button class="pill" data-sector="resources">Сырье</button>
+        <button class="pill" data-sector="autarky">Автаркии</button>
       </div>
 
-      <div class="currency-list" id="currencyList">
-        <!-- Injected via JavaScript -->
+      <!-- Currency Watchlist Items Container -->
+      <div class="currency-list" id="currencyList" role="list">
+        <!-- Injected dynamically via JavaScript -->
       </div>
     </aside>
 
     <!-- CENTER PANEL: Interactive Chart & Trade View -->
-    <section class="panel chart-panel">
+    <section class="panel chart-panel" aria-label="Интерактивный график">
       <div class="chart-header">
         <div class="active-currency-info">
           <div class="ticker-badge" id="activeTickerBadge">ETH</div>
           <div class="names-box">
             <div class="active-currency-title" id="activeCurrencyTitle">Эфириум / Люменария</div>
             <div class="active-sectors" id="activeSectorTags">
-              <!-- Sector tags injected -->
+              <!-- Injected dynamically -->
             </div>
           </div>
-          <button class="btn-dossier" id="btnOpenDossier">🏛️ Досье государства</button>
+          <button class="btn-dossier" id="btnOpenDossier" title="Открыть подробную справку о государстве">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M3 21h18M3 10h18M5 10v11M19 10v11M9 10v11M15 10v11M3 10l9-7 9 7" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>Досье государства</span>
+          </button>
         </div>
 
         <div class="price-hero">
           <div class="current-price" id="activeLivePrice">250.0000</div>
-          <div class="price-delta positive" id="activePriceDelta">+0.00%</div>
+          <div class="price-delta text-green" id="activePriceDelta">+0.00%</div>
         </div>
       </div>
 
@@ -98,10 +152,10 @@
         </div>
 
         <div class="market-stats-row">
-          <div class="stat-pill"><span class="lbl">МАКС 24Ч:</span> <span id="statHigh">250.00</span></div>
-          <div class="stat-pill"><span class="lbl">МИН 24Ч:</span> <span id="statLow">250.00</span></div>
-          <div class="stat-pill"><span class="lbl">ОБЪЕМ:</span> <span id="statVol">0</span></div>
-          <div class="stat-pill"><span class="lbl">ИНЕРЦИЯ:</span> <span id="statInertia">x0.65</span></div>
+          <div class="stat-pill"><span class="lbl">МАКС 24Ч:</span> <span id="statHigh" class="tabular">250.00</span></div>
+          <div class="stat-pill"><span class="lbl">МИН 24Ч:</span> <span id="statLow" class="tabular">250.00</span></div>
+          <div class="stat-pill"><span class="lbl">ОБЪЕМ:</span> <span id="statVol" class="tabular">0</span></div>
+          <div class="stat-pill"><span class="lbl">ИНЕРЦИЯ:</span> <span id="statInertia" class="tabular">x0.65</span></div>
         </div>
       </div>
 
@@ -111,34 +165,39 @@
       </div>
 
       <div class="chart-footer-notice">
-        ⚡ <em>График детерминирован и рассчитывается синхронно посекундно во всех браузерах через единый PRNG-сид.</em>
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span>График детерминирован и рассчитывается синхронно во всех браузерах через единый PRNG-сид.</span>
       </div>
     </section>
 
     <!-- RIGHT PANEL: Live Geopolitical RP Newsfeed -->
-    <aside class="panel feed-panel">
+    <aside class="panel feed-panel" aria-label="Сводка геополитических событий">
       <div class="panel-header">
-        <div class="panel-title">СВОДКА RP-СОБЫТИЙ // ТЕЛЕГРАМ</div>
-        <span class="feed-count-badge" id="eventCountBadge">0 событий</span>
+        <div class="panel-header-row">
+          <span class="panel-title">RP-События</span>
+          <span class="panel-count" id="eventCountBadge">0 событий</span>
+        </div>
       </div>
 
       <div class="events-feed" id="eventsFeed">
-        <!-- Events injected via JavaScript -->
+        <!-- Injected dynamically via JavaScript -->
       </div>
     </aside>
 
   </main>
 
-  <!-- Country Dossier Modal -->
-  <div class="modal-overlay" id="dossierModal">
+  <!-- Country Dossier Modal Dialog -->
+  <div class="modal-overlay" id="dossierModal" role="dialog" aria-modal="true" aria-labelledby="modalCountryTitle">
     <div class="modal-content">
       <div class="modal-header">
-        <h2 id="modalCountryTitle">Досье государства</h2>
-        <button class="modal-close" id="btnCloseDossier">✕</button>
+        <h2 class="modal-title" id="modalCountryTitle">Досье государства</h2>
+        <button class="modal-close" id="btnCloseDossier" aria-label="Закрыть">✕</button>
       </div>
       
       <div class="modal-body" id="modalDossierBody">
-        <!-- Injected via JavaScript -->
+        <!-- Injected dynamically via JavaScript -->
       </div>
     </div>
   </div>
