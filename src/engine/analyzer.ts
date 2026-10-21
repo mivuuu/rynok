@@ -31,7 +31,10 @@ export function buildGroqSystemPrompt(): string {
 ${countryBriefs}
 
 ПРАВИЛА ОЦЕНКИ И ДИНАМИКИ:
-- Одно событие может влиять СРАЗУ НА НЕСКОЛЬКО стран (например: открытие беспошлинного транзита помогает и организатору, и торговым партнерам; война бьет по обеим сторонам или усиливает военную экономику агрессора).
+- СТРОЖАЙШЕЕ ПРАВИЛО ЛОКАЛЬНОСТИ И ПРЯМОГО УПОМИНАНИЯ (ЗАПРЕТ ФАНТОМНЫХ СТРАН):
+  1. Включай в "impacts" ТОЛЬКО те государства, которые ПРЯМО НАЗВАНЫ в тексте (по имени, валюте, аббревиатуре или союзу).
+  2. ЕСЛИ ТРЕТЬЯ СТРАНА ЯВНО УПОМЯНУТА В ТЕКСТЕ (например: "Критания заявила о поддержке", "Люменария закупает дроны у Критании", "Критания осудила удары") — ты ОБЯЗАН оценить её реакцию в соответствии с контекстом (торговля оружием, санкции, дипломатия, нейтралитет).
+  3. КАТЕГОРИЧЕСКИ ЗАПРЕЩЕНО добавлять третьи страны "за компанию" только из-за их профиля (например: если воюют Люменария и Аустра, ЗАПРЕЩЕНО добавлять Кританию или Негецию, если они не названы в посте!). Если в посте только Люменария и Аустра — в impacts должны быть РОВНО две страны: ETH и VYN.
 - "drift": от -0.10 до +0.10 (величина шокового импульса). Для сверхдержав (Люменария, Аустра, Негеция) импульс обычно скромнее (±0.01..±0.035), для малых стран может достигать ±0.08..±0.10.
 - "volatility": от 0.005 до 0.04 (рост колебаний рынка при неопределенности, войне, терактах, реформах).
 - "decay": от 0.82 до 0.96 (коэффициент угасания шока в минуту. 0.85 — новость быстро отыграет, 0.95 — эффект держится дольше).
@@ -172,7 +175,21 @@ export function analyzeWithRegexFallback(text: string): AnalysisResult {
 }
 
 /**
- * Tier 1: GroqCloud API Analyst with Llama 3.3 70B
+ * Checks if a country (or any of its aliases/acronyms) is mentioned in the text
+ */
+export function isCountryMentionedInText(text: string, config: CountryConfig): boolean {
+  const lowerText = text.toLowerCase();
+  for (const alias of config.aliases) {
+    const lowerAlias = alias.toLowerCase();
+    const escaped = lowerAlias.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const regex = new RegExp(`(^|[^а-яёa-z0-9])${escaped}`, 'iu');
+    if (regex.test(lowerText)) return true;
+  }
+  return false;
+}
+
+/**
+ * Tier 1: GroqCloud API Analyst with Llama / Qwen
  */
 export async function analyzeWithGroq(
   text: string,
@@ -211,12 +228,19 @@ export async function analyzeWithGroq(
     throw new Error('Invalid JSON structure from Groq');
   }
 
-  // Validate tickers
+  // Validate tickers & filter out unmentioned phantom countries
   const validatedImpacts: EventImpact[] = [];
   for (const imp of parsed.impacts) {
     const upperTicker = (imp.ticker || '').toUpperCase();
     if (COUNTRIES[upperTicker]) {
       const config = COUNTRIES[upperTicker];
+
+      // Discard unmentioned phantom countries (e.g. Critania when not named)
+      if (!isCountryMentionedInText(text, config)) {
+        console.log(`[Sanitizer] Excluded unmentioned phantom country: ${upperTicker} (${config.countryName})`);
+        continue;
+      }
+
       // Apply inertia bounds
       const rawDrift = typeof imp.drift === 'number' ? imp.drift : 0;
       const boundedDrift = Math.max(-0.12, Math.min(0.12, rawDrift / config.sensitivity.inertia));
