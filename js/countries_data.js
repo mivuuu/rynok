@@ -189,9 +189,9 @@ export const COUNTRIES = {
     },
     sensitivity: { inertia: 1.20, baseVolatility: 0.0017 }
   },
-  END: {
-    ticker: 'END',
-    currencyName: 'Эндор',
+  FRT: {
+    ticker: 'FRT',
+    currencyName: 'Фартмарка',
     countryName: 'Фертенберг',
     basePrice: 16.00,
     sectors: ['agriculture', 'industry'],
