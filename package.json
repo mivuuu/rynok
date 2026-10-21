@@ -1,0 +1,21 @@
+{
+  "name": "rynok-geopolitics",
+  "version": "1.0.0",
+  "description": "Deterministic, zero-maintenance geopolitical RP market exchange powered by Cloudflare Workers, Groq, and GitHub Pages",
+  "type": "module",
+  "main": "dist/engine/math.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "node --loader ts-node/esm src/tests/test_math.ts",
+    "test:native": "tsc && node dist/tests/test_math.js",
+    "worker:dev": "cd worker && npx wrangler dev",
+    "worker:deploy": "cd worker && npx wrangler deploy"
+  },
+  "keywords": ["roleplay", "geopolitics", "currency-exchange", "cloudflare-workers", "deterministic-engine"],
+  "author": "Antigravity & Architect",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.7.0"
+  }
+}

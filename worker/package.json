@@ -1,0 +1,15 @@
+{
+  "name": "rynok-worker",
+  "version": "1.0.0",
+  "description": "Cloudflare Worker Telegram Webhook & Geopolitical Market Evaluator",
+  "main": "src/index.ts",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20241004.0",
+    "typescript": "^5.7.0",
+    "wrangler": "^3.80.0"
+  }
+}

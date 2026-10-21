@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RYNOK // Межгосударственный Валютный Рынок</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/terminal.css">
+  
+  <!-- TradingView Lightweight Charts Library (Free, zero-dependency, ultra-fast canvas chart) -->
+  <script src="https://unpkg.com/lightweight-charts@4.2.1/dist/lightweight-charts.standalone.production.js"></script>
+</head>
+<body class="terminal-body">
+
+  <!-- Top System Bar -->
+  <header class="system-bar">
+    <div class="brand">
+      <span class="brand-glitch">RYNOK</span>
+      <span class="brand-sub">GEOPOLITICAL EXCHANGE // СИНХРОНИЗИРОВАННЫЙ ТЕРМИНАЛ</span>
+    </div>
+
+    <div class="system-metrics">
+      <div class="metric-item">
+        <span class="pulse-indicator"></span>
+        <span class="metric-label">СЕТЬ:</span>
+        <span class="metric-val text-green">100% LIVE SYNC</span>
+      </div>
+      <div class="metric-item">
+        <span class="metric-label">ВРЕМЯ СЕРВЕРА:</span>
+        <span class="metric-val" id="serverClock">--:--:-- UTC</span>
+      </div>
+      <div class="metric-item">
+        <span class="metric-label">ШОКИ РЫНКА:</span>
+        <span class="metric-val" id="activeShocksCount">0</span>
+      </div>
+      <div class="metric-item status-pill" id="syncStatus">
+        СИНХРОНИЗИРОВАНО
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Terminal Layout -->
+  <main class="terminal-grid">
+    
+    <!-- LEFT PANEL: Currencies Watchlist -->
+    <aside class="panel watchlist-panel">
+      <div class="panel-header">
+        <div class="panel-title">ГОСУДАРСТВЕННЫЕ ВАЛЮТЫ (23)</div>
+        <input type="text" id="currencySearch" class="terminal-input" placeholder="Поиск (ETH, Люменария)...">
+      </div>
+
+      <div class="filter-pills" id="sectorFilterBar">
+        <button class="pill active" data-sector="all">Все</button>
+        <button class="pill" data-sector="tech">🔬 Хай-Тек</button>
+        <button class="pill" data-sector="military">⚔️ Военные</button>
+        <button class="pill" data-sector="industry">⚙️ Индустрия</button>
+        <button class="pill" data-sector="finance">🏦 Финансы</button>
+        <button class="pill" data-sector="resources">🛢️ Сырье</button>
+        <button class="pill" data-sector="autarky">🛡️ Автаркии</button>
+      </div>
+
+      <div class="currency-list" id="currencyList">
+        <!-- Injected via JavaScript -->
+      </div>
+    </aside>
+
+    <!-- CENTER PANEL: Interactive Chart & Trade View -->
+    <section class="panel chart-panel">
+      <div class="chart-header">
+        <div class="active-currency-info">
+          <div class="ticker-badge" id="activeTickerBadge">ETH</div>
+          <div class="names-box">
+            <div class="active-currency-title" id="activeCurrencyTitle">Эфириум / Люменария</div>
+            <div class="active-sectors" id="activeSectorTags">
+              <!-- Sector tags injected -->
+            </div>
+          </div>
+          <button class="btn-dossier" id="btnOpenDossier">🏛️ Досье государства</button>
+        </div>
+
+        <div class="price-hero">
+          <div class="current-price" id="activeLivePrice">250.0000</div>
+          <div class="price-delta positive" id="activePriceDelta">+0.00%</div>
+        </div>
+      </div>
+
+      <!-- Toolbar: Timeframes & View modes -->
+      <div class="chart-toolbar">
+        <div class="timeframe-buttons">
+          <button class="tf-btn active" data-tf="1">1М</button>
+          <button class="tf-btn" data-tf="5">5М</button>
+          <button class="tf-btn" data-tf="15">15М</button>
+          <button class="tf-btn" data-tf="60">1Ч</button>
+        </div>
+
+        <div class="market-stats-row">
+          <div class="stat-pill"><span class="lbl">МАКС 24Ч:</span> <span id="statHigh">250.00</span></div>
+          <div class="stat-pill"><span class="lbl">МИН 24Ч:</span> <span id="statLow">250.00</span></div>
+          <div class="stat-pill"><span class="lbl">ОБЪЕМ:</span> <span id="statVol">0</span></div>
+          <div class="stat-pill"><span class="lbl">ИНЕРЦИЯ:</span> <span id="statInertia">x0.65</span></div>
+        </div>
+      </div>
+
+      <!-- Chart Container -->
+      <div class="chart-viewport" id="chartContainer">
+        <!-- Lightweight Charts canvas is mounted here -->
+      </div>
+
+      <div class="chart-footer-notice">
+        ⚡ <em>График детерминирован и рассчитывается синхронно посекундно во всех браузерах через единый PRNG-сид.</em>
+      </div>
+    </section>
+
+    <!-- RIGHT PANEL: Live Geopolitical RP Newsfeed -->
+    <aside class="panel feed-panel">
+      <div class="panel-header">
+        <div class="panel-title">СВОДКА RP-СОБЫТИЙ // ТЕЛЕГРАМ</div>
+        <span class="feed-count-badge" id="eventCountBadge">0 событий</span>
+      </div>
+
+      <div class="events-feed" id="eventsFeed">
+        <!-- Events injected via JavaScript -->
+      </div>
+    </aside>
+
+  </main>
+
+  <!-- Country Dossier Modal -->
+  <div class="modal-overlay" id="dossierModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 id="modalCountryTitle">Досье государства</h2>
+        <button class="modal-close" id="btnCloseDossier">✕</button>
+      </div>
+      
+      <div class="modal-body" id="modalDossierBody">
+        <!-- Injected via JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Terminal Logic Script -->
+  <script type="module" src="js/terminal.js"></script>
+</body>
+</html>

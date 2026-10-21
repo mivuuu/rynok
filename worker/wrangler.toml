@@ -1,0 +1,17 @@
+name = "rynok-worker"
+main = "src/index.ts"
+compatibility_date = "2024-10-01"
+compatibility_flags = ["nodejs_compat"]
+
+[vars]
+GITHUB_OWNER = "your-github-username"
+GITHUB_REPO = "rynok"
+GITHUB_BRANCH = "main"
+ADMIN_USER_IDS = ""
+MIN_BOLD_LENGTH = "15"
+
+# Secrets to be configured via `wrangler secret put <NAME>`:
+# - GROQ_API_KEY
+# - GITHUB_TOKEN
+# - TELEGRAM_BOT_TOKEN
+# - TELEGRAM_SECRET_TOKEN (optional webhook verification secret)

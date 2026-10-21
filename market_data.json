@@ -1,0 +1,522 @@
+{
+  "version": 1,
+  "last_updated": 1792328352658,
+  "genesis_timestamp": 1792328352658,
+  "currencies": {
+    "ETH": {
+      "current_anchor": {
+        "timestamp": 1792328352658,
+        "price": 250,
+        "drift": 0,
+        "volatility": 0.0009,
+        "decay": 0.95,
+        "event_id": "genesis",
+        "event_title": "Официальный запуск котировок биржи"
+      },
+      "history_anchors": [
+        {
+          "timestamp": 1792328352658,
+          "price": 250,
+          "drift": 0,
+          "volatility": 0.0009,
+          "decay": 0.95,
+          "event_id": "genesis",
+          "event_title": "Официальный запуск котировок биржи"
+        }
+      ]
+    },
+    "VYN": {
+      "current_anchor": {
+        "timestamp": 1792328352658,
+        "price": 180,
+        "drift": 0,
+        "volatility": 0.0014,
+        "decay": 0.95,
+        "event_id": "genesis",
+        "event_title": "Официальный запуск котировок биржи"
+      },
+      "history_anchors": [
+        {
+          "timestamp": 1792328352658,
+          "price": 180,
+          "drift": 0,
+          "volatility": 0.0014,
+          "decay": 0.95,
+          "event_id": "genesis",
+          "event_title": "Официальный запуск котировок биржи"
+        }
+      ]
+    },
+    "NEL": {
+      "current_anchor": {
+        "timestamp": 1792328352658,
+        "price": 175,
+        "drift": 0,
+        "volatility": 0.001,
+        "decay": 0.95,
+        "event_id": "genesis",
+        "event_title": "Официальный запуск котировок биржи"
+      },
+      "history_anchors": [
+        {
+          "timestamp": 1792328352658,
+          "price": 175,
+          "drift": 0,
+          "volatility": 0.001,
+          "decay": 0.95,
+          "event_id": "genesis",
+          "event_title": "Официальный запуск котировок биржи"
+        }
+      ]
+    },
+    "VNG": {
+      "current_anchor": {
+        "timestamp": 1792328352658,
+        "price": 95,
+        "drift": 0,
+        "volatility": 0.0012,
+        "decay": 0.95,
+        "event_id": "genesis",
+        "event_title": "Официальный запуск котировок биржи"
+      },
+      "history_anchors": [
+        {
+          "timestamp": 1792328352658,
+          "price": 95,
+          "drift": 0,
+          "volatility": 0.0012,
+          "decay": 0.95,
+          "event_id": "genesis",
+          "event_title": "Официальный запуск котировок биржи"
+        }
+      ]
+    },
+    "YRL": {
+      "current_anchor": {
+        "timestamp": 1792328352658,
+        "price": 75,
+        "drift": 0,
+        "volatility": 0.0013,
+        "decay": 0.95,
+        "event_id": "genesis",
+        "event_title": "Официальный запуск котировок биржи"
+      },
+      "history_anchors": [
+        {
+          "timestamp": 1792328352658,
+          "price": 75,
+          "drift": 0,
+          "volatility": 0.0013,
+          "decay": 0.95,
+          "event_id": "genesis",
+          "event_title": "Официальный запуск котировок биржи"
+        }
+      ]
+    },
+    "TVR": {
+      "current_anchor": {
+        "timestamp": 1792328352658,
+        "price": 60,
+        "drift": 0,
+        "volatility": 0.0014,
+        "decay": 0.95,
+        "event_id": "genesis",
+        "event_title": "Официальный запуск котировок биржи"
+      },
+      "history_anchors": [
+        {
+          "timestamp": 1792328352658,
+          "price": 60,
+          "drift": 0,
+          "volatility": 0.0014,
+          "decay": 0.95,
+          "event_id": "genesis",
+          "event_title": "Официальный запуск котировок биржи"
+        }
+      ]
+    },
+    "OIL": {
+      "current_anchor": {
+        "timestamp": 1792328352658,
+        "price": 55,
+        "drift": 0,
+        "volatility": 0.0013,
+        "decay": 0.95,
+        "event_id": "genesis",
+        "event_title": "Официальный запуск котировок биржи"
+      },
+      "history_anchors": [
+        {
+          "timestamp": 1792328352658,
+          "price": 55,
+          "drift": 0,
+          "volatility": 0.0013,
+          "decay": 0.95,
+          "event_id": "genesis",
+          "event_title": "Официальный запуск котировок биржи"
+        }
+      ]
+    },
+    "VTN": {
+      "current_anchor": {
+        "timestamp": 1792328352658,
+        "price": 45,
+        "drift": 0,
+        "volatility": 0.0018,
+        "decay": 0.95,
+        "event_id": "genesis",
+        "event_title": "Официальный запуск котировок биржи"
+      },
+      "history_anchors": [
+        {
+          "timestamp": 1792328352658,
+          "price": 45,
+          "drift": 0,
+          "volatility": 0.0018,
+          "decay": 0.95,
+          "event_id": "genesis",
+          "event_title": "Официальный запуск котировок биржи"
+        }
+      ]
+    },
+    "RVN": {
+      "current_anchor": {
+        "timestamp": 1792328352658,
+        "price": 35,
+        "drift": 0,
+        "volatility": 0.0015,
+        "decay": 0.95,
+        "event_id": "genesis",
+        "event_title": "Официальный запуск котировок биржи"
+      },
+      "history_anchors": [
+        {
+          "timestamp": 1792328352658,
+          "price": 35,
+          "drift": 0,
+          "volatility": 0.0015,
+          "decay": 0.95,
+          "event_id": "genesis",
+          "event_title": "Официальный запуск котировок биржи"
+        }
+      ]
+    },
+    "SHK": {
+      "current_anchor": {
+        "timestamp": 1792328352658,
+        "price": 30,
+        "drift": 0,
+        "volatility": 0.0016,
+        "decay": 0.95,
+        "event_id": "genesis",
+        "event_title": "Официальный запуск котировок биржи"
+      },
+      "history_anchors": [
+        {
+          "timestamp": 1792328352658,
+          "price": 30,
+          "drift": 0,
+          "volatility": 0.0016,
+          "decay": 0.95,
+          "event_id": "genesis",
+          "event_title": "Официальный запуск котировок биржи"
+        }
+      ]
+    },
+    "KRN": {
+      "current_anchor": {
+        "timestamp": 1792328352658,
+        "price": 22,
+        "drift": 0,
+        "volatility": 0.0015,
+        "decay": 0.95,
+        "event_id": "genesis",
+        "event_title": "Официальный запуск котировок биржи"
+      },
+      "history_anchors": [
+        {
+          "timestamp": 1792328352658,
+          "price": 22,
+          "drift": 0,
+          "volatility": 0.0015,
+          "decay": 0.95,
+          "event_id": "genesis",
+          "event_title": "Официальный запуск котировок биржи"
+        }
+      ]
+    },
+    "RSH": {
+      "current_anchor": {
+        "timestamp": 1792328352658,
+        "price": 18,
+        "drift": 0,
+        "volatility": 0.0017,
+        "decay": 0.95,
+        "event_id": "genesis",
+        "event_title": "Официальный запуск котировок биржи"
+      },
+      "history_anchors": [
+        {
+          "timestamp": 1792328352658,
+          "price": 18,
+          "drift": 0,
+          "volatility": 0.0017,
+          "decay": 0.95,
+          "event_id": "genesis",
+          "event_title": "Официальный запуск котировок биржи"
+        }
+      ]
+    },
+    "END": {
+      "current_anchor": {
+        "timestamp": 1792328352658,
+        "price": 16,
+        "drift": 0,
+        "volatility": 0.0015,
+        "decay": 0.95,
+        "event_id": "genesis",
+        "event_title": "Официальный запуск котировок биржи"
+      },
+      "history_anchors": [
+        {
+          "timestamp": 1792328352658,
+          "price": 16,
+          "drift": 0,
+          "volatility": 0.0015,
+          "decay": 0.95,
+          "event_id": "genesis",
+          "event_title": "Официальный запуск котировок биржи"
+        }
+      ]
+    },
+    "VLT": {
+      "current_anchor": {
+        "timestamp": 1792328352658,
+        "price": 32,
+        "drift": 0,
+        "volatility": 0.0014,
+        "decay": 0.95,
+        "event_id": "genesis",
+        "event_title": "Официальный запуск котировок биржи"
+      },
+      "history_anchors": [
+        {
+          "timestamp": 1792328352658,
+          "price": 32,
+          "drift": 0,
+          "volatility": 0.0014,
+          "decay": 0.95,
+          "event_id": "genesis",
+          "event_title": "Официальный запуск котировок биржи"
+        }
+      ]
+    },
+    "ETW": {
+      "current_anchor": {
+        "timestamp": 1792328352658,
+        "price": 40,
+        "drift": 0,
+        "volatility": 0.0016,
+        "decay": 0.95,
+        "event_id": "genesis",
+        "event_title": "Официальный запуск котировок биржи"
+      },
+      "history_anchors": [
+        {
+          "timestamp": 1792328352658,
+          "price": 40,
+          "drift": 0,
+          "volatility": 0.0016,
+          "decay": 0.95,
+          "event_id": "genesis",
+          "event_title": "Официальный запуск котировок биржи"
+        }
+      ]
+    },
+    "AZM": {
+      "current_anchor": {
+        "timestamp": 1792328352658,
+        "price": 12,
+        "drift": 0,
+        "volatility": 0.0017,
+        "decay": 0.95,
+        "event_id": "genesis",
+        "event_title": "Официальный запуск котировок биржи"
+      },
+      "history_anchors": [
+        {
+          "timestamp": 1792328352658,
+          "price": 12,
+          "drift": 0,
+          "volatility": 0.0017,
+          "decay": 0.95,
+          "event_id": "genesis",
+          "event_title": "Официальный запуск котировок биржи"
+        }
+      ]
+    },
+    "HRN": {
+      "current_anchor": {
+        "timestamp": 1792328352658,
+        "price": 10,
+        "drift": 0,
+        "volatility": 0.0018,
+        "decay": 0.95,
+        "event_id": "genesis",
+        "event_title": "Официальный запуск котировок биржи"
+      },
+      "history_anchors": [
+        {
+          "timestamp": 1792328352658,
+          "price": 10,
+          "drift": 0,
+          "volatility": 0.0018,
+          "decay": 0.95,
+          "event_id": "genesis",
+          "event_title": "Официальный запуск котировок биржи"
+        }
+      ]
+    },
+    "URE": {
+      "current_anchor": {
+        "timestamp": 1792328352658,
+        "price": 25,
+        "drift": 0,
+        "volatility": 0.0012,
+        "decay": 0.95,
+        "event_id": "genesis",
+        "event_title": "Официальный запуск котировок биржи"
+      },
+      "history_anchors": [
+        {
+          "timestamp": 1792328352658,
+          "price": 25,
+          "drift": 0,
+          "volatility": 0.0012,
+          "decay": 0.95,
+          "event_id": "genesis",
+          "event_title": "Официальный запуск котировок биржи"
+        }
+      ]
+    },
+    "OMY": {
+      "current_anchor": {
+        "timestamp": 1792328352658,
+        "price": 4.5,
+        "drift": 0,
+        "volatility": 0.0024,
+        "decay": 0.95,
+        "event_id": "genesis",
+        "event_title": "Официальный запуск котировок биржи"
+      },
+      "history_anchors": [
+        {
+          "timestamp": 1792328352658,
+          "price": 4.5,
+          "drift": 0,
+          "volatility": 0.0024,
+          "decay": 0.95,
+          "event_id": "genesis",
+          "event_title": "Официальный запуск котировок биржи"
+        }
+      ]
+    },
+    "TGR": {
+      "current_anchor": {
+        "timestamp": 1792328352658,
+        "price": 3,
+        "drift": 0,
+        "volatility": 0.0025,
+        "decay": 0.95,
+        "event_id": "genesis",
+        "event_title": "Официальный запуск котировок биржи"
+      },
+      "history_anchors": [
+        {
+          "timestamp": 1792328352658,
+          "price": 3,
+          "drift": 0,
+          "volatility": 0.0025,
+          "decay": 0.95,
+          "event_id": "genesis",
+          "event_title": "Официальный запуск котировок биржи"
+        }
+      ]
+    },
+    "NVR": {
+      "current_anchor": {
+        "timestamp": 1792328352658,
+        "price": 5.5,
+        "drift": 0,
+        "volatility": 0.002,
+        "decay": 0.95,
+        "event_id": "genesis",
+        "event_title": "Официальный запуск котировок биржи"
+      },
+      "history_anchors": [
+        {
+          "timestamp": 1792328352658,
+          "price": 5.5,
+          "drift": 0,
+          "volatility": 0.002,
+          "decay": 0.95,
+          "event_id": "genesis",
+          "event_title": "Официальный запуск котировок биржи"
+        }
+      ]
+    },
+    "SVR": {
+      "current_anchor": {
+        "timestamp": 1792328352658,
+        "price": 5,
+        "drift": 0,
+        "volatility": 0.002,
+        "decay": 0.95,
+        "event_id": "genesis",
+        "event_title": "Официальный запуск котировок биржи"
+      },
+      "history_anchors": [
+        {
+          "timestamp": 1792328352658,
+          "price": 5,
+          "drift": 0,
+          "volatility": 0.002,
+          "decay": 0.95,
+          "event_id": "genesis",
+          "event_title": "Официальный запуск котировок биржи"
+        }
+      ]
+    },
+    "FRZ": {
+      "current_anchor": {
+        "timestamp": 1792328352658,
+        "price": 8.5,
+        "drift": 0,
+        "volatility": 0.0018,
+        "decay": 0.95,
+        "event_id": "genesis",
+        "event_title": "Официальный запуск котировок биржи"
+      },
+      "history_anchors": [
+        {
+          "timestamp": 1792328352658,
+          "price": 8.5,
+          "drift": 0,
+          "volatility": 0.0018,
+          "decay": 0.95,
+          "event_id": "genesis",
+          "event_title": "Официальный запуск котировок биржи"
+        }
+      ]
+    }
+  },
+  "events": [
+    {
+      "id": "genesis",
+      "timestamp": 1792328352658,
+      "title": "Официальный запуск единой биржи государств",
+      "raw_text": "Комитет центральных банков зафиксировал официальные стартовые котировки 23 национальных валют.",
+      "impacts": []
+    }
+  ]
+}
