@@ -65,7 +65,9 @@ const POSITIVE_STEMS = [
 const NEGATIVE_STEMS = [
   /войн/i, /атак/i, /санкц/i, /кризис/i, /взрыв/i, /мобилизац/i, /обвиня/i, /конфликт/i,
   /блокад/i, /эмбарго/i, /паден/i, /дефицит/i, /угроз/i, /теракт/i, /подрыв/i, /ущерб/i,
-  /убыт/i, /разрыв/i, /диверси/i, /бунт/i, /госпереворот/i
+  /убыт/i, /разрыв/i, /диверси/i, /бунт/i, /госпереворот/i, /протест/i, /рушит/i, /разрушен/i,
+  /погиб/i, /удар/i, /беспорядк/i, /поражен/i, /эвакуац/i, /смерт/i, /оборон/i, /подавлен/i,
+  /точечн/i, /бпла/i, /ракети/i, /разбомб/i
 ];
 
 /**
@@ -80,7 +82,6 @@ export function analyzeWithRegexFallback(text: string): AnalysisResult {
   for (const [ticker, config] of Object.entries(COUNTRIES)) {
     for (const alias of config.aliases) {
       const lowerAlias = alias.toLowerCase();
-      // Match if text contains alias as a substring bounded by non-alphanumeric chars or start/end
       const escaped = lowerAlias.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
       const regex = new RegExp(`(^|[^а-яёa-z0-9])${escaped}`, 'iu');
       if (regex.test(lowerText)) {
@@ -90,9 +91,13 @@ export function analyzeWithRegexFallback(text: string): AnalysisResult {
     }
   }
 
-  // If no countries explicitly detected, default to global impact on top 3 powers or neutral
+  // If no countries explicitly detected, default to neutral
   if (detectedTickers.size === 0) {
-    detectedTickers.add('ETH');
+    return {
+      event_title: text.replace(/[*_#`]/g, '').trim().substring(0, 45),
+      source: 'regex',
+      impacts: []
+    };
   }
 
   let posScore = 0;
@@ -105,6 +110,10 @@ export function analyzeWithRegexFallback(text: string): AnalysisResult {
     if (stem.test(text)) negScore++;
   }
 
+  // Check for severe catastrophe triggers (civil war, collapsing fronts, embassy bombings, massive riots)
+  const isSevereCatastrophe = /рушит.*фронт|подавлен.*протест|взрыв.*посольств|точечн.*удар|разрушен.*здан|массовые.*беспорядк|госпереворот|тяжел.*войн/i.test(text);
+  const isMinorDiplomacy = /обвиня|бойкот|заявил|сборная|хокке|спорт|мнение/i.test(text);
+
   const netSentiment = posScore - negScore;
   const impacts: EventImpact[] = [];
 
@@ -113,26 +122,33 @@ export function analyzeWithRegexFallback(text: string): AnalysisResult {
     const inertia = config.sensitivity.inertia;
 
     let baseDrift = 0;
-    let volatility = 0.01;
+    let volatility = 0.008;
     let decay = 0.90;
 
-    if (netSentiment > 0) {
-      baseDrift = Math.min(0.08, 0.015 * netSentiment) / inertia;
-      volatility = 0.008 + 0.003 * netSentiment;
+    if (isSevereCatastrophe && netSentiment < 0) {
+      // Severe geopolitical crisis (e.g. collapsing front in Austra)
+      baseDrift = -0.065 / inertia;
+      volatility = 0.035;
+      decay = 0.94;
+    } else if (isMinorDiplomacy) {
+      // Small diplomatic friction
+      baseDrift = (netSentiment >= 0 ? 0.004 : -0.004) / inertia;
+      volatility = 0.006;
+      decay = 0.85;
+    } else if (netSentiment > 0) {
+      // Normal positive development
+      baseDrift = Math.min(0.025, 0.006 * netSentiment) / inertia;
+      volatility = 0.007 + 0.002 * netSentiment;
+      decay = 0.88;
     } else if (netSentiment < 0) {
-      baseDrift = Math.max(-0.08, 0.018 * netSentiment) / inertia;
-      volatility = 0.015 + 0.005 * Math.abs(netSentiment);
-      decay = 0.93; // Negative shocks linger longer
+      // Moderate negative event
+      baseDrift = Math.max(-0.035, 0.007 * netSentiment) / inertia;
+      volatility = 0.012 + 0.003 * Math.abs(netSentiment);
+      decay = 0.91;
     } else {
-      // Uncertainty / Neutral event
-      baseDrift = 0.002;
-      volatility = 0.008;
-    }
-
-    // Special case for military nations: wars might be bullish for arms production
-    if (config.sectors.includes('military') && /войн|конфликт|мобилизац|арми/i.test(text)) {
-      baseDrift = Math.abs(baseDrift) * 0.8;
-      volatility = 0.025;
+      // Neutral
+      baseDrift = 0.0005;
+      volatility = 0.005;
     }
 
     impacts.push({
@@ -140,7 +156,7 @@ export function analyzeWithRegexFallback(text: string): AnalysisResult {
       drift: Number(baseDrift.toFixed(4)),
       volatility: Number(Math.min(0.045, volatility).toFixed(4)),
       decay: Number(decay.toFixed(2)),
-      reason: netSentiment >= 0 ? 'Позитивные геополитические или экономические факторы' : 'Геополитическое давление или конфликтный фон'
+      reason: netSentiment >= 0 ? 'Позитивные геополитические или экономические факторы' : 'Военные удары, разрушения, протесты или конфликтный фон'
     });
   }
 
