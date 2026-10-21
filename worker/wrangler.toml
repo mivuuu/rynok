@@ -4,7 +4,7 @@ compatibility_date = "2024-10-01"
 compatibility_flags = ["nodejs_compat"]
 
 [vars]
-GITHUB_OWNER = "your-github-username"
+GITHUB_OWNER = "mivuuu"
 GITHUB_REPO = "rynok"
 GITHUB_BRANCH = "main"
 ADMIN_USER_IDS = ""
