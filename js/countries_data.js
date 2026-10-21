@@ -192,7 +192,7 @@ export const COUNTRIES = {
   END: {
     ticker: 'END',
     currencyName: 'Эндор',
-    countryName: 'Энландия',
+    countryName: 'Фертенберг',
     basePrice: 16.00,
     sectors: ['agriculture', 'industry'],
     stats: {
@@ -251,7 +251,7 @@ export const COUNTRIES = {
   },
   HRN: {
     ticker: 'HRN',
-    currencyName: 'Хейран',
+    currencyName: 'Хисолийская крона',
     countryName: 'Хисолия',
     basePrice: 10.00,
     sectors: ['industry'],

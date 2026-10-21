@@ -257,8 +257,8 @@ export const COUNTRIES: Record<string, CountryConfig> = {
   END: {
     ticker: 'END',
     currencyName: 'Эндор',
-    countryName: 'Энландия',
-    aliases: ['энланди', 'энландией', 'энландию', 'enlandia', 'end', 'эндор'],
+    countryName: 'Фертенберг',
+    aliases: ['фертенберг', 'фертенберга', 'фертенбергу', 'фертенберге', 'фертенбергом', 'fertenberg', 'энланди', 'энландией', 'энландию', 'enlandia', 'end', 'эндор'],
     basePrice: 16.00,
     sectors: ['agriculture', 'industry'],
     stats: {
@@ -324,9 +324,9 @@ export const COUNTRIES: Record<string, CountryConfig> = {
   },
   HRN: {
     ticker: 'HRN',
-    currencyName: 'Хейран',
+    currencyName: 'Хисолийская крона',
     countryName: 'Хисолия',
-    aliases: ['хисоли', 'хисолией', 'хисолию', 'hisolia', 'hrn', 'хейран'],
+    aliases: ['хисоли', 'хисолией', 'хисолию', 'hisolia', 'hrn', 'хисолийская крона', 'хисолийской кроны', 'хисолийскую крону', 'крона', 'хейран'],
     basePrice: 10.00,
     sectors: ['industry'],
     stats: {
