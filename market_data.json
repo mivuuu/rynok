@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": 1792768324531,
+  "last_updated": 1792768326569,
   "genesis_timestamp": 1790267976000,
   "currencies": {
     "ETH": {
@@ -2302,13 +2302,13 @@
     },
     "TVR": {
       "current_anchor": {
-        "timestamp": 1792768289071,
-        "price": 38.7927,
-        "drift": -0.0368,
-        "volatility": 0.025,
-        "decay": 0.92,
-        "event_id": "evt_1792768289071_f4p4b",
-        "event_title": "Арест лидера Trojka в Просперии"
+        "timestamp": 1792768326569,
+        "price": 38.5783,
+        "drift": 0.0005,
+        "volatility": 0.005,
+        "decay": 0.9,
+        "event_id": "evt_1792768326569_f9tky",
+        "event_title": "В Восточной Просперии лидер партии Trojka Anton..."
       },
       "history_anchors": [
         {
@@ -2373,6 +2373,15 @@
           "decay": 0.92,
           "event_id": "evt_1792753929722_redsc",
           "event_title": "Парламентские выборы в Просперии"
+        },
+        {
+          "timestamp": 1792768289071,
+          "price": 38.7927,
+          "drift": -0.0368,
+          "volatility": 0.025,
+          "decay": 0.92,
+          "event_id": "evt_1792768289071_f4p4b",
+          "event_title": "Арест лидера Trojka в Просперии"
         }
       ]
     },
@@ -4804,6 +4813,22 @@
     }
   },
   "events": [
+    {
+      "id": "evt_1792768326569_f9tky",
+      "timestamp": 1792768326569,
+      "title": "В Восточной Просперии лидер партии Trojka Anton...",
+      "raw_text": "В Восточной Просперии лидер партии Trojka Anton Červenko был арестован. В это же время градус недовольства населения начал повышаться",
+      "impacts": [
+        {
+          "ticker": "TVR",
+          "drift": 0.0005,
+          "volatility": 0.005,
+          "decay": 0.9,
+          "reason": "Позитивные геополитические или экономические факторы"
+        }
+      ],
+      "source": "regex"
+    },
     {
       "id": "evt_1792768324531_mqpc2",
       "timestamp": 1792768324531,
@@ -7904,22 +7929,6 @@
           "drift": 0.0042,
           "volatility": 0.006,
           "decay": 0.85,
-          "reason": "Позитивные геополитические или экономические факторы"
-        }
-      ],
-      "source": "telegram_history"
-    },
-    {
-      "id": "evt_1791996271000_message1993",
-      "timestamp": 1791996271000,
-      "title": "Гросс внедряет ИИ\n\nГросс внедряет ИИ",
-      "raw_text": "Гросс внедряет ИИ",
-      "impacts": [
-        {
-          "ticker": "OIL",
-          "drift": 0.0005,
-          "volatility": 0.005,
-          "decay": 0.9,
           "reason": "Позитивные геополитические или экономические факторы"
         }
       ],
