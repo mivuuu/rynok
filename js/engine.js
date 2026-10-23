@@ -30,17 +30,74 @@ export function sampleSeededNormal(prng) {
   return Math.sqrt(-2.0 * Math.log(u1)) * Math.cos(2.0 * Math.PI * u2);
 }
 
-export function getMinuteStep(ticker, minuteTimestamp, minutesSinceAnchor, anchor, baseVolatility) {
+export const BASE_PRICES = {
+  ETH: 250,
+  VYN: 180,
+  NEL: 175,
+  VNG: 95,
+  YRL: 75,
+  TVR: 60,
+  OIL: 55,
+  VTN: 45,
+  RVN: 35,
+  SHK: 30,
+  KRN: 22,
+  RSH: 18,
+  FRT: 16,
+  VLT: 32,
+  ETW: 40,
+  AZM: 12,
+  HRN: 10,
+  URE: 25,
+  OMY: 4.5,
+  TGR: 3,
+  NVR: 5.5,
+  SVR: 5,
+  FRZ: 8.5
+};
+
+export function getMinuteStep(ticker, minuteTimestamp, minutesSinceAnchor, anchor, baseVolatility, currentPrice) {
   const seedString = `${ticker}:${minuteTimestamp}`;
   const seed = hash32(seedString);
   const prng = createMulberry32(seed);
 
+  // 1. Shock drift decays exponentially with each minute: drift_m = μ₀ * (decay ^ m)
   const effectiveDecay = Math.pow(Math.max(0.5, Math.min(0.999, anchor.decay)), Math.max(0, minutesSinceAnchor));
-  const shockDrift = anchor.drift * effectiveDecay;
+  let shockDrift = anchor.drift * effectiveDecay;
+
+  // 2. Mean Reversion and Soft Corridor enforcement (±25% target corridor)
+  const basePrice = BASE_PRICES[ticker] ?? anchor.price ?? 100;
+  const price = currentPrice ?? anchor.price;
+  const deviation = (price - basePrice) / basePrice;
+  const absDev = Math.abs(deviation);
+
+  let meanReversionPull = 0;
+  const CORRIDOR = 0.25; // ±25%
+  const kIn = 0.0003;    // Gentle background drift inside corridor
+  const kOut = 0.022;    // Progressive restoring pull outside corridor (~1h cooling)
+
+  if (absDev <= CORRIDOR) {
+    meanReversionPull = -Math.sign(deviation) * kIn * (absDev / CORRIDOR);
+  } else {
+    const excess = absDev - CORRIDOR;
+    meanReversionPull = -Math.sign(deviation) * (kIn + kOut * Math.min(2.5, Math.pow(excess, 0.75)));
+  }
+
+  // Cap mean reversion pull per minute to maintain smooth candles
+  meanReversionPull = Math.max(-0.04, Math.min(0.04, meanReversionPull));
+
+  // Damping shock drift if it tries to push further away from the corridor
+  if (deviation > 0.20 && shockDrift > 0) {
+    shockDrift *= Math.max(0.1, 1 - (deviation - 0.20) / 0.15);
+  } else if (deviation < -0.20 && shockDrift < 0) {
+    shockDrift *= Math.max(0.1, 1 - (-deviation - 0.20) / 0.15);
+  }
+
+  // 3. Total volatility: inherent baseline + decaying shock volatility
   const totalVol = baseVolatility + anchor.volatility * effectiveDecay;
   const epsilon = sampleSeededNormal(prng);
 
-  const deltaPct = shockDrift + totalVol * epsilon;
+  const deltaPct = shockDrift + meanReversionPull + totalVol * epsilon;
   return { deltaPct, prng };
 }
 
@@ -58,7 +115,7 @@ export function calculateExactPrice(anchor, targetTimestamp, ticker, baseVolatil
   for (let m = startMinute + 1; m <= endMinute; m++) {
     const minuteTimestamp = m * ONE_MINUTE_MS;
     const minutesSinceAnchor = m - startMinute;
-    const { deltaPct } = getMinuteStep(ticker, minuteTimestamp, minutesSinceAnchor, anchor, baseVolatility);
+    const { deltaPct } = getMinuteStep(ticker, minuteTimestamp, minutesSinceAnchor, anchor, baseVolatility, currentPrice);
     currentPrice = Math.max(0.0001, currentPrice * (1 + deltaPct));
   }
 
@@ -67,7 +124,7 @@ export function calculateExactPrice(anchor, targetTimestamp, ticker, baseVolatil
     const fraction = remainingMs / ONE_MINUTE_MS;
     const nextMinuteTimestamp = (endMinute + 1) * ONE_MINUTE_MS;
     const minutesSinceAnchor = (endMinute + 1) - startMinute;
-    const { deltaPct } = getMinuteStep(ticker, nextMinuteTimestamp, minutesSinceAnchor, anchor, baseVolatility);
+    const { deltaPct } = getMinuteStep(ticker, nextMinuteTimestamp, minutesSinceAnchor, anchor, baseVolatility, currentPrice);
     currentPrice = Math.max(0.0001, currentPrice * (1 + deltaPct * fraction));
   }
 
@@ -112,7 +169,7 @@ export function generateCandles(anchorInput, fromTimestamp, toTimestamp, interva
 
       const activeAnchor = anchors[anchorIdx];
       const minutesSinceAnchor = Math.max(1, Math.floor((stepTime - activeAnchor.timestamp) / ONE_MINUTE_MS));
-      const { deltaPct, prng } = getMinuteStep(ticker, stepTime, minutesSinceAnchor, activeAnchor, baseVolatility);
+      const { deltaPct, prng } = getMinuteStep(ticker, stepTime, minutesSinceAnchor, activeAnchor, baseVolatility, runningPrice);
 
       runningPrice = Math.max(0.0001, runningPrice * (1 + deltaPct));
 

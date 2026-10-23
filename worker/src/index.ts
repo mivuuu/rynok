@@ -1,3 +1,4 @@
+declare const Buffer: any;
 import { COUNTRIES, CountryConfig } from '../../src/config/countries.js';
 import { MarketAnchor, calculateExactPrice } from '../../src/engine/math.js';
 import { analyzeRPEvent, AnalysisResult, EventImpact } from '../../src/engine/analyzer.js';
@@ -44,6 +45,8 @@ interface TelegramUpdate {
   update_id: number;
   message?: TelegramMessage;
   channel_post?: TelegramMessage;
+  edited_message?: TelegramMessage;
+  edited_channel_post?: TelegramMessage;
 }
 
 interface MarketDataState {
