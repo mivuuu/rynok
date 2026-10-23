@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": 1792791844322,
+  "last_updated": 1792791858129,
   "genesis_timestamp": 1790267976000,
   "currencies": {
     "ETH": {
@@ -522,13 +522,13 @@
     },
     "VYN": {
       "current_anchor": {
-        "timestamp": 1792791844322,
-        "price": 10.2885,
-        "drift": -0.0429,
-        "volatility": 0.022,
+        "timestamp": 1792791858129,
+        "price": 10.0997,
+        "drift": -0.0357,
+        "volatility": 0.018,
         "decay": 0.9,
-        "event_id": "evt_1792791844322_0ylpk",
-        "event_title": "Удар по Аустре",
+        "event_id": "evt_1792791858129_vj5vd",
+        "event_title": "Удар по НПЗ Аустры",
         "base_price": 18,
         "status": "default",
         "status_label": "СУВЕРЕННЫЙ ДЕФОЛТ"
@@ -881,6 +881,18 @@
           "decay": 0.88,
           "event_id": "evt_1792789303850_pu7r8",
           "event_title": "Массированная ракетная атака Люменарии",
+          "base_price": 18,
+          "status": "default",
+          "status_label": "СУВЕРЕННЫЙ ДЕФОЛТ"
+        },
+        {
+          "timestamp": 1792791844322,
+          "price": 10.2885,
+          "drift": -0.0429,
+          "volatility": 0.022,
+          "decay": 0.9,
+          "event_id": "evt_1792791844322_0ylpk",
+          "event_title": "Удар по Аустре",
           "base_price": 18,
           "status": "default",
           "status_label": "СУВЕРЕННЫЙ ДЕФОЛТ"
@@ -4961,6 +4973,22 @@
   },
   "events": [
     {
+      "id": "evt_1792791858129_vj5vd",
+      "timestamp": 1792791858129,
+      "title": "Удар по НПЗ Аустры",
+      "raw_text": "Один из прилетов в аустрийский НПЗ, зафиксированный местным жителем на видео",
+      "impacts": [
+        {
+          "ticker": "VYN",
+          "drift": -0.0357,
+          "volatility": 0.018,
+          "decay": 0.9,
+          "reason": "Удар по ключевой энергетической инфраструктуре (НПЗ) наносит прямой ущерб экономике и снижает доверие к валюте"
+        }
+      ],
+      "source": "groq"
+    },
+    {
       "id": "evt_1792791844322_0ylpk",
       "timestamp": 1792791844322,
       "title": "Удар по Аустре",
@@ -7939,22 +7967,6 @@
       "timestamp": 1792506943000,
       "title": "ТУР №5 • 🏝️ ЯРЛАНДИЯ •  ИИХО • ДИВИЗИОН ПРЕТЕН...",
       "raw_text": "ТУР №5 • 🏝️ ЯРЛАНДИЯ •  ИИХО • ДИВИЗИОН ПРЕТЕНДЕНТОВ 🏒Матч 2: МАН 4:0 ЭШК",
-      "impacts": [
-        {
-          "ticker": "YRL",
-          "drift": 0.0005,
-          "volatility": 0.005,
-          "decay": 0.9,
-          "reason": "Позитивные геополитические или экономические факторы"
-        }
-      ],
-      "source": "telegram_history"
-    },
-    {
-      "id": "evt_1792506914000_message2726",
-      "timestamp": 1792506914000,
-      "title": "ТУР №5 • 🏝️ ЯРЛАНДИЯ •  ИИХО • ДИВИЗИОН ПРЕТЕН...",
-      "raw_text": "ТУР №5 • 🏝️ ЯРЛАНДИЯ •  ИИХО • ДИВИЗИОН ПРЕТЕНДЕНТОВ 🏒Матч 1: АСМ 5:2 ЮЖС",
       "impacts": [
         {
           "ticker": "YRL",
