@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": 1792791858129,
+  "last_updated": 1792793548449,
   "genesis_timestamp": 1790267976000,
   "currencies": {
     "ETH": {
@@ -522,12 +522,12 @@
     },
     "VYN": {
       "current_anchor": {
-        "timestamp": 1792791858129,
-        "price": 10.0997,
-        "drift": -0.0357,
-        "volatility": 0.018,
-        "decay": 0.9,
-        "event_id": "evt_1792791858129_vj5vd",
+        "timestamp": 1792793548449,
+        "price": 7.1716,
+        "drift": -0.05,
+        "volatility": 0.022,
+        "decay": 0.91,
+        "event_id": "evt_1792793548449_8sje9",
         "event_title": "Удар по НПЗ Аустры",
         "base_price": 18,
         "status": "default",
@@ -893,6 +893,18 @@
           "decay": 0.9,
           "event_id": "evt_1792791844322_0ylpk",
           "event_title": "Удар по Аустре",
+          "base_price": 18,
+          "status": "default",
+          "status_label": "СУВЕРЕННЫЙ ДЕФОЛТ"
+        },
+        {
+          "timestamp": 1792791858129,
+          "price": 10.0997,
+          "drift": -0.0357,
+          "volatility": 0.018,
+          "decay": 0.9,
+          "event_id": "evt_1792791858129_vj5vd",
+          "event_title": "Удар по НПЗ Аустры",
           "base_price": 18,
           "status": "default",
           "status_label": "СУВЕРЕННЫЙ ДЕФОЛТ"
@@ -4973,6 +4985,22 @@
   },
   "events": [
     {
+      "id": "evt_1792793548449_8sje9",
+      "timestamp": 1792793548449,
+      "title": "Удар по НПЗ Аустры",
+      "raw_text": "Один из прилетов в аустрийский НПЗ, зафиксированный местным жителем на видео",
+      "impacts": [
+        {
+          "ticker": "VYN",
+          "drift": -0.05,
+          "volatility": 0.022,
+          "decay": 0.91,
+          "reason": "Удар по ключевой инфраструктуре (НПЗ) наносит прямой ущерб промышленному сектору и энергетической безопасности Аустры, вызывая отток капитала."
+        }
+      ],
+      "source": "groq"
+    },
+    {
       "id": "evt_1792791858129_vj5vd",
       "timestamp": 1792791858129,
       "title": "Удар по НПЗ Аустры",
@@ -7954,22 +7982,6 @@
         },
         {
           "ticker": "TGR",
-          "drift": 0.0005,
-          "volatility": 0.005,
-          "decay": 0.9,
-          "reason": "Позитивные геополитические или экономические факторы"
-        }
-      ],
-      "source": "telegram_history"
-    },
-    {
-      "id": "evt_1792506943000_message2727",
-      "timestamp": 1792506943000,
-      "title": "ТУР №5 • 🏝️ ЯРЛАНДИЯ •  ИИХО • ДИВИЗИОН ПРЕТЕН...",
-      "raw_text": "ТУР №5 • 🏝️ ЯРЛАНДИЯ •  ИИХО • ДИВИЗИОН ПРЕТЕНДЕНТОВ 🏒Матч 2: МАН 4:0 ЭШК",
-      "impacts": [
-        {
-          "ticker": "YRL",
           "drift": 0.0005,
           "volatility": 0.005,
           "decay": 0.9,
