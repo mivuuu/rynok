@@ -160,6 +160,54 @@ function parseAdminCommand(fullText: string, userId: number, adminIds: number[])
     }
   }
 
+  // /default <TICKER> [NEW_BASE] [TITLE...]
+  // Example: /default VYN 20 Военный крах и блокада хунты
+  if (cmd === '/default' && parts.length >= 2) {
+    const ticker = parts[1].toUpperCase();
+    const newBase = parseFloat(parts[2]) || (COUNTRIES[ticker]?.basePrice ? COUNTRIES[ticker].basePrice * 0.12 : 20);
+    const title = parts.slice(3).join(' ') || `Объявление суверенного дефолта ${ticker}`;
+
+    if (COUNTRIES[ticker]) {
+      return {
+        event_title: title,
+        source: 'admin',
+        impacts: [{
+          ticker,
+          drift: -0.04,
+          volatility: 0.025,
+          decay: 0.92,
+          status: 'default',
+          new_base_price: newBase,
+          reason: 'Официальное объявление суверенного дефолта'
+        }]
+      };
+    }
+  }
+
+  // /rebuild <TICKER> [NEW_BASE] [TITLE...]
+  // Example: /rebuild VYN 50 Мирный договор и начало восстановления
+  if (cmd === '/rebuild' && parts.length >= 2) {
+    const ticker = parts[1].toUpperCase();
+    const newBase = parseFloat(parts[2]) || (COUNTRIES[ticker]?.basePrice ? COUNTRIES[ticker].basePrice * 0.40 : 50);
+    const title = parts.slice(3).join(' ') || `Программа послевоенного восстановления ${ticker}`;
+
+    if (COUNTRIES[ticker]) {
+      return {
+        event_title: title,
+        source: 'admin',
+        impacts: [{
+          ticker,
+          drift: 0.025,
+          volatility: 0.015,
+          decay: 0.90,
+          status: 'rebuilding',
+          new_base_price: newBase,
+          reason: 'Мирные соглашения и начало восстановительных работ'
+        }]
+      };
+    }
+  }
+
   return null;
 }
 
@@ -230,14 +278,28 @@ async function commitMarketUpdate(
       country.sensitivity.baseVolatility
     );
 
+    let stampedPrice = exactCurrentPrice;
+    if (impact.status === 'default' && impact.new_base_price) {
+      stampedPrice = impact.new_base_price;
+    } else if (impact.status === 'rebuilding' && impact.new_base_price && stampedPrice < impact.new_base_price) {
+      stampedPrice = (stampedPrice + impact.new_base_price) / 2;
+    }
+
     const newAnchor: MarketAnchor = {
       timestamp: now,
-      price: exactCurrentPrice,
+      price: Number(stampedPrice.toFixed(4)),
       drift: impact.drift,
       volatility: impact.volatility,
       decay: impact.decay,
       event_id: eventId,
-      event_title: analysis.event_title
+      event_title: analysis.event_title,
+      base_price: impact.new_base_price ?? currRecord.current_anchor.base_price,
+      status: impact.status ?? currRecord.current_anchor.status,
+      status_label: impact.status === 'default'
+        ? 'СУВЕРЕННЫЙ ДЕФОЛТ'
+        : impact.status === 'rebuilding'
+          ? 'ПОСЛЕВОЕННОЕ ВОССТАНОВЛЕНИЕ'
+          : currRecord.current_anchor.status_label
     };
 
     currRecord.history_anchors.push(currRecord.current_anchor);

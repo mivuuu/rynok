@@ -66,7 +66,7 @@ export function getMinuteStep(ticker, minuteTimestamp, minutesSinceAnchor, ancho
   let shockDrift = anchor.drift * effectiveDecay;
 
   // 2. Mean Reversion and Soft Corridor enforcement (±25% target corridor)
-  const basePrice = BASE_PRICES[ticker] ?? anchor.price ?? 100;
+  const basePrice = anchor.base_price ?? BASE_PRICES[ticker] ?? anchor.price ?? 100;
   const price = currentPrice ?? anchor.price;
   const deviation = (price - basePrice) / basePrice;
   const absDev = Math.abs(deviation);
@@ -76,7 +76,12 @@ export function getMinuteStep(ticker, minuteTimestamp, minutesSinceAnchor, ancho
   const kIn = 0.0003;    // Gentle background drift inside corridor
   const kOut = 0.022;    // Progressive restoring pull outside corridor (~1h cooling)
 
-  if (absDev <= CORRIDOR) {
+  const isDefaulted = anchor.status === 'default';
+
+  if (isDefaulted && deviation < 0) {
+    // In sovereign default, downward war shocks are not pulled back up forcefully
+    meanReversionPull = -kIn * 0.1 * deviation;
+  } else if (absDev <= CORRIDOR) {
     meanReversionPull = -Math.sign(deviation) * kIn * (absDev / CORRIDOR);
   } else {
     const excess = absDev - CORRIDOR;
@@ -89,7 +94,7 @@ export function getMinuteStep(ticker, minuteTimestamp, minutesSinceAnchor, ancho
   // Damping shock drift if it tries to push further away from the corridor
   if (deviation > 0.20 && shockDrift > 0) {
     shockDrift *= Math.max(0.1, 1 - (deviation - 0.20) / 0.15);
-  } else if (deviation < -0.20 && shockDrift < 0) {
+  } else if (!isDefaulted && deviation < -0.20 && shockDrift < 0) {
     shockDrift *= Math.max(0.1, 1 - (-deviation - 0.20) / 0.15);
   }
 

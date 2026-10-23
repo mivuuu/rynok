@@ -201,11 +201,17 @@ class RynokTerminal {
     if (mobileTickerBadge) mobileTickerBadge.textContent = ticker;
 
     // Update header info
-    const badgeEl = document.getElementById('activeTickerBadge');
-    if (badgeEl) badgeEl.textContent = ticker;
+    const currRecord = this.marketState?.currencies?.[ticker];
+    const status = currRecord?.current_anchor?.status;
+    let statusBadgeHtml = '';
+    if (status === 'default') {
+      statusBadgeHtml = `<span class="status-badge-inline badge-default">🔴 ДЕФОЛТ</span>`;
+    } else if (status === 'rebuilding') {
+      statusBadgeHtml = `<span class="status-badge-inline badge-rebuilding">🟡 ВОССТАНОВЛЕНИЕ</span>`;
+    }
 
     const titleEl = document.getElementById('activeCurrencyTitle');
-    if (titleEl) titleEl.textContent = `${country.currencyName} / ${country.countryName}`;
+    if (titleEl) titleEl.innerHTML = `${country.currencyName} / ${country.countryName} ${statusBadgeHtml}`;
 
     // Update sector tags
     const sectorsEl = document.getElementById('activeSectorTags');
@@ -413,6 +419,13 @@ class RynokTerminal {
     listEl.innerHTML = sorted.map(country => {
       const isVisible = this.filterMatches(country);
       const primarySector = country.sectors[0] ? (SECTOR_LABELS[country.sectors[0]]?.label || country.sectors[0]) : '';
+      const currRecord = this.marketState?.currencies?.[country.ticker];
+      const status = currRecord?.current_anchor?.status;
+      const statusBadge = status === 'default' 
+        ? `<span class="status-badge-inline badge-default" style="font-size:8px; padding:0 4px;">ДЕФОЛТ</span>`
+        : status === 'rebuilding' 
+          ? `<span class="status-badge-inline badge-rebuilding" style="font-size:8px; padding:0 4px;">ВОССТ.</span>` 
+          : '';
 
       return `
         <div class="currency-row ${country.ticker === this.activeTicker ? 'active' : ''}" 
@@ -425,6 +438,7 @@ class RynokTerminal {
             <div class="row-names">
               <div class="row-ticker-line">
                 <span class="row-ticker">${country.ticker}</span>
+                ${statusBadge}
                 <span class="row-sectors-inline">${primarySector}</span>
               </div>
               <span class="row-country">${country.countryName}</span>
@@ -539,9 +553,32 @@ class RynokTerminal {
       return `<span class="sector-tag" style="font-size: 11px;">${info.label}</span>`;
     }).join(' ');
 
-    const stats = country.stats;
+    const currRecord = this.marketState?.currencies?.[ticker];
+    const currentAnchor = currRecord?.current_anchor;
+
+    let statusAlertHtml = '';
+    if (currentAnchor?.status === 'default') {
+      statusAlertHtml = `
+        <div class="dossier-status-alert alert-default">
+          🔴 СУВЕРЕННЫЙ ДЕФОЛТ / ВОЕННЫЙ КРИЗИС
+          <div style="font-size: 11px; opacity: 0.85; margin-top: 3px;">
+            Кредитный рейтинг снижен до категории «D». Базовый эквивалент девальвирован из-за уничтожения энергосети, гибели руководства и международной блокады хунты.
+          </div>
+        </div>
+      `;
+    } else if (currentAnchor?.status === 'rebuilding') {
+      statusAlertHtml = `
+        <div class="dossier-status-alert alert-rebuilding">
+          🟡 ПОСЛЕВОЕННОЕ ВОССТАНОВЛЕНИЕ
+          <div style="font-size: 11px; opacity: 0.85; margin-top: 3px;">
+            Действует режим мирного урегулирования и международной реконструкции экономики.
+          </div>
+        </div>
+      `;
+    }
 
     bodyEl.innerHTML = `
+      ${statusAlertHtml}
       <div style="display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 4px;">
         ${sectorsHtml}
       </div>
