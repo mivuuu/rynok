@@ -1,16 +1,16 @@
 {
   "version": 1,
-  "last_updated": 1792910658385,
+  "last_updated": 1792913359265,
   "genesis_timestamp": 1790267976000,
   "currencies": {
     "ETH": {
       "current_anchor": {
-        "timestamp": 1792910658385,
-        "price": 265.6168,
-        "drift": 0.0062,
-        "volatility": 0.008,
+        "timestamp": 1792913359265,
+        "price": 271.6231,
+        "drift": 0.0046,
+        "volatility": 0.005,
         "decay": 0.9,
-        "event_id": "evt_1792910658385_52hm1",
+        "event_id": "evt_1792913359265_h1cpj",
         "event_title": "Прокон: безвиз с 12 странами"
       },
       "history_anchors": [
@@ -589,6 +589,15 @@
           "decay": 0.93,
           "event_id": "evt_1792866123576_dh9yd",
           "event_title": "Планы Гросса по вербовке из Негеции"
+        },
+        {
+          "timestamp": 1792910658385,
+          "price": 265.6168,
+          "drift": 0.0062,
+          "volatility": 0.008,
+          "decay": 0.9,
+          "event_id": "evt_1792910658385_52hm1",
+          "event_title": "Прокон: безвиз с 12 странами"
         }
       ]
     },
@@ -1009,12 +1018,12 @@
     },
     "NEL": {
       "current_anchor": {
-        "timestamp": 1792910658385,
-        "price": 202.0119,
-        "drift": 0.0057,
-        "volatility": 0.008,
+        "timestamp": 1792913359265,
+        "price": 211.172,
+        "drift": 0.0043,
+        "volatility": 0.005,
         "decay": 0.9,
-        "event_id": "evt_1792910658385_52hm1",
+        "event_id": "evt_1792913359265_h1cpj",
         "event_title": "Прокон: безвиз с 12 странами"
       },
       "history_anchors": [
@@ -1818,17 +1827,26 @@
           "decay": 0.9,
           "event_id": "evt_1792890143285_nsdl8",
           "event_title": "Восстановление инфраструктуры Негеции"
+        },
+        {
+          "timestamp": 1792910658385,
+          "price": 202.0119,
+          "drift": 0.0057,
+          "volatility": 0.008,
+          "decay": 0.9,
+          "event_id": "evt_1792910658385_52hm1",
+          "event_title": "Прокон: безвиз с 12 странами"
         }
       ]
     },
     "VNG": {
       "current_anchor": {
-        "timestamp": 1792910658385,
-        "price": 77.1418,
-        "drift": 0.0047,
-        "volatility": 0.008,
+        "timestamp": 1792913359265,
+        "price": 80.595,
+        "drift": 0.0035,
+        "volatility": 0.005,
         "decay": 0.9,
-        "event_id": "evt_1792910658385_52hm1",
+        "event_id": "evt_1792913359265_h1cpj",
         "event_title": "Прокон: безвиз с 12 странами"
       },
       "history_anchors": [
@@ -2497,17 +2515,26 @@
           "decay": 0.91,
           "event_id": "evt_1792886777480_wixzj",
           "event_title": "Военная экспансия Негеции в проливах"
+        },
+        {
+          "timestamp": 1792910658385,
+          "price": 77.1418,
+          "drift": 0.0047,
+          "volatility": 0.008,
+          "decay": 0.9,
+          "event_id": "evt_1792910658385_52hm1",
+          "event_title": "Прокон: безвиз с 12 странами"
         }
       ]
     },
     "YRL": {
       "current_anchor": {
-        "timestamp": 1792910658385,
-        "price": 74.7547,
-        "drift": 0.0044,
-        "volatility": 0.008,
+        "timestamp": 1792913359265,
+        "price": 74.8916,
+        "drift": 0.0033,
+        "volatility": 0.005,
         "decay": 0.9,
-        "event_id": "evt_1792910658385_52hm1",
+        "event_id": "evt_1792913359265_h1cpj",
         "event_title": "Прокон: безвиз с 12 странами"
       },
       "history_anchors": [
@@ -2726,6 +2753,15 @@
           "decay": 0.9,
           "event_id": "evt_1792692756010_0uhv5",
           "event_title": "Топы:\nВВП:\n1. Люменария — $38,6 трлн\n2. Аустра ..."
+        },
+        {
+          "timestamp": 1792910658385,
+          "price": 74.7547,
+          "drift": 0.0044,
+          "volatility": 0.008,
+          "decay": 0.9,
+          "event_id": "evt_1792910658385_52hm1",
+          "event_title": "Прокон: безвиз с 12 странами"
         }
       ]
     },
@@ -2942,12 +2978,12 @@
     },
     "OIL": {
       "current_anchor": {
-        "timestamp": 1792910658385,
-        "price": 55.9455,
-        "drift": 0.0042,
-        "volatility": 0.008,
+        "timestamp": 1792913359265,
+        "price": 57.747,
+        "drift": 0.0032,
+        "volatility": 0.005,
         "decay": 0.9,
-        "event_id": "evt_1792910658385_52hm1",
+        "event_id": "evt_1792913359265_h1cpj",
         "event_title": "Прокон: безвиз с 12 странами"
       },
       "history_anchors": [
@@ -3544,6 +3580,15 @@
           "decay": 0.9,
           "event_id": "evt_1792866123576_dh9yd",
           "event_title": "Планы Гросса по вербовке из Негеции"
+        },
+        {
+          "timestamp": 1792910658385,
+          "price": 55.9455,
+          "drift": 0.0042,
+          "volatility": 0.008,
+          "decay": 0.9,
+          "event_id": "evt_1792910658385_52hm1",
+          "event_title": "Прокон: безвиз с 12 странами"
         }
       ]
     },
@@ -3683,12 +3728,12 @@
     },
     "SHK": {
       "current_anchor": {
-        "timestamp": 1792910658385,
-        "price": 29.1932,
-        "drift": 0.0036,
-        "volatility": 0.008,
+        "timestamp": 1792913359265,
+        "price": 29.783,
+        "drift": 0.0027,
+        "volatility": 0.005,
         "decay": 0.9,
-        "event_id": "evt_1792910658385_52hm1",
+        "event_id": "evt_1792913359265_h1cpj",
         "event_title": "Прокон: безвиз с 12 странами"
       },
       "history_anchors": [
@@ -3844,17 +3889,26 @@
           "decay": 0.9,
           "event_id": "evt_1792692756010_0uhv5",
           "event_title": "Топы:\nВВП:\n1. Люменария — $38,6 трлн\n2. Аустра ..."
+        },
+        {
+          "timestamp": 1792910658385,
+          "price": 29.1932,
+          "drift": 0.0036,
+          "volatility": 0.008,
+          "decay": 0.9,
+          "event_id": "evt_1792910658385_52hm1",
+          "event_title": "Прокон: безвиз с 12 странами"
         }
       ]
     },
     "KRN": {
       "current_anchor": {
-        "timestamp": 1792910658385,
-        "price": 20.8629,
-        "drift": 0.0035,
-        "volatility": 0.008,
+        "timestamp": 1792913359265,
+        "price": 21.1645,
+        "drift": 0.0026,
+        "volatility": 0.005,
         "decay": 0.9,
-        "event_id": "evt_1792910658385_52hm1",
+        "event_id": "evt_1792913359265_h1cpj",
         "event_title": "Прокон: безвиз с 12 странами"
       },
       "history_anchors": [
@@ -3974,17 +4028,26 @@
           "decay": 0.9,
           "event_id": "evt_1792692756010_0uhv5",
           "event_title": "Топы:\nВВП:\n1. Люменария — $38,6 трлн\n2. Аустра ..."
+        },
+        {
+          "timestamp": 1792910658385,
+          "price": 20.8629,
+          "drift": 0.0035,
+          "volatility": 0.008,
+          "decay": 0.9,
+          "event_id": "evt_1792910658385_52hm1",
+          "event_title": "Прокон: безвиз с 12 странами"
         }
       ]
     },
     "RSH": {
       "current_anchor": {
-        "timestamp": 1792910658385,
-        "price": 17.3685,
-        "drift": 0.0033,
-        "volatility": 0.008,
+        "timestamp": 1792913359265,
+        "price": 18.1146,
+        "drift": 0.0025,
+        "volatility": 0.005,
         "decay": 0.9,
-        "event_id": "evt_1792910658385_52hm1",
+        "event_id": "evt_1792913359265_h1cpj",
         "event_title": "Прокон: безвиз с 12 странами"
       },
       "history_anchors": [
@@ -4032,17 +4095,26 @@
           "decay": 0.9,
           "event_id": "evt_1792692756010_0uhv5",
           "event_title": "Топы:\nВВП:\n1. Люменария — $38,6 трлн\n2. Аустра ..."
+        },
+        {
+          "timestamp": 1792910658385,
+          "price": 17.3685,
+          "drift": 0.0033,
+          "volatility": 0.008,
+          "decay": 0.9,
+          "event_id": "evt_1792910658385_52hm1",
+          "event_title": "Прокон: безвиз с 12 странами"
         }
       ]
     },
     "FRT": {
       "current_anchor": {
-        "timestamp": 1792910658385,
-        "price": 16.1215,
-        "drift": 0.0033,
-        "volatility": 0.008,
+        "timestamp": 1792913359265,
+        "price": 16.3729,
+        "drift": 0.0025,
+        "volatility": 0.005,
         "decay": 0.9,
-        "event_id": "evt_1792910658385_52hm1",
+        "event_id": "evt_1792913359265_h1cpj",
         "event_title": "Прокон: безвиз с 12 странами"
       },
       "history_anchors": [
@@ -4459,6 +4531,15 @@
           "decay": 0.9,
           "event_id": "evt_1792839365994_3glek",
           "event_title": "Нейтралитет Фертенберга"
+        },
+        {
+          "timestamp": 1792910658385,
+          "price": 16.1215,
+          "drift": 0.0033,
+          "volatility": 0.008,
+          "decay": 0.9,
+          "event_id": "evt_1792910658385_52hm1",
+          "event_title": "Прокон: безвиз с 12 странами"
         }
       ]
     },
@@ -4984,12 +5065,12 @@
     },
     "URE": {
       "current_anchor": {
-        "timestamp": 1792910658385,
-        "price": 25.5647,
-        "drift": 0.0035,
-        "volatility": 0.008,
+        "timestamp": 1792913359265,
+        "price": 26.3396,
+        "drift": 0.0026,
+        "volatility": 0.005,
         "decay": 0.9,
-        "event_id": "evt_1792910658385_52hm1",
+        "event_id": "evt_1792913359265_h1cpj",
         "event_title": "Прокон: безвиз с 12 странами"
       },
       "history_anchors": [
@@ -5172,17 +5253,26 @@
           "decay": 0.9,
           "event_id": "evt_1792849586771_mj63f",
           "event_title": "ТУР №6 • 24 ОКТЯБРЯ • 🧱 УРИЯ •  ИИХО • 🏒 ДИВИ..."
+        },
+        {
+          "timestamp": 1792910658385,
+          "price": 25.5647,
+          "drift": 0.0035,
+          "volatility": 0.008,
+          "decay": 0.9,
+          "event_id": "evt_1792910658385_52hm1",
+          "event_title": "Прокон: безвиз с 12 странами"
         }
       ]
     },
     "OMY": {
       "current_anchor": {
-        "timestamp": 1792910658385,
-        "price": 4.4737,
-        "drift": 0.0028,
-        "volatility": 0.008,
+        "timestamp": 1792913359265,
+        "price": 4.5598,
+        "drift": 0.0021,
+        "volatility": 0.005,
         "decay": 0.9,
-        "event_id": "evt_1792910658385_52hm1",
+        "event_id": "evt_1792913359265_h1cpj",
         "event_title": "Прокон: безвиз с 12 странами"
       },
       "history_anchors": [
@@ -5284,6 +5374,15 @@
           "decay": 0.9,
           "event_id": "evt_1792692756010_0uhv5",
           "event_title": "Топы:\nВВП:\n1. Люменария — $38,6 трлн\n2. Аустра ..."
+        },
+        {
+          "timestamp": 1792910658385,
+          "price": 4.4737,
+          "drift": 0.0028,
+          "volatility": 0.008,
+          "decay": 0.9,
+          "event_id": "evt_1792910658385_52hm1",
+          "event_title": "Прокон: безвиз с 12 странами"
         }
       ]
     },
@@ -5522,12 +5621,12 @@
     },
     "SVR": {
       "current_anchor": {
-        "timestamp": 1792910658385,
-        "price": 4.9385,
-        "drift": 0.003,
-        "volatility": 0.008,
+        "timestamp": 1792913359265,
+        "price": 5.2423,
+        "drift": 0.0022,
+        "volatility": 0.005,
         "decay": 0.9,
-        "event_id": "evt_1792910658385_52hm1",
+        "event_id": "evt_1792913359265_h1cpj",
         "event_title": "Прокон: безвиз с 12 странами"
       },
       "history_anchors": [
@@ -5602,6 +5701,15 @@
           "decay": 0.9,
           "event_id": "evt_1792692756010_0uhv5",
           "event_title": "Топы:\nВВП:\n1. Люменария — $38,6 трлн\n2. Аустра ..."
+        },
+        {
+          "timestamp": 1792910658385,
+          "price": 4.9385,
+          "drift": 0.003,
+          "volatility": 0.008,
+          "decay": 0.9,
+          "event_id": "evt_1792910658385_52hm1",
+          "event_title": "Прокон: безвиз с 12 странами"
         }
       ]
     },
@@ -5656,6 +5764,99 @@
     }
   },
   "events": [
+    {
+      "id": "evt_1792913359265_h1cpj",
+      "timestamp": 1792913359265,
+      "title": "Прокон: безвиз с 12 странами",
+      "raw_text": "Правительство Проциона желает ввести безвизовый режим с этим государствами:\nЯрландия \nРасшатай\nЭшкирия\nВергилия\nНегеция\nФертенберг\nУрия\nЮжный Сапах\nГайяна\nГросс\nЛюменария \nНовая Кайландия",
+      "impacts": [
+        {
+          "ticker": "YRL",
+          "drift": 0.0033,
+          "volatility": 0.005,
+          "decay": 0.9,
+          "reason": "Безвизовый режим с Проконом"
+        },
+        {
+          "ticker": "RSH",
+          "drift": 0.0025,
+          "volatility": 0.005,
+          "decay": 0.9,
+          "reason": "Безвизовый режим с Проконом"
+        },
+        {
+          "ticker": "SHK",
+          "drift": 0.0027,
+          "volatility": 0.005,
+          "decay": 0.9,
+          "reason": "Безвизовый режим с Проконом"
+        },
+        {
+          "ticker": "VNG",
+          "drift": 0.0035,
+          "volatility": 0.005,
+          "decay": 0.9,
+          "reason": "Безвизовый режим с Проконом"
+        },
+        {
+          "ticker": "NEL",
+          "drift": 0.0043,
+          "volatility": 0.005,
+          "decay": 0.9,
+          "reason": "Безвизовый режим с Проконом"
+        },
+        {
+          "ticker": "FRT",
+          "drift": 0.0025,
+          "volatility": 0.005,
+          "decay": 0.9,
+          "reason": "Безвизовый режим с Проконом"
+        },
+        {
+          "ticker": "URE",
+          "drift": 0.0026,
+          "volatility": 0.005,
+          "decay": 0.9,
+          "reason": "Безвизовый режим с Проконом"
+        },
+        {
+          "ticker": "SVR",
+          "drift": 0.0022,
+          "volatility": 0.005,
+          "decay": 0.9,
+          "reason": "Безвизовый режим с Проконом"
+        },
+        {
+          "ticker": "OMY",
+          "drift": 0.0021,
+          "volatility": 0.005,
+          "decay": 0.9,
+          "reason": "Безвизовый режим с Проконом"
+        },
+        {
+          "ticker": "OIL",
+          "drift": 0.0032,
+          "volatility": 0.005,
+          "decay": 0.9,
+          "reason": "Безвизовый режим с Проконом"
+        },
+        {
+          "ticker": "ETH",
+          "drift": 0.0046,
+          "volatility": 0.005,
+          "decay": 0.9,
+          "reason": "Безвизовый режим с Проконом"
+        },
+        {
+          "ticker": "KRN",
+          "drift": 0.0026,
+          "volatility": 0.005,
+          "decay": 0.9,
+          "reason": "Безвизовый режим с Проконом"
+        }
+      ],
+      "source": "groq"
+    },
     {
       "id": "evt_1792910658385_52hm1",
       "timestamp": 1792910658385,
@@ -8684,36 +8885,6 @@
           "volatility": 0.015,
           "decay": 0.92,
           "reason": "Анонс выборов создает умеренную неопределенность на рынке, но отсутствие признаков кризиса или радикальных изменений политики поддерживает стабильность с небольшим ростом волатильности."
-        }
-      ],
-      "source": "groq"
-    },
-    {
-      "id": "evt_1792689799700_0f1nu",
-      "timestamp": 1792689799700,
-      "title": "Турне ПМ Гросса: Пагристан и Фертенберг",
-      "raw_text": "Я думаю, нам стоит сделать небольшое турне, после Пагристана у нас на примете фертенбергцы — заявил ПМ-Гросса",
-      "impacts": [
-        {
-          "ticker": "OIL",
-          "drift": 0.0158,
-          "volatility": 0.008,
-          "decay": 0.92,
-          "reason": "Демонстрация активной дипломатической инициативы и расширения влияния через визиты в Пагристан и Фертенберг укрепляет позиции правительства."
-        },
-        {
-          "ticker": "TGR",
-          "drift": 0.0067,
-          "volatility": 0.01,
-          "decay": 0.9,
-          "reason": "Ожидание визита высокопоставленного лица из крупного государства (Гросс) может повысить доверие к стабильности и открытости экономики."
-        },
-        {
-          "ticker": "FRT",
-          "drift": 0.0083,
-          "volatility": 0.01,
-          "decay": 0.9,
-          "reason": "Перспектива визита ПМ Гросса сигнализирует о возможном укреплении торговых или политических связей, что позитивно для валюты."
         }
       ],
       "source": "groq"
