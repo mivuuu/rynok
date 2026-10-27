@@ -541,6 +541,7 @@ class RynokTerminal {
   openDossier(ticker) {
     const country = COUNTRIES[ticker];
     if (!country) return;
+    const stats = country.stats;
 
     const modal = document.getElementById('dossierModal');
     const titleEl = document.getElementById('modalCountryTitle');
