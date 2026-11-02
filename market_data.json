@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": 1793614522184,
+  "last_updated": 1793614633269,
   "genesis_timestamp": 1790267976000,
   "currencies": {
     "ETH": {
@@ -4788,13 +4788,13 @@
     },
     "VTN": {
       "current_anchor": {
-        "timestamp": 1793614297582,
-        "price": 47.6395,
-        "drift": 0.0005,
-        "volatility": 0.005,
+        "timestamp": 1793614633269,
+        "price": 47.648,
+        "drift": 0.005,
+        "volatility": 0.008,
         "decay": 0.9,
-        "event_id": "evt_1793614297582_netus",
-        "event_title": "Страны участники международного конкурса алкого..."
+        "event_id": "evt_1793614633269_rh7em",
+        "event_title": "Массовое признание Проциона и Аурумберга"
       },
       "history_anchors": [
         {
@@ -4904,18 +4904,27 @@
           "decay": 0.9,
           "event_id": "evt_1793613874755_qukeg",
           "event_title": "Международный конкурс алкоголя"
+        },
+        {
+          "timestamp": 1793614297582,
+          "price": 47.6395,
+          "drift": 0.0005,
+          "volatility": 0.005,
+          "decay": 0.9,
+          "event_id": "evt_1793614297582_netus",
+          "event_title": "Страны участники международного конкурса алкого..."
         }
       ]
     },
     "RVN": {
       "current_anchor": {
-        "timestamp": 1792886777480,
-        "price": 32.9302,
-        "drift": -0.0114,
-        "volatility": 0.016,
-        "decay": 0.92,
-        "event_id": "evt_1792886777480_wixzj",
-        "event_title": "Военная экспансия Негеции в проливах"
+        "timestamp": 1793614633269,
+        "price": 37.0156,
+        "drift": 0.0048,
+        "volatility": 0.008,
+        "decay": 0.9,
+        "event_id": "evt_1793614633269_rh7em",
+        "event_title": "Массовое признание Проциона и Аурумберга"
       },
       "history_anchors": [
         {
@@ -4971,18 +4980,27 @@
           "decay": 0.92,
           "event_id": "evt_1792886643960_j2xkw",
           "event_title": "Негеция разместила флот в проливах"
+        },
+        {
+          "timestamp": 1792886777480,
+          "price": 32.9302,
+          "drift": -0.0114,
+          "volatility": 0.016,
+          "decay": 0.92,
+          "event_id": "evt_1792886777480_wixzj",
+          "event_title": "Военная экспансия Негеции в проливах"
         }
       ]
     },
     "SHK": {
       "current_anchor": {
-        "timestamp": 1793385147503,
-        "price": 28.6431,
+        "timestamp": 1793614633269,
+        "price": 29.8862,
         "drift": 0.0045,
         "volatility": 0.008,
         "decay": 0.9,
-        "event_id": "evt_1793385147503_eeght",
-        "event_title": "Раскол по признанию Проциона"
+        "event_id": "evt_1793614633269_rh7em",
+        "event_title": "Массовое признание Проциона и Аурумберга"
       },
       "history_anchors": [
         {
@@ -5191,18 +5209,27 @@
           "decay": 0.94,
           "event_id": "evt_1793268518737_d8zdb",
           "event_title": "Итоги сезона хоккейной сборной Эшкирии"
+        },
+        {
+          "timestamp": 1793385147503,
+          "price": 28.6431,
+          "drift": 0.0045,
+          "volatility": 0.008,
+          "decay": 0.9,
+          "event_id": "evt_1793385147503_eeght",
+          "event_title": "Раскол по признанию Проциона"
         }
       ]
     },
     "KRN": {
       "current_anchor": {
-        "timestamp": 1793385147503,
-        "price": 21.7925,
-        "drift": -0.0017,
-        "volatility": 0.006,
-        "decay": 0.92,
-        "event_id": "evt_1793385147503_eeght",
-        "event_title": "Раскол по признанию Проциона"
+        "timestamp": 1793614633269,
+        "price": 22.2518,
+        "drift": 0.0043,
+        "volatility": 0.008,
+        "decay": 0.9,
+        "event_id": "evt_1793614633269_rh7em",
+        "event_title": "Массовое признание Проциона и Аурумберга"
       },
       "history_anchors": [
         {
@@ -5348,6 +5375,15 @@
           "decay": 0.9,
           "event_id": "evt_1793062441726_3jm3s",
           "event_title": "Правительство Проциона желает ввести безвизовый..."
+        },
+        {
+          "timestamp": 1793385147503,
+          "price": 21.7925,
+          "drift": -0.0017,
+          "volatility": 0.006,
+          "decay": 0.92,
+          "event_id": "evt_1793385147503_eeght",
+          "event_title": "Раскол по признанию Проциона"
         }
       ]
     },
@@ -6117,13 +6153,13 @@
     },
     "VLT": {
       "current_anchor": {
-        "timestamp": 1793614297582,
-        "price": 33.7891,
-        "drift": 0.0005,
-        "volatility": 0.005,
+        "timestamp": 1793614633269,
+        "price": 33.0603,
+        "drift": 0.0043,
+        "volatility": 0.008,
         "decay": 0.9,
-        "event_id": "evt_1793614297582_netus",
-        "event_title": "Страны участники международного конкурса алкого..."
+        "event_id": "evt_1793614633269_rh7em",
+        "event_title": "Массовое признание Проциона и Аурумберга"
       },
       "history_anchors": [
         {
@@ -6287,18 +6323,27 @@
           "decay": 0.9,
           "event_id": "evt_1793613874755_qukeg",
           "event_title": "Международный конкурс алкоголя"
+        },
+        {
+          "timestamp": 1793614297582,
+          "price": 33.7891,
+          "drift": 0.0005,
+          "volatility": 0.005,
+          "decay": 0.9,
+          "event_id": "evt_1793614297582_netus",
+          "event_title": "Страны участники международного конкурса алкого..."
         }
       ]
     },
     "ETW": {
       "current_anchor": {
-        "timestamp": 1792886777480,
-        "price": 38.3954,
-        "drift": -0.0136,
-        "volatility": 0.018,
-        "decay": 0.91,
-        "event_id": "evt_1792886777480_wixzj",
-        "event_title": "Военная экспансия Негеции в проливах"
+        "timestamp": 1793614633269,
+        "price": 41.7401,
+        "drift": 0.0045,
+        "volatility": 0.008,
+        "decay": 0.9,
+        "event_id": "evt_1793614633269_rh7em",
+        "event_title": "Массовое признание Проциона и Аурумберга"
       },
       "history_anchors": [
         {
@@ -6354,18 +6399,27 @@
           "decay": 0.92,
           "event_id": "evt_1792886643960_j2xkw",
           "event_title": "Негеция разместила флот в проливах"
+        },
+        {
+          "timestamp": 1792886777480,
+          "price": 38.3954,
+          "drift": -0.0136,
+          "volatility": 0.018,
+          "decay": 0.91,
+          "event_id": "evt_1792886777480_wixzj",
+          "event_title": "Военная экспансия Негеции в проливах"
         }
       ]
     },
     "AZM": {
       "current_anchor": {
-        "timestamp": 1793454475222,
-        "price": 12.2351,
-        "drift": 0.0032,
-        "volatility": 0.005,
+        "timestamp": 1793614633269,
+        "price": 11.839,
+        "drift": 0.004,
+        "volatility": 0.008,
         "decay": 0.9,
-        "event_id": "evt_1793454475222_8fmra",
-        "event_title": "Дебют Хисолии и Асмаина в элитном дивизионе"
+        "event_id": "evt_1793614633269_rh7em",
+        "event_title": "Массовое признание Проциона и Аурумберга"
       },
       "history_anchors": [
         {
@@ -6619,6 +6673,15 @@
           "decay": 0.9,
           "event_id": "evt_1793438623776_1jxv2",
           "event_title": "Дебют Хисолии и Асماин в элитном дивизионе"
+        },
+        {
+          "timestamp": 1793454475222,
+          "price": 12.2351,
+          "drift": 0.0032,
+          "volatility": 0.005,
+          "decay": 0.9,
+          "event_id": "evt_1793454475222_8fmra",
+          "event_title": "Дебют Хисолии и Асмаина в элитном дивизионе"
         }
       ]
     },
@@ -7127,13 +7190,13 @@
     },
     "OMY": {
       "current_anchor": {
-        "timestamp": 1793385147503,
-        "price": 4.5669,
-        "drift": -0.0014,
-        "volatility": 0.006,
-        "decay": 0.92,
-        "event_id": "evt_1793385147503_eeght",
-        "event_title": "Раскол по признанию Проциона"
+        "timestamp": 1793614633269,
+        "price": 4.2601,
+        "drift": 0.0034,
+        "volatility": 0.008,
+        "decay": 0.9,
+        "event_id": "evt_1793614633269_rh7em",
+        "event_title": "Массовое признание Проциона и Аурумберга"
       },
       "history_anchors": [
         {
@@ -7261,18 +7324,27 @@
           "decay": 0.9,
           "event_id": "evt_1793062441726_3jm3s",
           "event_title": "Правительство Проциона желает ввести безвизовый..."
+        },
+        {
+          "timestamp": 1793385147503,
+          "price": 4.5669,
+          "drift": -0.0014,
+          "volatility": 0.006,
+          "decay": 0.92,
+          "event_id": "evt_1793385147503_eeght",
+          "event_title": "Раскол по признанию Проциона"
         }
       ]
     },
     "TGR": {
       "current_anchor": {
-        "timestamp": 1793614522184,
-        "price": 2.9973,
-        "drift": 0.002,
-        "volatility": 0.005,
+        "timestamp": 1793614633269,
+        "price": 2.9736,
+        "drift": 0.0033,
+        "volatility": 0.008,
         "decay": 0.9,
-        "event_id": "evt_1793614522184_uryjg",
-        "event_title": "Пагристан: начало переговоров"
+        "event_id": "evt_1793614633269_rh7em",
+        "event_title": "Массовое признание Проциона и Аурумберга"
       },
       "history_anchors": [
         {
@@ -7553,6 +7625,15 @@
           "decay": 0.9,
           "event_id": "evt_1793614266253_kze3d",
           "event_title": "Совместное присутствие с делегацией Пагристана"
+        },
+        {
+          "timestamp": 1793614522184,
+          "price": 2.9973,
+          "drift": 0.002,
+          "volatility": 0.005,
+          "decay": 0.9,
+          "event_id": "evt_1793614522184_uryjg",
+          "event_title": "Пагристан: начало переговоров"
         }
       ]
     },
@@ -7746,13 +7827,13 @@
     },
     "FRZ": {
       "current_anchor": {
-        "timestamp": 1792692756010,
-        "price": 9.0164,
-        "drift": 0.0005,
-        "volatility": 0.005,
+        "timestamp": 1793614633269,
+        "price": 8.8446,
+        "drift": 0.004,
+        "volatility": 0.008,
         "decay": 0.9,
-        "event_id": "evt_1792692756010_0uhv5",
-        "event_title": "Топы:\nВВП:\n1. Люменария — $38,6 трлн\n2. Аустра ..."
+        "event_id": "evt_1793614633269_rh7em",
+        "event_title": "Массовое признание Проциона и Аурумберга"
       },
       "history_anchors": [
         {
@@ -7790,11 +7871,99 @@
           "decay": 0.91,
           "event_id": "evt_1792053481000_message2043",
           "event_title": "Негеция предложила Эшкирии, Рохе, Урии, Энланди..."
+        },
+        {
+          "timestamp": 1792692756010,
+          "price": 9.0164,
+          "drift": 0.0005,
+          "volatility": 0.005,
+          "decay": 0.9,
+          "event_id": "evt_1792692756010_0uhv5",
+          "event_title": "Топы:\nВВП:\n1. Люменария — $38,6 трлн\n2. Аустра ..."
         }
       ]
     }
   },
   "events": [
+    {
+      "id": "evt_1793614633269_rh7em",
+      "timestamp": 1793614633269,
+      "title": "Массовое признание Проциона и Аурумберга",
+      "raw_text": "Критания, Мантия, Асмаин, Этрория, Роха, Ферондия, НК, Эшкирия, Пагристан и Гайяна также объявили о признании Проциона и Аурумберга",
+      "impacts": [
+        {
+          "ticker": "VTN",
+          "drift": 0.005,
+          "volatility": 0.008,
+          "decay": 0.9,
+          "reason": "Дипломатическое расширение контактов, умеренный позитив"
+        },
+        {
+          "ticker": "VLT",
+          "drift": 0.0043,
+          "volatility": 0.008,
+          "decay": 0.9,
+          "reason": "Дипломатическое расширение контактов, умеренный позитив"
+        },
+        {
+          "ticker": "AZM",
+          "drift": 0.004,
+          "volatility": 0.008,
+          "decay": 0.9,
+          "reason": "Дипломатическое расширение контактов, умеренный позитив"
+        },
+        {
+          "ticker": "ETW",
+          "drift": 0.0045,
+          "volatility": 0.008,
+          "decay": 0.9,
+          "reason": "Дипломатическое расширение контактов, умеренный позитив"
+        },
+        {
+          "ticker": "RVN",
+          "drift": 0.0048,
+          "volatility": 0.008,
+          "decay": 0.9,
+          "reason": "Дипломатическое расширение контактов, умеренный позитив"
+        },
+        {
+          "ticker": "FRZ",
+          "drift": 0.004,
+          "volatility": 0.008,
+          "decay": 0.9,
+          "reason": "Дипломатическое расширение контактов, умеренный позитив"
+        },
+        {
+          "ticker": "KRN",
+          "drift": 0.0043,
+          "volatility": 0.008,
+          "decay": 0.9,
+          "reason": "Дипломатическое расширение контактов, умеренный позитив"
+        },
+        {
+          "ticker": "SHK",
+          "drift": 0.0045,
+          "volatility": 0.008,
+          "decay": 0.9,
+          "reason": "Дипломатическое расширение контактов, умеренный позитив"
+        },
+        {
+          "ticker": "TGR",
+          "drift": 0.0033,
+          "volatility": 0.008,
+          "decay": 0.9,
+          "reason": "Дипломатическое расширение контактов, умеренный позитив"
+        },
+        {
+          "ticker": "OMY",
+          "drift": 0.0034,
+          "volatility": 0.008,
+          "decay": 0.9,
+          "reason": "Дипломатическое расширение контактов, умеренный позитив"
+        }
+      ],
+      "source": "groq"
+    },
     {
       "id": "evt_1793614522184_uryjg",
       "timestamp": 1793614522184,
@@ -11015,22 +11184,6 @@
           "volatility": 0.007,
           "decay": 0.9,
           "reason": "Слабое давление из-за упоминания в контексте конфликта и обвинений"
-        }
-      ],
-      "source": "groq"
-    },
-    {
-      "id": "evt_1792959106957_w2dod",
-      "timestamp": 1792959106957,
-      "title": "Гросс вводит безвиз с Проционом",
-      "raw_text": "Гросс вводит безвиз с Проционом",
-      "impacts": [
-        {
-          "ticker": "OIL",
-          "drift": 0.0042,
-          "volatility": 0.006,
-          "decay": 0.9,
-          "reason": "Упрощение визового режима с Проционом стимулирует деловые связи и туризм, умеренно поддерживая спрос на Ойл"
         }
       ],
       "source": "groq"
