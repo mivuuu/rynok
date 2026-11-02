@@ -1,16 +1,16 @@
 {
   "version": 1,
-  "last_updated": 1793632813892,
+  "last_updated": 1793632824418,
   "genesis_timestamp": 1790267976000,
   "currencies": {
     "ETH": {
       "current_anchor": {
-        "timestamp": 1793632813892,
-        "price": 281.4483,
+        "timestamp": 1793632824418,
+        "price": 281.3256,
         "drift": 0.0046,
         "volatility": 0.005,
         "decay": 0.9,
-        "event_id": "evt_1793632813892_5m75c",
+        "event_id": "evt_1793632824418_dzj5d",
         "event_title": "ИИХО: Группы ЧМ по хоккею"
       },
       "history_anchors": [
@@ -904,17 +904,26 @@
           "decay": 0.9,
           "event_id": "evt_1793614297582_netus",
           "event_title": "Страны участники международного конкурса алкого..."
+        },
+        {
+          "timestamp": 1793632813892,
+          "price": 281.4483,
+          "drift": 0.0046,
+          "volatility": 0.005,
+          "decay": 0.9,
+          "event_id": "evt_1793632813892_5m75c",
+          "event_title": "ИИХО: Группы ЧМ по хоккею"
         }
       ]
     },
     "VYN": {
       "current_anchor": {
-        "timestamp": 1793632813892,
-        "price": 1.4536,
+        "timestamp": 1793632824418,
+        "price": 1.4541,
         "drift": 0.0043,
         "volatility": 0.005,
         "decay": 0.9,
-        "event_id": "evt_1793632813892_5m75c",
+        "event_id": "evt_1793632824418_dzj5d",
         "event_title": "ИИХО: Группы ЧМ по хоккею",
         "base_price": 18,
         "status": "default",
@@ -1427,29 +1436,32 @@
           "base_price": 18,
           "status": "default",
           "status_label": "СУВЕРЕННЫЙ ДЕФОЛТ"
+        },
+        {
+          "timestamp": 1793632813892,
+          "price": 1.4536,
+          "drift": 0.0043,
+          "volatility": 0.005,
+          "decay": 0.9,
+          "event_id": "evt_1793632813892_5m75c",
+          "event_title": "ИИХО: Группы ЧМ по хоккею",
+          "base_price": 18,
+          "status": "default",
+          "status_label": "СУВЕРЕННЫЙ ДЕФОЛТ"
         }
       ]
     },
     "NEL": {
       "current_anchor": {
-        "timestamp": 1793632813892,
-        "price": 203.1867,
+        "timestamp": 1793632824418,
+        "price": 202.8064,
         "drift": 0.0043,
         "volatility": 0.005,
         "decay": 0.9,
-        "event_id": "evt_1793632813892_5m75c",
+        "event_id": "evt_1793632824418_dzj5d",
         "event_title": "ИИХО: Группы ЧМ по хоккею"
       },
       "history_anchors": [
-        {
-          "timestamp": 1791365410000,
-          "price": 130.164,
-          "drift": 0.0005,
-          "volatility": 0.005,
-          "decay": 0.9,
-          "event_id": "evt_1791365410000_message1878",
-          "event_title": "Негеция возобновила изучение новой коледонии и ..."
-        },
         {
           "timestamp": 1791366827000,
           "price": 133.6215,
@@ -2340,29 +2352,29 @@
           "decay": 0.88,
           "event_id": "evt_1793615253243_e0clk",
           "event_title": "Канцлер Негеции поздравил Чен Евгения с победам..."
+        },
+        {
+          "timestamp": 1793632813892,
+          "price": 203.1867,
+          "drift": 0.0043,
+          "volatility": 0.005,
+          "decay": 0.9,
+          "event_id": "evt_1793632813892_5m75c",
+          "event_title": "ИИХО: Группы ЧМ по хоккею"
         }
       ]
     },
     "VNG": {
       "current_anchor": {
-        "timestamp": 1793632813892,
-        "price": 104.0694,
+        "timestamp": 1793632824418,
+        "price": 104.3398,
         "drift": 0.0035,
         "volatility": 0.005,
         "decay": 0.9,
-        "event_id": "evt_1793632813892_5m75c",
+        "event_id": "evt_1793632824418_dzj5d",
         "event_title": "ИИХО: Группы ЧМ по хоккею"
       },
       "history_anchors": [
-        {
-          "timestamp": 1790931360000,
-          "price": 95.0116,
-          "drift": -0.0082,
-          "volatility": 0.015,
-          "decay": 0.91,
-          "event_id": "evt_1790931360000_message1537",
-          "event_title": "Президент Вергилии: «Создание подобного квази г..."
-        },
         {
           "timestamp": 1790931443000,
           "price": 94.3086,
@@ -3253,17 +3265,26 @@
           "decay": 0.9,
           "event_id": "evt_1793614297582_netus",
           "event_title": "Страны участники международного конкурса алкого..."
+        },
+        {
+          "timestamp": 1793632813892,
+          "price": 104.0694,
+          "drift": 0.0035,
+          "volatility": 0.005,
+          "decay": 0.9,
+          "event_id": "evt_1793632813892_5m75c",
+          "event_title": "ИИХО: Группы ЧМ по хоккею"
         }
       ]
     },
     "YRL": {
       "current_anchor": {
-        "timestamp": 1793632813892,
-        "price": 82.1769,
+        "timestamp": 1793632824418,
+        "price": 82.573,
         "drift": 0.0033,
         "volatility": 0.005,
         "decay": 0.9,
-        "event_id": "evt_1793632813892_5m75c",
+        "event_id": "evt_1793632824418_dzj5d",
         "event_title": "ИИХО: Группы ЧМ по хоккею"
       },
       "history_anchors": [
@@ -3617,6 +3638,15 @@
           "decay": 0.9,
           "event_id": "evt_1793614446080_tdnid",
           "event_title": "Признание Проциона и Аурумберга Ярландией"
+        },
+        {
+          "timestamp": 1793632813892,
+          "price": 82.1769,
+          "drift": 0.0033,
+          "volatility": 0.005,
+          "decay": 0.9,
+          "event_id": "evt_1793632813892_5m75c",
+          "event_title": "ИИХО: Группы ЧМ по хоккею"
         }
       ]
     },
@@ -3932,24 +3962,15 @@
     },
     "OIL": {
       "current_anchor": {
-        "timestamp": 1793632813892,
-        "price": 67.1695,
+        "timestamp": 1793632824418,
+        "price": 67.1192,
         "drift": 0.0032,
         "volatility": 0.005,
         "decay": 0.9,
-        "event_id": "evt_1793632813892_5m75c",
+        "event_id": "evt_1793632824418_dzj5d",
         "event_title": "ИИХО: Группы ЧМ по хоккею"
       },
       "history_anchors": [
-        {
-          "timestamp": 1792015288000,
-          "price": 61.224,
-          "drift": 0.0042,
-          "volatility": 0.006,
-          "decay": 0.85,
-          "event_id": "evt_1792015288000_message2037",
-          "event_title": "Образование в учебном заведении для человека, и..."
-        },
         {
           "timestamp": 1792507324000,
           "price": 66.7819,
@@ -4840,17 +4861,26 @@
           "decay": 0.9,
           "event_id": "evt_1793627375805_0973g",
           "event_title": "Открытие посольства Пагристана в Гроссе"
+        },
+        {
+          "timestamp": 1793632813892,
+          "price": 67.1695,
+          "drift": 0.0032,
+          "volatility": 0.005,
+          "decay": 0.9,
+          "event_id": "evt_1793632813892_5m75c",
+          "event_title": "ИИХО: Группы ЧМ по хоккею"
         }
       ]
     },
     "VTN": {
       "current_anchor": {
-        "timestamp": 1793632813892,
-        "price": 49.9806,
+        "timestamp": 1793632824418,
+        "price": 50.1499,
         "drift": 0.003,
         "volatility": 0.005,
         "decay": 0.9,
-        "event_id": "evt_1793632813892_5m75c",
+        "event_id": "evt_1793632824418_dzj5d",
         "event_title": "ИИХО: Группы ЧМ по хоккею"
       },
       "history_anchors": [
@@ -4988,17 +5018,26 @@
           "decay": 0.9,
           "event_id": "evt_1793614652558_k1npi",
           "event_title": "Массовое признание Проциона и Аурумберга"
+        },
+        {
+          "timestamp": 1793632813892,
+          "price": 49.9806,
+          "drift": 0.003,
+          "volatility": 0.005,
+          "decay": 0.9,
+          "event_id": "evt_1793632813892_5m75c",
+          "event_title": "ИИХО: Группы ЧМ по хоккею"
         }
       ]
     },
     "RVN": {
       "current_anchor": {
-        "timestamp": 1793632813892,
-        "price": 36.8669,
+        "timestamp": 1793632824418,
+        "price": 37.0388,
         "drift": 0.0029,
         "volatility": 0.005,
         "decay": 0.9,
-        "event_id": "evt_1793632813892_5m75c",
+        "event_id": "evt_1793632824418_dzj5d",
         "event_title": "ИИХО: Группы ЧМ по хоккею"
       },
       "history_anchors": [
@@ -5082,6 +5121,15 @@
           "decay": 0.9,
           "event_id": "evt_1793614652558_k1npi",
           "event_title": "Массовое признание Проциона и Аурумберга"
+        },
+        {
+          "timestamp": 1793632813892,
+          "price": 36.8669,
+          "drift": 0.0029,
+          "volatility": 0.005,
+          "decay": 0.9,
+          "event_id": "evt_1793632813892_5m75c",
+          "event_title": "ИИХО: Группы ЧМ по хоккею"
         }
       ]
     },
@@ -5500,12 +5548,12 @@
     },
     "RSH": {
       "current_anchor": {
-        "timestamp": 1793632813892,
-        "price": 19.3826,
+        "timestamp": 1793632824418,
+        "price": 19.3991,
         "drift": 0.0025,
         "volatility": 0.005,
         "decay": 0.9,
-        "event_id": "evt_1793632813892_5m75c",
+        "event_id": "evt_1793632824418_dzj5d",
         "event_title": "ИИХО: Группы ЧМ по хоккею"
       },
       "history_anchors": [
@@ -5688,6 +5736,15 @@
           "decay": 0.9,
           "event_id": "evt_1793614450397_jwyqa",
           "event_title": "Открытие культурного центра Проциона в Расшатая"
+        },
+        {
+          "timestamp": 1793632813892,
+          "price": 19.3826,
+          "drift": 0.0025,
+          "volatility": 0.005,
+          "decay": 0.9,
+          "event_id": "evt_1793632813892_5m75c",
+          "event_title": "ИИХО: Группы ЧМ по хоккею"
         }
       ]
     },
@@ -6466,12 +6523,12 @@
     },
     "ETW": {
       "current_anchor": {
-        "timestamp": 1793632813892,
-        "price": 41.3065,
+        "timestamp": 1793632824418,
+        "price": 41.3029,
         "drift": 0.0027,
         "volatility": 0.005,
         "decay": 0.9,
-        "event_id": "evt_1793632813892_5m75c",
+        "event_id": "evt_1793632824418_dzj5d",
         "event_title": "ИИХО: Группы ЧМ по хоккею"
       },
       "history_anchors": [
@@ -6555,17 +6612,26 @@
           "decay": 0.9,
           "event_id": "evt_1793614652558_k1npi",
           "event_title": "Массовое признание Проциона и Аурумберга"
+        },
+        {
+          "timestamp": 1793632813892,
+          "price": 41.3065,
+          "drift": 0.0027,
+          "volatility": 0.005,
+          "decay": 0.9,
+          "event_id": "evt_1793632813892_5m75c",
+          "event_title": "ИИХО: Группы ЧМ по хоккею"
         }
       ]
     },
     "AZM": {
       "current_anchor": {
-        "timestamp": 1793632813892,
-        "price": 11.7247,
+        "timestamp": 1793632824418,
+        "price": 11.7184,
         "drift": 0.0024,
         "volatility": 0.005,
         "decay": 0.9,
-        "event_id": "evt_1793632813892_5m75c",
+        "event_id": "evt_1793632824418_dzj5d",
         "event_title": "ИИХО: Группы ЧМ по хоккею"
       },
       "history_anchors": [
@@ -6847,17 +6913,26 @@
           "decay": 0.9,
           "event_id": "evt_1793614652558_k1npi",
           "event_title": "Массовое признание Проциона и Аурумберга"
+        },
+        {
+          "timestamp": 1793632813892,
+          "price": 11.7247,
+          "drift": 0.0024,
+          "volatility": 0.005,
+          "decay": 0.9,
+          "event_id": "evt_1793632813892_5m75c",
+          "event_title": "ИИХО: Группы ЧМ по хоккею"
         }
       ]
     },
     "HRN": {
       "current_anchor": {
-        "timestamp": 1793632813892,
-        "price": 10.0881,
+        "timestamp": 1793632824418,
+        "price": 10.1031,
         "drift": 0.0023,
         "volatility": 0.005,
         "decay": 0.9,
-        "event_id": "evt_1793632813892_5m75c",
+        "event_id": "evt_1793632824418_dzj5d",
         "event_title": "ИИХО: Группы ЧМ по хоккею"
       },
       "history_anchors": [
@@ -7094,17 +7169,26 @@
           "decay": 0.9,
           "event_id": "evt_1793470138539_arpaj",
           "event_title": "Соболезнования Хисолии по теракту в Люмерании"
+        },
+        {
+          "timestamp": 1793632813892,
+          "price": 10.0881,
+          "drift": 0.0023,
+          "volatility": 0.005,
+          "decay": 0.9,
+          "event_id": "evt_1793632813892_5m75c",
+          "event_title": "ИИХО: Группы ЧМ по хоккею"
         }
       ]
     },
     "URE": {
       "current_anchor": {
-        "timestamp": 1793632813892,
-        "price": 26.2833,
+        "timestamp": 1793632824418,
+        "price": 26.2707,
         "drift": 0.0026,
         "volatility": 0.005,
         "decay": 0.9,
-        "event_id": "evt_1793632813892_5m75c",
+        "event_id": "evt_1793632824418_dzj5d",
         "event_title": "ИИХО: Группы ЧМ по хоккею"
       },
       "history_anchors": [
@@ -7377,6 +7461,15 @@
           "decay": 0.9,
           "event_id": "evt_1793614988576_b194f",
           "event_title": "Урия признала Процион, Аурумберг и Торию"
+        },
+        {
+          "timestamp": 1793632813892,
+          "price": 26.2833,
+          "drift": 0.0026,
+          "volatility": 0.005,
+          "decay": 0.9,
+          "event_id": "evt_1793632813892_5m75c",
+          "event_title": "ИИХО: Группы ЧМ по хоккею"
         }
       ]
     },
@@ -8073,12 +8166,12 @@
     },
     "FRZ": {
       "current_anchor": {
-        "timestamp": 1793632813892,
-        "price": 9.4872,
+        "timestamp": 1793632824418,
+        "price": 9.4862,
         "drift": 0.0024,
         "volatility": 0.005,
         "decay": 0.9,
-        "event_id": "evt_1793632813892_5m75c",
+        "event_id": "evt_1793632824418_dzj5d",
         "event_title": "ИИХО: Группы ЧМ по хоккею"
       },
       "history_anchors": [
@@ -8144,11 +8237,127 @@
           "decay": 0.9,
           "event_id": "evt_1793614652558_k1npi",
           "event_title": "Массовое признание Проциона и Аурумберга"
+        },
+        {
+          "timestamp": 1793632813892,
+          "price": 9.4872,
+          "drift": 0.0024,
+          "volatility": 0.005,
+          "decay": 0.9,
+          "event_id": "evt_1793632813892_5m75c",
+          "event_title": "ИИХО: Группы ЧМ по хоккею"
         }
       ]
     }
   },
   "events": [
+    {
+      "id": "evt_1793632824418_dzj5d",
+      "timestamp": 1793632824418,
+      "title": "ИИХО: Группы ЧМ по хоккею",
+      "raw_text": "ИИХО объявила о списке групп на следующем ЧМ по хоккею: | Группа А: | Группа Б: | * - поборятся за хоккейную преемственность бывшей Просперии в ближайшее время ⚡\n\nИИХО объявила о списке групп на следующем ЧМ по хоккею:\n\nГруппа А:\n• Негеция\n• Гросс\n• Аустра\n• Расшатай\n• Асмаин\n• Урия\n• Этрория\n• *Процион\n/ Аурумберг\nГруппа Б:\n• Вергилия\n• Люменария\n• Войфтенн\n• Ярландия\n• Хисолия\n• Критания\n• Роха\n• Ферондия\n* - поборятся за хоккейную преемственность бывшей Просперии в ближайшее время ⚡",
+      "impacts": [
+        {
+          "ticker": "NEL",
+          "drift": 0.0043,
+          "volatility": 0.005,
+          "decay": 0.9,
+          "reason": "Участие в ЧМ по хоккею, нейтральный позитивный сигнал"
+        },
+        {
+          "ticker": "OIL",
+          "drift": 0.0032,
+          "volatility": 0.005,
+          "decay": 0.9,
+          "reason": "Участие в ЧМ по хоккею, нейтральный позитивный сигнал"
+        },
+        {
+          "ticker": "VYN",
+          "drift": 0.0043,
+          "volatility": 0.005,
+          "decay": 0.9,
+          "reason": "Участие в ЧМ по хоккею, нейтральный позитивный сигнал"
+        },
+        {
+          "ticker": "RSH",
+          "drift": 0.0025,
+          "volatility": 0.005,
+          "decay": 0.9,
+          "reason": "Участие в ЧМ по хоккею, нейтральный позитивный сигнал"
+        },
+        {
+          "ticker": "AZM",
+          "drift": 0.0024,
+          "volatility": 0.005,
+          "decay": 0.9,
+          "reason": "Участие в ЧМ по хоккею, нейтральный позитивный сигнал"
+        },
+        {
+          "ticker": "URE",
+          "drift": 0.0026,
+          "volatility": 0.005,
+          "decay": 0.9,
+          "reason": "Участие в ЧМ по хоккею, нейтральный позитивный сигнал"
+        },
+        {
+          "ticker": "ETW",
+          "drift": 0.0027,
+          "volatility": 0.005,
+          "decay": 0.9,
+          "reason": "Участие в ЧМ по хоккею, нейтральный позитивный сигнал"
+        },
+        {
+          "ticker": "VNG",
+          "drift": 0.0035,
+          "volatility": 0.005,
+          "decay": 0.9,
+          "reason": "Участие в ЧМ по хоккею, нейтральный позитивный сигнал"
+        },
+        {
+          "ticker": "ETH",
+          "drift": 0.0046,
+          "volatility": 0.005,
+          "decay": 0.9,
+          "reason": "Участие в ЧМ по хоккею, нейтральный позитивный сигнал"
+        },
+        {
+          "ticker": "YRL",
+          "drift": 0.0033,
+          "volatility": 0.005,
+          "decay": 0.9,
+          "reason": "Участие в ЧМ по хоккею, нейтральный позитивный сигнал"
+        },
+        {
+          "ticker": "HRN",
+          "drift": 0.0023,
+          "volatility": 0.005,
+          "decay": 0.9,
+          "reason": "Участие в ЧМ по хоккею, нейтральный позитивный сигнал"
+        },
+        {
+          "ticker": "VTN",
+          "drift": 0.003,
+          "volatility": 0.005,
+          "decay": 0.9,
+          "reason": "Участие в ЧМ по хоккею, нейтральный позитивный сигнал"
+        },
+        {
+          "ticker": "RVN",
+          "drift": 0.0029,
+          "volatility": 0.005,
+          "decay": 0.9,
+          "reason": "Участие в ЧМ по хоккею, нейтральный позитивный сигнал"
+        },
+        {
+          "ticker": "FRZ",
+          "drift": 0.0024,
+          "volatility": 0.005,
+          "decay": 0.9,
+          "reason": "Участие в ЧМ по хоккею, нейтральный позитивный сигнал"
+        }
+      ],
+      "source": "groq"
+    },
     {
       "id": "evt_1793632813892_5m75c",
       "timestamp": 1793632813892,
@@ -11544,22 +11753,6 @@
           "volatility": 0.012,
           "decay": 0.9,
           "reason": "Военные удары, разрушения, протесты или конфликтный фон"
-        }
-      ],
-      "source": "regex"
-    },
-    {
-      "id": "evt_1793062439539_cuzgb",
-      "timestamp": 1793062439539,
-      "title": "Фертенберг заказал 2 малых и 1 гигантское торго...",
-      "raw_text": "Фертенберг заказал 2 малых и 1 гигантское торговое судно. Разработкой и производством будет заниматься компания PND (Procyonská Námořní Doprava\n\nФертенберг заказал 2 малых и 1 гигантское торговое судно. Разработкой и производством будет заниматься компания PND (Procyonská Námořní Doprava).",
-      "impacts": [
-        {
-          "ticker": "FRT",
-          "drift": 0.0025,
-          "volatility": 0.007,
-          "decay": 0.88,
-          "reason": "Позитивные геополитические или экономические факторы"
         }
       ],
       "source": "regex"
