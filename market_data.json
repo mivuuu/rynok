@@ -1,28 +1,19 @@
 {
   "version": 1,
-  "last_updated": 1794735114401,
+  "last_updated": 1794740418284,
   "genesis_timestamp": 1790267976000,
   "currencies": {
     "ETH": {
       "current_anchor": {
-        "timestamp": 1794658402492,
-        "price": 259.9175,
+        "timestamp": 1794740418284,
+        "price": 251.284,
         "drift": 0.0005,
         "volatility": 0.005,
         "decay": 0.9,
-        "event_id": "evt_1794658402492_1e7ft",
-        "event_title": "14 ноября — 1-й тур | Группа А:\n1. Негеция — Пр..."
+        "event_id": "evt_1794740418284_36rj5",
+        "event_title": "15 ноября — 2-й тур | Группа А:\n1. Негеция — Эт..."
       },
       "history_anchors": [
-        {
-          "timestamp": 1791354179000,
-          "price": 325.5121,
-          "drift": 0.0062,
-          "volatility": 0.006,
-          "decay": 0.85,
-          "event_id": "evt_1791354179000_message1871",
-          "event_title": "Сборная Негеции по хоккею заявила, что сборная ..."
-        },
         {
           "timestamp": 1792428045000,
           "price": 355.218,
@@ -913,18 +904,27 @@
           "decay": 0.9,
           "event_id": "evt_1794591134240_ia1pe",
           "event_title": "Угрозы Люменарии Пагристану"
+        },
+        {
+          "timestamp": 1794658402492,
+          "price": 259.9175,
+          "drift": 0.0005,
+          "volatility": 0.005,
+          "decay": 0.9,
+          "event_id": "evt_1794658402492_1e7ft",
+          "event_title": "14 ноября — 1-й тур | Группа А:\n1. Негеция — Пр..."
         }
       ]
     },
     "VYN": {
       "current_anchor": {
-        "timestamp": 1794658402492,
-        "price": 3.3445,
+        "timestamp": 1794740418284,
+        "price": 3.4613,
         "drift": 0.0005,
         "volatility": 0.005,
         "decay": 0.9,
-        "event_id": "evt_1794658402492_1e7ft",
-        "event_title": "14 ноября — 1-й тур | Группа А:\n1. Негеция — Пр...",
+        "event_id": "evt_1794740418284_36rj5",
+        "event_title": "15 ноября — 2-й тур | Группа А:\n1. Негеция — Эт...",
         "base_price": 18,
         "status": "default",
         "status_label": "СУВЕРЕННЫЙ ДЕФОЛТ"
@@ -1520,29 +1520,32 @@
           "base_price": 18,
           "status": "default",
           "status_label": "СУВЕРЕННЫЙ ДЕФОЛТ"
+        },
+        {
+          "timestamp": 1794658402492,
+          "price": 3.3445,
+          "drift": 0.0005,
+          "volatility": 0.005,
+          "decay": 0.9,
+          "event_id": "evt_1794658402492_1e7ft",
+          "event_title": "14 ноября — 1-й тур | Группа А:\n1. Негеция — Пр...",
+          "base_price": 18,
+          "status": "default",
+          "status_label": "СУВЕРЕННЫЙ ДЕФОЛТ"
         }
       ]
     },
     "NEL": {
       "current_anchor": {
-        "timestamp": 1794703641805,
-        "price": 182.0929,
-        "drift": 0.0043,
-        "volatility": 0.008,
+        "timestamp": 1794740418284,
+        "price": 183.8338,
+        "drift": 0.0005,
+        "volatility": 0.005,
         "decay": 0.9,
-        "event_id": "evt_1794703641805_65f6s",
-        "event_title": "Спекуляции о реформе ЭК"
+        "event_id": "evt_1794740418284_36rj5",
+        "event_title": "15 ноября — 2-й тур | Группа А:\n1. Негеция — Эт..."
       },
       "history_anchors": [
-        {
-          "timestamp": 1792756898634,
-          "price": 406.9003,
-          "drift": 0.0071,
-          "volatility": 0.005,
-          "decay": 0.95,
-          "event_id": "evt_1792756898634_g38sr",
-          "event_title": "Нейтралитет Негеции к кризису"
-        },
         {
           "timestamp": 1792757967193,
           "price": 444.7766,
@@ -2433,29 +2436,29 @@
           "decay": 0.9,
           "event_id": "evt_1794703621876_aafxw",
           "event_title": "Вопросы о членстве в Экономической конфедерации"
+        },
+        {
+          "timestamp": 1794703641805,
+          "price": 182.0929,
+          "drift": 0.0043,
+          "volatility": 0.008,
+          "decay": 0.9,
+          "event_id": "evt_1794703641805_65f6s",
+          "event_title": "Спекуляции о реформе ЭК"
         }
       ]
     },
     "VNG": {
       "current_anchor": {
-        "timestamp": 1794703641805,
-        "price": 95.1741,
-        "drift": 0.0047,
-        "volatility": 0.009,
+        "timestamp": 1794740418284,
+        "price": 96.5283,
+        "drift": 0.0005,
+        "volatility": 0.005,
         "decay": 0.9,
-        "event_id": "evt_1794703641805_65f6s",
-        "event_title": "Спекуляции о реформе ЭК"
+        "event_id": "evt_1794740418284_36rj5",
+        "event_title": "15 ноября — 2-й тур | Группа А:\n1. Негеция — Эт..."
       },
       "history_anchors": [
-        {
-          "timestamp": 1790936736000,
-          "price": 90.4561,
-          "drift": 0.0071,
-          "volatility": 0.009,
-          "decay": 0.88,
-          "event_id": "evt_1790936736000_message1547",
-          "event_title": "ФРВ будет закупать у Негеции технику чтобы не п..."
-        },
         {
           "timestamp": 1790936885000,
           "price": 91.9412,
@@ -3346,18 +3349,27 @@
           "decay": 0.9,
           "event_id": "evt_1794703621876_aafxw",
           "event_title": "Вопросы о членстве в Экономической конфедерации"
+        },
+        {
+          "timestamp": 1794703641805,
+          "price": 95.1741,
+          "drift": 0.0047,
+          "volatility": 0.009,
+          "decay": 0.9,
+          "event_id": "evt_1794703641805_65f6s",
+          "event_title": "Спекуляции о реформе ЭК"
         }
       ]
     },
     "YRL": {
       "current_anchor": {
-        "timestamp": 1794671363997,
-        "price": 72.685,
-        "drift": 0.0033,
+        "timestamp": 1794740418284,
+        "price": 75.8868,
+        "drift": 0.0005,
         "volatility": 0.005,
         "decay": 0.9,
-        "event_id": "evt_1794671363997_1p5u1",
-        "event_title": "Матч Ярландия - Хисолия"
+        "event_id": "evt_1794740418284_36rj5",
+        "event_title": "15 ноября — 2-й тур | Группа А:\n1. Негеция — Эт..."
       },
       "history_anchors": [
         {
@@ -3800,6 +3812,15 @@
           "decay": 0.9,
           "event_id": "evt_1794658402492_1e7ft",
           "event_title": "14 ноября — 1-й тур | Группа А:\n1. Негеция — Пр..."
+        },
+        {
+          "timestamp": 1794671363997,
+          "price": 72.685,
+          "drift": 0.0033,
+          "volatility": 0.005,
+          "decay": 0.9,
+          "event_id": "evt_1794671363997_1p5u1",
+          "event_title": "Матч Ярландия - Хисолия"
         }
       ]
     },
@@ -4259,24 +4280,15 @@
     },
     "OIL": {
       "current_anchor": {
-        "timestamp": 1794735104267,
-        "price": 52.52,
-        "drift": -0.0032,
-        "volatility": 0.006,
-        "decay": 0.94,
-        "event_id": "evt_1794735104267_4g4jm",
-        "event_title": "Задержка визита ПМ Гросса в Хисолии"
+        "timestamp": 1794740418284,
+        "price": 47.8427,
+        "drift": 0.0005,
+        "volatility": 0.005,
+        "decay": 0.9,
+        "event_id": "evt_1794740418284_36rj5",
+        "event_title": "15 ноября — 2-й тур | Группа А:\n1. Негеция — Эт..."
       },
       "history_anchors": [
-        {
-          "timestamp": 1793180466771,
-          "price": 54.599,
-          "drift": 0.0032,
-          "volatility": 0.005,
-          "decay": 0.94,
-          "event_id": "evt_1793180466771_veeb1",
-          "event_title": "Пророчество ПМ-Гросса о вечной войне"
-        },
         {
           "timestamp": 1793284425859,
           "price": 55.3964,
@@ -5167,18 +5179,27 @@
           "decay": 0.9,
           "event_id": "evt_1794658402492_1e7ft",
           "event_title": "14 ноября — 1-й тур | Группа А:\n1. Негеция — Пр..."
+        },
+        {
+          "timestamp": 1794735104267,
+          "price": 52.52,
+          "drift": -0.0032,
+          "volatility": 0.006,
+          "decay": 0.94,
+          "event_id": "evt_1794735104267_4g4jm",
+          "event_title": "Задержка визита ПМ Гросса в Хисолии"
         }
       ]
     },
     "VTN": {
       "current_anchor": {
-        "timestamp": 1794671812387,
-        "price": 45.3789,
-        "drift": 0.005,
-        "volatility": 0.008,
+        "timestamp": 1794740418284,
+        "price": 47.796,
+        "drift": 0.0005,
+        "volatility": 0.005,
         "decay": 0.9,
-        "event_id": "evt_1794671812387_duncx",
-        "event_title": "Асмаин и Критания лидируют в группах"
+        "event_id": "evt_1794740418284_36rj5",
+        "event_title": "15 ноября — 2-й тур | Группа А:\n1. Негеция — Эт..."
       },
       "history_anchors": [
         {
@@ -5405,18 +5426,27 @@
           "decay": 0.9,
           "event_id": "evt_1794658402492_1e7ft",
           "event_title": "14 ноября — 1-й тур | Группа А:\n1. Негеция — Пр..."
+        },
+        {
+          "timestamp": 1794671812387,
+          "price": 45.3789,
+          "drift": 0.005,
+          "volatility": 0.008,
+          "decay": 0.9,
+          "event_id": "evt_1794671812387_duncx",
+          "event_title": "Асмаин и Критания лидируют в группах"
         }
       ]
     },
     "RVN": {
       "current_anchor": {
-        "timestamp": 1794658402492,
-        "price": 36.0665,
+        "timestamp": 1794740418284,
+        "price": 36.0755,
         "drift": 0.0005,
         "volatility": 0.005,
         "decay": 0.9,
-        "event_id": "evt_1794658402492_1e7ft",
-        "event_title": "14 ноября — 1-й тур | Группа А:\n1. Негеция — Пр..."
+        "event_id": "evt_1794740418284_36rj5",
+        "event_title": "15 ноября — 2-й тур | Группа А:\n1. Негеция — Эт..."
       },
       "history_anchors": [
         {
@@ -5571,6 +5601,15 @@
           "decay": 0.9,
           "event_id": "evt_1794501489232_3wl1k",
           "event_title": "ИИХО: Группы ЧМ по хоккею"
+        },
+        {
+          "timestamp": 1794658402492,
+          "price": 36.0665,
+          "drift": 0.0005,
+          "volatility": 0.005,
+          "decay": 0.9,
+          "event_id": "evt_1794658402492_1e7ft",
+          "event_title": "14 ноября — 1-й тур | Группа А:\n1. Негеция — Пр..."
         }
       ]
     },
@@ -6016,13 +6055,13 @@
     },
     "RSH": {
       "current_anchor": {
-        "timestamp": 1794658402492,
-        "price": 17.4307,
+        "timestamp": 1794740418284,
+        "price": 19.4445,
         "drift": 0.0005,
         "volatility": 0.005,
         "decay": 0.9,
-        "event_id": "evt_1794658402492_1e7ft",
-        "event_title": "14 ноября — 1-й тур | Группа А:\n1. Негеция — Пр..."
+        "event_id": "evt_1794740418284_36rj5",
+        "event_title": "15 ноября — 2-й тур | Группа А:\n1. Негеция — Эт..."
       },
       "history_anchors": [
         {
@@ -6258,6 +6297,15 @@
           "decay": 0.9,
           "event_id": "evt_1794501489232_3wl1k",
           "event_title": "ИИХО: Группы ЧМ по хоккею"
+        },
+        {
+          "timestamp": 1794658402492,
+          "price": 17.4307,
+          "drift": 0.0005,
+          "volatility": 0.005,
+          "decay": 0.9,
+          "event_id": "evt_1794658402492_1e7ft",
+          "event_title": "14 ноября — 1-й тур | Группа А:\n1. Негеция — Пр..."
         }
       ]
     },
@@ -7117,13 +7165,13 @@
     },
     "ETW": {
       "current_anchor": {
-        "timestamp": 1794658402492,
-        "price": 40.5453,
+        "timestamp": 1794740418284,
+        "price": 40.2463,
         "drift": 0.0005,
         "volatility": 0.005,
         "decay": 0.9,
-        "event_id": "evt_1794658402492_1e7ft",
-        "event_title": "14 ноября — 1-й тур | Группа А:\n1. Негеция — Пр..."
+        "event_id": "evt_1794740418284_36rj5",
+        "event_title": "15 ноября — 2-й тур | Группа А:\n1. Негеция — Эт..."
       },
       "history_anchors": [
         {
@@ -7260,18 +7308,27 @@
           "decay": 0.9,
           "event_id": "evt_1794501489232_3wl1k",
           "event_title": "ИИХО: Группы ЧМ по хоккею"
+        },
+        {
+          "timestamp": 1794658402492,
+          "price": 40.5453,
+          "drift": 0.0005,
+          "volatility": 0.005,
+          "decay": 0.9,
+          "event_id": "evt_1794658402492_1e7ft",
+          "event_title": "14 ноября — 1-й тур | Группа А:\n1. Негеция — Пр..."
         }
       ]
     },
     "AZM": {
       "current_anchor": {
-        "timestamp": 1794671812387,
-        "price": 12.7058,
-        "drift": 0.004,
-        "volatility": 0.008,
+        "timestamp": 1794740418284,
+        "price": 12.1262,
+        "drift": 0.0005,
+        "volatility": 0.005,
         "decay": 0.9,
-        "event_id": "evt_1794671812387_duncx",
-        "event_title": "Асмаин и Критания лидируют в группах"
+        "event_id": "evt_1794740418284_36rj5",
+        "event_title": "15 ноября — 2-й тур | Группа А:\n1. Негеция — Эт..."
       },
       "history_anchors": [
         {
@@ -7624,18 +7681,27 @@
           "decay": 0.9,
           "event_id": "evt_1794658402492_1e7ft",
           "event_title": "14 ноября — 1-й тур | Группа А:\n1. Негеция — Пр..."
+        },
+        {
+          "timestamp": 1794671812387,
+          "price": 12.7058,
+          "drift": 0.004,
+          "volatility": 0.008,
+          "decay": 0.9,
+          "event_id": "evt_1794671812387_duncx",
+          "event_title": "Асмаин и Критания лидируют в группах"
         }
       ]
     },
     "HRN": {
       "current_anchor": {
-        "timestamp": 1794735104267,
-        "price": 10.0503,
-        "drift": -0.0015,
+        "timestamp": 1794740418284,
+        "price": 10.2151,
+        "drift": 0.0005,
         "volatility": 0.005,
-        "decay": 0.94,
-        "event_id": "evt_1794735104267_4g4jm",
-        "event_title": "Задержка визита ПМ Гросса в Хисолии"
+        "decay": 0.9,
+        "event_id": "evt_1794740418284_36rj5",
+        "event_title": "15 ноября — 2-й тур | Группа А:\n1. Негеция — Эт..."
       },
       "history_anchors": [
         {
@@ -8051,18 +8117,27 @@
           "decay": 0.9,
           "event_id": "evt_1794734060247_lbejf",
           "event_title": "Заявление короля Хисолии о безопасности"
+        },
+        {
+          "timestamp": 1794735104267,
+          "price": 10.0503,
+          "drift": -0.0015,
+          "volatility": 0.005,
+          "decay": 0.94,
+          "event_id": "evt_1794735104267_4g4jm",
+          "event_title": "Задержка визита ПМ Гросса в Хисолии"
         }
       ]
     },
     "URE": {
       "current_anchor": {
-        "timestamp": 1794658888225,
-        "price": 24.5249,
+        "timestamp": 1794740418284,
+        "price": 25.1228,
         "drift": 0.0005,
         "volatility": 0.005,
         "decay": 0.9,
-        "event_id": "evt_1794658888225_tm8lc",
-        "event_title": "ИИХО • ГРУППА „А“: | 🤩 | АУС 1:4 УРИ | 🤩 | (с..."
+        "event_id": "evt_1794740418284_36rj5",
+        "event_title": "15 ноября — 2-й тур | Группа А:\n1. Негеция — Эт..."
       },
       "history_anchors": [
         {
@@ -8424,6 +8499,15 @@
           "decay": 0.9,
           "event_id": "evt_1794658402492_1e7ft",
           "event_title": "14 ноября — 1-й тур | Группа А:\n1. Негеция — Пр..."
+        },
+        {
+          "timestamp": 1794658888225,
+          "price": 24.5249,
+          "drift": 0.0005,
+          "volatility": 0.005,
+          "decay": 0.9,
+          "event_id": "evt_1794658888225_tm8lc",
+          "event_title": "ИИХО • ГРУППА „А“: | 🤩 | АУС 1:4 УРИ | 🤩 | (с..."
         }
       ]
     },
@@ -9381,13 +9465,13 @@
     },
     "FRZ": {
       "current_anchor": {
-        "timestamp": 1794658402492,
-        "price": 8.2967,
+        "timestamp": 1794740418284,
+        "price": 8.5094,
         "drift": 0.0005,
         "volatility": 0.005,
         "decay": 0.9,
-        "event_id": "evt_1794658402492_1e7ft",
-        "event_title": "14 ноября — 1-й тур | Группа А:\n1. Негеция — Пр..."
+        "event_id": "evt_1794740418284_36rj5",
+        "event_title": "15 ноября — 2-й тур | Группа А:\n1. Негеция — Эт..."
       },
       "history_anchors": [
         {
@@ -9524,11 +9608,127 @@
           "decay": 0.9,
           "event_id": "evt_1794501489232_3wl1k",
           "event_title": "ИИХО: Группы ЧМ по хоккею"
+        },
+        {
+          "timestamp": 1794658402492,
+          "price": 8.2967,
+          "drift": 0.0005,
+          "volatility": 0.005,
+          "decay": 0.9,
+          "event_id": "evt_1794658402492_1e7ft",
+          "event_title": "14 ноября — 1-й тур | Группа А:\n1. Негеция — Пр..."
         }
       ]
     }
   },
   "events": [
+    {
+      "id": "evt_1794740418284_36rj5",
+      "timestamp": 1794740418284,
+      "title": "15 ноября — 2-й тур | Группа А:\n1. Негеция — Эт...",
+      "raw_text": "15 ноября — 2-й тур | Группа А:\n1. Негеция — Этрория\n2. Процион — Урия\n3. Гросс — Асмаин\n4. Аустра — Расшатай | Группа Б:\n1. Вергилия — Роха\n2. Ферондия — Критания\n3. Люменария — Хисолия\n4. Войфтенн — Ярландия",
+      "impacts": [
+        {
+          "ticker": "ETH",
+          "drift": 0.0005,
+          "volatility": 0.005,
+          "decay": 0.9,
+          "reason": "Позитивные геополитические или экономические факторы"
+        },
+        {
+          "ticker": "VYN",
+          "drift": 0.0005,
+          "volatility": 0.005,
+          "decay": 0.9,
+          "reason": "Позитивные геополитические или экономические факторы"
+        },
+        {
+          "ticker": "NEL",
+          "drift": 0.0005,
+          "volatility": 0.005,
+          "decay": 0.9,
+          "reason": "Позитивные геополитические или экономические факторы"
+        },
+        {
+          "ticker": "VNG",
+          "drift": 0.0005,
+          "volatility": 0.005,
+          "decay": 0.9,
+          "reason": "Позитивные геополитические или экономические факторы"
+        },
+        {
+          "ticker": "YRL",
+          "drift": 0.0005,
+          "volatility": 0.005,
+          "decay": 0.9,
+          "reason": "Позитивные геополитические или экономические факторы"
+        },
+        {
+          "ticker": "OIL",
+          "drift": 0.0005,
+          "volatility": 0.005,
+          "decay": 0.9,
+          "reason": "Позитивные геополитические или экономические факторы"
+        },
+        {
+          "ticker": "VTN",
+          "drift": 0.0005,
+          "volatility": 0.005,
+          "decay": 0.9,
+          "reason": "Позитивные геополитические или экономические факторы"
+        },
+        {
+          "ticker": "RVN",
+          "drift": 0.0005,
+          "volatility": 0.005,
+          "decay": 0.9,
+          "reason": "Позитивные геополитические или экономические факторы"
+        },
+        {
+          "ticker": "RSH",
+          "drift": 0.0005,
+          "volatility": 0.005,
+          "decay": 0.9,
+          "reason": "Позитивные геополитические или экономические факторы"
+        },
+        {
+          "ticker": "ETW",
+          "drift": 0.0005,
+          "volatility": 0.005,
+          "decay": 0.9,
+          "reason": "Позитивные геополитические или экономические факторы"
+        },
+        {
+          "ticker": "AZM",
+          "drift": 0.0005,
+          "volatility": 0.005,
+          "decay": 0.9,
+          "reason": "Позитивные геополитические или экономические факторы"
+        },
+        {
+          "ticker": "HRN",
+          "drift": 0.0005,
+          "volatility": 0.005,
+          "decay": 0.9,
+          "reason": "Позитивные геополитические или экономические факторы"
+        },
+        {
+          "ticker": "URE",
+          "drift": 0.0005,
+          "volatility": 0.005,
+          "decay": 0.9,
+          "reason": "Позитивные геополитические или экономические факторы"
+        },
+        {
+          "ticker": "FRZ",
+          "drift": 0.0005,
+          "volatility": 0.005,
+          "decay": 0.9,
+          "reason": "Позитивные геополитические или экономические факторы"
+        }
+      ],
+      "source": "regex"
+    },
     {
       "id": "evt_1794735114401_vkcri",
       "timestamp": 1794735114401,
@@ -13197,22 +13397,6 @@
           "volatility": 0.005,
           "decay": 0.9,
           "reason": "Нейтральное упоминание государства и бренда, без существенных экономических последствий"
-        }
-      ],
-      "source": "groq"
-    },
-    {
-      "id": "evt_1793614266253_kze3d",
-      "timestamp": 1793614266253,
-      "title": "Совместное присутствие с делегацией Пагристана",
-      "raw_text": "идут вместе с пагристанской [делегацией]",
-      "impacts": [
-        {
-          "ticker": "TGR",
-          "drift": 0.002,
-          "volatility": 0.005,
-          "decay": 0.9,
-          "reason": "Участие в совместной дипломатической миссии, нейтральный/позитивный сигнал"
         }
       ],
       "source": "groq"
