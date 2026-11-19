@@ -1,28 +1,19 @@
 {
   "version": 1,
-  "last_updated": 1795080364453,
+  "last_updated": 1795081190576,
   "genesis_timestamp": 1790267976000,
   "currencies": {
     "ETH": {
       "current_anchor": {
-        "timestamp": 1795009636914,
-        "price": 259.1523,
-        "drift": 0.0077,
-        "volatility": 0.008,
+        "timestamp": 1795081190576,
+        "price": 250.2125,
+        "drift": 0.0046,
+        "volatility": 0.005,
         "decay": 0.9,
-        "event_id": "evt_1795009636914_hou6u",
-        "event_title": "5-й тур: Матч Критания — Люменария"
+        "event_id": "evt_1795081190576_laqzz",
+        "event_title": "6-й тур чемпионата: дерби и матчи групп"
       },
       "history_anchors": [
-        {
-          "timestamp": 1792538016000,
-          "price": 180.0046,
-          "drift": -0.0062,
-          "volatility": 0.006,
-          "decay": 0.85,
-          "event_id": "evt_1792538016000_message2816",
-          "event_title": "Протестующие, так же заявили о полной поддержке..."
-        },
         {
           "timestamp": 1792590185910,
           "price": 173.5724,
@@ -913,18 +904,27 @@
           "decay": 0.9,
           "event_id": "evt_1794967881753_vp3rd",
           "event_title": "Приглашение на выставку кошек"
+        },
+        {
+          "timestamp": 1795009636914,
+          "price": 259.1523,
+          "drift": 0.0077,
+          "volatility": 0.008,
+          "decay": 0.9,
+          "event_id": "evt_1795009636914_hou6u",
+          "event_title": "5-й тур: Матч Критания — Люменария"
         }
       ]
     },
     "VYN": {
       "current_anchor": {
-        "timestamp": 1795034635162,
-        "price": 4.5886,
-        "drift": -0.0043,
+        "timestamp": 1795081190576,
+        "price": 4.3123,
+        "drift": 0.0043,
         "volatility": 0.005,
-        "decay": 0.94,
-        "event_id": "evt_1795034635162_7irqz",
-        "event_title": "Провал сборных в плей-офф",
+        "decay": 0.9,
+        "event_id": "evt_1795081190576_laqzz",
+        "event_title": "6-й тур чемпионата: дерби и матчи групп",
         "base_price": 18,
         "status": "default",
         "status_label": "СУВЕРЕННЫЙ ДЕФОЛТ"
@@ -1568,29 +1568,32 @@
           "base_price": 18,
           "status": "default",
           "status_label": "СУВЕРЕННЫЙ ДЕФОЛТ"
+        },
+        {
+          "timestamp": 1795034635162,
+          "price": 4.5886,
+          "drift": -0.0043,
+          "volatility": 0.005,
+          "decay": 0.94,
+          "event_id": "evt_1795034635162_7irqz",
+          "event_title": "Провал сборных в плей-офф",
+          "base_price": 18,
+          "status": "default",
+          "status_label": "СУВЕРЕННЫЙ ДЕФОЛТ"
         }
       ]
     },
     "NEL": {
       "current_anchor": {
-        "timestamp": 1794987810270,
-        "price": 186.86,
-        "drift": -0.0071,
-        "volatility": 0.01,
+        "timestamp": 1795081190576,
+        "price": 173.1829,
+        "drift": 0.0043,
+        "volatility": 0.005,
         "decay": 0.9,
-        "event_id": "evt_1794987810270_6pe5d",
-        "event_title": "Гросс требует отчёт о потерях"
+        "event_id": "evt_1795081190576_laqzz",
+        "event_title": "6-й тур чемпионата: дерби и матчи групп"
       },
       "history_anchors": [
-        {
-          "timestamp": 1792886687578,
-          "price": 190.4624,
-          "drift": 0.0114,
-          "volatility": 0.012,
-          "decay": 0.9,
-          "event_id": "evt_1792886687578_4peya",
-          "event_title": "Аннексия территорий Негецией"
-        },
         {
           "timestamp": 1792886777480,
           "price": 204.6296,
@@ -2481,29 +2484,29 @@
           "decay": 0.9,
           "event_id": "evt_1794969929766_ku597",
           "event_title": "Запуск платформы госуслуг в Негеции"
+        },
+        {
+          "timestamp": 1794987810270,
+          "price": 186.86,
+          "drift": -0.0071,
+          "volatility": 0.01,
+          "decay": 0.9,
+          "event_id": "evt_1794987810270_6pe5d",
+          "event_title": "Гросс требует отчёт о потерях"
         }
       ]
     },
     "VNG": {
       "current_anchor": {
-        "timestamp": 1795033562625,
-        "price": 98.1519,
-        "drift": -0.0035,
+        "timestamp": 1795081190576,
+        "price": 92.9781,
+        "drift": 0.0047,
         "volatility": 0.006,
         "decay": 0.9,
-        "event_id": "evt_1795033562625_y1xs6",
-        "event_title": "Победа Ярландии над Вергилией"
+        "event_id": "evt_1795081190576_laqzz",
+        "event_title": "6-й тур чемпионата: дерби и матчи групп"
       },
       "history_anchors": [
-        {
-          "timestamp": 1790948693000,
-          "price": 64.4238,
-          "drift": 0.0047,
-          "volatility": 0.006,
-          "decay": 0.85,
-          "event_id": "evt_1790948693000_message1584",
-          "event_title": "Вергилийская Организация Хоккея одобрило на соо..."
-        },
         {
           "timestamp": 1790958233000,
           "price": 66.3131,
@@ -3394,18 +3397,27 @@
           "decay": 0.9,
           "event_id": "evt_1794987810270_6pe5d",
           "event_title": "Гросс требует отчёт о потерях"
+        },
+        {
+          "timestamp": 1795033562625,
+          "price": 98.1519,
+          "drift": -0.0035,
+          "volatility": 0.006,
+          "decay": 0.9,
+          "event_id": "evt_1795033562625_y1xs6",
+          "event_title": "Победа Ярландии над Вергилией"
         }
       ]
     },
     "YRL": {
       "current_anchor": {
-        "timestamp": 1795034396481,
-        "price": 77.4087,
-        "drift": 0.0044,
-        "volatility": 0.006,
+        "timestamp": 1795081190576,
+        "price": 77.3802,
+        "drift": 0.0033,
+        "volatility": 0.005,
         "decay": 0.9,
-        "event_id": "evt_1795034396481_5m3i0",
-        "event_title": "Ярландия обыграла Аустру в овертайме"
+        "event_id": "evt_1795081190576_laqzz",
+        "event_title": "6-й тур чемпионата: дерби и матчи групп"
       },
       "history_anchors": [
         {
@@ -3947,6 +3959,15 @@
           "decay": 0.9,
           "event_id": "evt_1795033562625_y1xs6",
           "event_title": "Победа Ярландии над Вергилией"
+        },
+        {
+          "timestamp": 1795034396481,
+          "price": 77.4087,
+          "drift": 0.0044,
+          "volatility": 0.006,
+          "decay": 0.9,
+          "event_id": "evt_1795034396481_5m3i0",
+          "event_title": "Ярландия обыграла Аустру в овертайме"
         }
       ]
     },
@@ -4415,24 +4436,15 @@
     },
     "OIL": {
       "current_anchor": {
-        "timestamp": 1795080364453,
-        "price": 54.2256,
+        "timestamp": 1795081190576,
+        "price": 56.372,
         "drift": 0.0032,
         "volatility": 0.005,
         "decay": 0.9,
-        "event_id": "evt_1795080364453_qa4np",
-        "event_title": "Дипломатический визит делегации Гросса в Хисолию"
+        "event_id": "evt_1795081190576_laqzz",
+        "event_title": "6-й тур чемпионата: дерби и матчи групп"
       },
       "history_anchors": [
-        {
-          "timestamp": 1793506197240,
-          "price": 56.6601,
-          "drift": 0.0032,
-          "volatility": 0.005,
-          "decay": 0.9,
-          "event_id": "evt_1793506197240_ig8o3",
-          "event_title": "Участники: Процион и Гросс"
-        },
         {
           "timestamp": 1793509806519,
           "price": 58.0633,
@@ -5323,18 +5335,27 @@
           "decay": 0.9,
           "event_id": "evt_1794988484142_lut5h",
           "event_title": "Снижение избирательного возраста в Гроссе"
+        },
+        {
+          "timestamp": 1795080364453,
+          "price": 54.2256,
+          "drift": 0.0032,
+          "volatility": 0.005,
+          "decay": 0.9,
+          "event_id": "evt_1795080364453_qa4np",
+          "event_title": "Дипломатический визит делегации Гросса в Хисолию"
         }
       ]
     },
     "VTN": {
       "current_anchor": {
-        "timestamp": 1795009636914,
-        "price": 47.4531,
+        "timestamp": 1795081190576,
+        "price": 47.3751,
         "drift": 0.003,
-        "volatility": 0.006,
-        "decay": 0.88,
-        "event_id": "evt_1795009636914_hou6u",
-        "event_title": "5-й тур: Матч Критания — Люменария"
+        "volatility": 0.005,
+        "decay": 0.9,
+        "event_id": "evt_1795081190576_laqzz",
+        "event_title": "6-й тур чемпионата: дерби и матчи групп"
       },
       "history_anchors": [
         {
@@ -5597,18 +5618,27 @@
           "decay": 0.9,
           "event_id": "evt_1794931877673_vlp6l",
           "event_title": "17 ноября — 4-й тур | Группа А:\n• Негеция — Асм..."
+        },
+        {
+          "timestamp": 1795009636914,
+          "price": 47.4531,
+          "drift": 0.003,
+          "volatility": 0.006,
+          "decay": 0.88,
+          "event_id": "evt_1795009636914_hou6u",
+          "event_title": "5-й тур: Матч Критания — Люменария"
         }
       ]
     },
     "RVN": {
       "current_anchor": {
-        "timestamp": 1794968022840,
-        "price": 35.6087,
+        "timestamp": 1795081190576,
+        "price": 34.5165,
         "drift": 0.0029,
-        "volatility": 0.007,
-        "decay": 0.88,
-        "event_id": "evt_1794968022840_ilkig",
-        "event_title": "Номинацию «самый красивый кот подросток» получа..."
+        "volatility": 0.005,
+        "decay": 0.9,
+        "event_id": "evt_1795081190576_laqzz",
+        "event_title": "6-й тур чемпионата: дерби и матчи групп"
       },
       "history_anchors": [
         {
@@ -5817,6 +5847,15 @@
           "decay": 0.9,
           "event_id": "evt_1794931877673_vlp6l",
           "event_title": "17 ноября — 4-й тур | Группа А:\n• Негеция — Асм..."
+        },
+        {
+          "timestamp": 1794968022840,
+          "price": 35.6087,
+          "drift": 0.0029,
+          "volatility": 0.007,
+          "decay": 0.88,
+          "event_id": "evt_1794968022840_ilkig",
+          "event_title": "Номинацию «самый красивый кот подросток» получа..."
         }
       ]
     },
@@ -6271,13 +6310,13 @@
     },
     "RSH": {
       "current_anchor": {
-        "timestamp": 1795034848547,
-        "price": 17.4128,
-        "drift": 0.0005,
+        "timestamp": 1795081190576,
+        "price": 17.4333,
+        "drift": 0.0025,
         "volatility": 0.005,
         "decay": 0.9,
-        "event_id": "evt_1795034848547_6jeog",
-        "event_title": "Для того чтобы пройти в плей-офф нужно быть в т..."
+        "event_id": "evt_1795081190576_laqzz",
+        "event_title": "6-й тур чемпионата: дерби и матчи групп"
       },
       "history_anchors": [
         {
@@ -6566,6 +6605,15 @@
           "volatility": 0.005,
           "decay": 0.9,
           "event_id": "evt_1795034808517_hqsm0",
+          "event_title": "Для того чтобы пройти в плей-офф нужно быть в т..."
+        },
+        {
+          "timestamp": 1795034848547,
+          "price": 17.4128,
+          "drift": 0.0005,
+          "volatility": 0.005,
+          "decay": 0.9,
+          "event_id": "evt_1795034848547_6jeog",
           "event_title": "Для того чтобы пройти в плей-офф нужно быть в т..."
         }
       ]
@@ -7426,13 +7474,13 @@
     },
     "ETW": {
       "current_anchor": {
-        "timestamp": 1794968018876,
-        "price": 37.9907,
+        "timestamp": 1795081190576,
+        "price": 39.4569,
         "drift": 0.0027,
         "volatility": 0.005,
         "decay": 0.9,
-        "event_id": "evt_1794968018876_jckp8",
-        "event_title": "Этрория получила номинацию за котенка"
+        "event_id": "evt_1795081190576_laqzz",
+        "event_title": "6-й тур чемпионата: дерби и матчи групп"
       },
       "history_anchors": [
         {
@@ -7605,18 +7653,27 @@
           "decay": 0.9,
           "event_id": "evt_1794931877673_vlp6l",
           "event_title": "17 ноября — 4-й тур | Группа А:\n• Негеция — Асм..."
+        },
+        {
+          "timestamp": 1794968018876,
+          "price": 37.9907,
+          "drift": 0.0027,
+          "volatility": 0.005,
+          "decay": 0.9,
+          "event_id": "evt_1794968018876_jckp8",
+          "event_title": "Этрория получила номинацию за котенка"
         }
       ]
     },
     "AZM": {
       "current_anchor": {
-        "timestamp": 1794969332268,
-        "price": 12.7066,
-        "drift": 0.004,
-        "volatility": 0.008,
+        "timestamp": 1795081190576,
+        "price": 12.7682,
+        "drift": 0.0024,
+        "volatility": 0.005,
         "decay": 0.9,
-        "event_id": "evt_1794969332268_s023t",
-        "event_title": "Антикоррупционная реформа в Асмаине"
+        "event_id": "evt_1795081190576_laqzz",
+        "event_title": "6-й тур чемпионата: дерби и матчи групп"
       },
       "history_anchors": [
         {
@@ -8014,18 +8071,27 @@
           "decay": 0.9,
           "event_id": "evt_1794969329857_u2zdp",
           "event_title": "Запуск открытого бюджета Асмаина"
+        },
+        {
+          "timestamp": 1794969332268,
+          "price": 12.7066,
+          "drift": 0.004,
+          "volatility": 0.008,
+          "decay": 0.9,
+          "event_id": "evt_1794969332268_s023t",
+          "event_title": "Антикоррупционная реформа в Асмаине"
         }
       ]
     },
     "HRN": {
       "current_anchor": {
-        "timestamp": 1795080364453,
-        "price": 10.2618,
-        "drift": -0.0015,
-        "volatility": 0.006,
+        "timestamp": 1795081190576,
+        "price": 10.2105,
+        "drift": 0.0023,
+        "volatility": 0.005,
         "decay": 0.9,
-        "event_id": "evt_1795080364453_qa4np",
-        "event_title": "Дипломатический визит делегации Гросса в Хисолию"
+        "event_id": "evt_1795081190576_laqzz",
+        "event_title": "6-й тур чемпионата: дерби и матчи групп"
       },
       "history_anchors": [
         {
@@ -8522,18 +8588,27 @@
           "decay": 0.9,
           "event_id": "evt_1794932220727_v7el5",
           "event_title": "Переговоры Гросса и Хисолии"
+        },
+        {
+          "timestamp": 1795080364453,
+          "price": 10.2618,
+          "drift": -0.0015,
+          "volatility": 0.006,
+          "decay": 0.9,
+          "event_id": "evt_1795080364453_qa4np",
+          "event_title": "Дипломатический визит делегации Гросса в Хисолию"
         }
       ]
     },
     "URE": {
       "current_anchor": {
-        "timestamp": 1795034848547,
-        "price": 26.0619,
-        "drift": 0.0005,
+        "timestamp": 1795081190576,
+        "price": 26.2183,
+        "drift": 0.0026,
         "volatility": 0.005,
         "decay": 0.9,
-        "event_id": "evt_1795034848547_6jeog",
-        "event_title": "Для того чтобы пройти в плей-офф нужно быть в т..."
+        "event_id": "evt_1795081190576_laqzz",
+        "event_title": "6-й тур чемпионата: дерби и матчи групп"
       },
       "history_anchors": [
         {
@@ -8975,6 +9050,15 @@
           "volatility": 0.005,
           "decay": 0.9,
           "event_id": "evt_1795034808517_hqsm0",
+          "event_title": "Для того чтобы пройти в плей-офф нужно быть в т..."
+        },
+        {
+          "timestamp": 1795034848547,
+          "price": 26.0619,
+          "drift": 0.0005,
+          "volatility": 0.005,
+          "decay": 0.9,
+          "event_id": "evt_1795034848547_6jeog",
           "event_title": "Для того чтобы пройти в плей-офф нужно быть в т..."
         }
       ]
@@ -9942,13 +10026,13 @@
     },
     "FRZ": {
       "current_anchor": {
-        "timestamp": 1794931877673,
-        "price": 9.2456,
-        "drift": 0.0005,
+        "timestamp": 1795081190576,
+        "price": 8.4628,
+        "drift": 0.0024,
         "volatility": 0.005,
         "decay": 0.9,
-        "event_id": "evt_1794931877673_vlp6l",
-        "event_title": "17 ноября — 4-й тур | Группа А:\n• Негеция — Асм..."
+        "event_id": "evt_1795081190576_laqzz",
+        "event_title": "6-й тур чемпионата: дерби и матчи групп"
       },
       "history_anchors": [
         {
@@ -10112,11 +10196,127 @@
           "decay": 0.9,
           "event_id": "evt_1794832796183_dq05v",
           "event_title": "16 ноября — 3-й тур | Группа А:\n• Негеция — Ури..."
+        },
+        {
+          "timestamp": 1794931877673,
+          "price": 9.2456,
+          "drift": 0.0005,
+          "volatility": 0.005,
+          "decay": 0.9,
+          "event_id": "evt_1794931877673_vlp6l",
+          "event_title": "17 ноября — 4-й тур | Группа А:\n• Негеция — Асм..."
         }
       ]
     }
   },
   "events": [
+    {
+      "id": "evt_1795081190576_laqzz",
+      "timestamp": 1795081190576,
+      "title": "6-й тур чемпионата: дерби и матчи групп",
+      "raw_text": "19 ноября — 6-й тур (предпоследний!) | Группа А:\n• Негеция — Аустра\n• Расшатай — Гросс\n• Асмаин — Процион\n• Урия — Этрория | Группа Б: \n• Вергилия — Войфтенн (⚡дерби одного льда*)\n• Ярландия — Люменария\n• Хисолия — Ферондия\n• Критания — Роха | * - | 🤩 | вергилийская сборная во время войны в их стране временно мигрировала в Войфтенн для регулярных тренировок",
+      "impacts": [
+        {
+          "ticker": "NEL",
+          "drift": 0.0043,
+          "volatility": 0.005,
+          "decay": 0.9,
+          "reason": "Нейтральное спортивное событие, минимальный позитивный фон"
+        },
+        {
+          "ticker": "VYN",
+          "drift": 0.0043,
+          "volatility": 0.005,
+          "decay": 0.9,
+          "reason": "Нейтральное спортивное событие, минимальный позитивный фон"
+        },
+        {
+          "ticker": "RSH",
+          "drift": 0.0025,
+          "volatility": 0.005,
+          "decay": 0.9,
+          "reason": "Нейтральное спортивное событие, минимальный позитивный фон"
+        },
+        {
+          "ticker": "OIL",
+          "drift": 0.0032,
+          "volatility": 0.005,
+          "decay": 0.9,
+          "reason": "Нейтральное спортивное событие, минимальный позитивный фон"
+        },
+        {
+          "ticker": "AZM",
+          "drift": 0.0024,
+          "volatility": 0.005,
+          "decay": 0.9,
+          "reason": "Нейтральное спортивное событие, минимальный позитивный фон"
+        },
+        {
+          "ticker": "URE",
+          "drift": 0.0026,
+          "volatility": 0.005,
+          "decay": 0.9,
+          "reason": "Нейтральное спортивное событие, минимальный позитивный фон"
+        },
+        {
+          "ticker": "ETW",
+          "drift": 0.0027,
+          "volatility": 0.005,
+          "decay": 0.9,
+          "reason": "Нейтральное спортивное событие, минимальный позитивный фон"
+        },
+        {
+          "ticker": "VNG",
+          "drift": 0.0047,
+          "volatility": 0.006,
+          "decay": 0.9,
+          "reason": "Дерби и миграция сборной из-за войны: легкий позитивный сигнал стабильности"
+        },
+        {
+          "ticker": "YRL",
+          "drift": 0.0033,
+          "volatility": 0.005,
+          "decay": 0.9,
+          "reason": "Нейтральное спортивное событие, минимальный позитивный фон"
+        },
+        {
+          "ticker": "ETH",
+          "drift": 0.0046,
+          "volatility": 0.005,
+          "decay": 0.9,
+          "reason": "Нейтральное спортивное событие, минимальный позитивный фон"
+        },
+        {
+          "ticker": "HRN",
+          "drift": 0.0023,
+          "volatility": 0.005,
+          "decay": 0.9,
+          "reason": "Нейтральное спортивное событие, минимальный позитивный фон"
+        },
+        {
+          "ticker": "FRZ",
+          "drift": 0.0024,
+          "volatility": 0.005,
+          "decay": 0.9,
+          "reason": "Нейтральное спортивное событие, минимальный позитивный фон"
+        },
+        {
+          "ticker": "VTN",
+          "drift": 0.003,
+          "volatility": 0.005,
+          "decay": 0.9,
+          "reason": "Нейтральное спортивное событие, минимальный позитивный фон"
+        },
+        {
+          "ticker": "RVN",
+          "drift": 0.0029,
+          "volatility": 0.005,
+          "decay": 0.9,
+          "reason": "Нейтральное спортивное событие, минимальный позитивный фон"
+        }
+      ],
+      "source": "groq"
+    },
     {
       "id": "evt_1795080364453_qa4np",
       "timestamp": 1795080364453,
@@ -13396,22 +13596,6 @@
         }
       ],
       "source": "regex"
-    },
-    {
-      "id": "evt_1793761053030_4333o",
-      "timestamp": 1793761053030,
-      "title": "Визит премьера Проциона в Гросс",
-      "raw_text": "Премьер-министр Процион Karel Kužnecov вылетел в Гросс, чтобы поддержать сборную Проциона",
-      "impacts": [
-        {
-          "ticker": "OIL",
-          "drift": 0.0032,
-          "volatility": 0.005,
-          "decay": 0.9,
-          "reason": "Дипломатический визит главы правительства Проциона для поддержки спортивной сборной; нейтрально-позитивный сигнал для делового климата"
-        }
-      ],
-      "source": "groq"
     }
   ]
 }
