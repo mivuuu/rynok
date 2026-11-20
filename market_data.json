@@ -1,28 +1,19 @@
 {
   "version": 1,
-  "last_updated": 1795167582335,
+  "last_updated": 1795167650781,
   "genesis_timestamp": 1790267976000,
   "currencies": {
     "ETH": {
       "current_anchor": {
-        "timestamp": 1795167339516,
-        "price": 267.3983,
+        "timestamp": 1795167650781,
+        "price": 274.794,
         "drift": 0.0046,
         "volatility": 0.005,
-        "decay": 0.9,
-        "event_id": "evt_1795167339516_slbdl",
-        "event_title": "Международный конкурс алкоголя"
+        "decay": 0.85,
+        "event_id": "evt_1795167650781_kypvf",
+        "event_title": "20 ноября — 7-й тур | Группа А:\n• Негеция — Гро..."
       },
       "history_anchors": [
-        {
-          "timestamp": 1792700696429,
-          "price": 536.855,
-          "drift": 0.0385,
-          "volatility": 0.018,
-          "decay": 0.92,
-          "event_id": "evt_1792700696429_obvi6",
-          "event_title": "Удары Люменарии по ядерным объектам Аустры"
-        },
         {
           "timestamp": 1792700946480,
           "price": 609.2468,
@@ -913,18 +904,27 @@
           "decay": 0.9,
           "event_id": "evt_1795166897104_6g44l",
           "event_title": "Международный конкурс алкоголя в Проционе"
+        },
+        {
+          "timestamp": 1795167339516,
+          "price": 267.3983,
+          "drift": 0.0046,
+          "volatility": 0.005,
+          "decay": 0.9,
+          "event_id": "evt_1795167339516_slbdl",
+          "event_title": "Международный конкурс алкоголя"
         }
       ]
     },
     "VYN": {
       "current_anchor": {
-        "timestamp": 1795096870508,
-        "price": 4.6418,
-        "drift": -0.0043,
+        "timestamp": 1795167650781,
+        "price": 4.4997,
+        "drift": 0.0043,
         "volatility": 0.005,
-        "decay": 0.9,
-        "event_id": "evt_1795096870508_qq9te",
-        "event_title": "Спортивные итоги: плей-офф и группы",
+        "decay": 0.85,
+        "event_id": "evt_1795167650781_kypvf",
+        "event_title": "20 ноября — 7-й тур | Группа А:\n• Негеция — Гро...",
         "base_price": 18,
         "status": "default",
         "status_label": "СУВЕРЕННЫЙ ДЕФОЛТ"
@@ -1592,29 +1592,32 @@
           "base_price": 18,
           "status": "default",
           "status_label": "СУВЕРЕННЫЙ ДЕФОЛТ"
+        },
+        {
+          "timestamp": 1795096870508,
+          "price": 4.6418,
+          "drift": -0.0043,
+          "volatility": 0.005,
+          "decay": 0.9,
+          "event_id": "evt_1795096870508_qq9te",
+          "event_title": "Спортивные итоги: плей-офф и группы",
+          "base_price": 18,
+          "status": "default",
+          "status_label": "СУВЕРЕННЫЙ ДЕФОЛТ"
         }
       ]
     },
     "NEL": {
       "current_anchor": {
-        "timestamp": 1795167339516,
-        "price": 180.4187,
-        "drift": 0.0057,
+        "timestamp": 1795167650781,
+        "price": 181.1924,
+        "drift": 0.0043,
         "volatility": 0.005,
-        "decay": 0.9,
-        "event_id": "evt_1795167339516_slbdl",
-        "event_title": "Международный конкурс алкоголя"
+        "decay": 0.85,
+        "event_id": "evt_1795167650781_kypvf",
+        "event_title": "20 ноября — 7-й тур | Группа А:\n• Негеция — Гро..."
       },
       "history_anchors": [
-        {
-          "timestamp": 1792915930031,
-          "price": 215.4834,
-          "drift": 0.0071,
-          "volatility": 0.008,
-          "decay": 0.9,
-          "event_id": "evt_1792915930031_5pea8",
-          "event_title": "Согласие Негеции"
-        },
         {
           "timestamp": 1792947690035,
           "price": 199.4521,
@@ -2505,29 +2508,29 @@
           "decay": 0.9,
           "event_id": "evt_1795166897104_6g44l",
           "event_title": "Международный конкурс алкоголя в Проционе"
+        },
+        {
+          "timestamp": 1795167339516,
+          "price": 180.4187,
+          "drift": 0.0057,
+          "volatility": 0.005,
+          "decay": 0.9,
+          "event_id": "evt_1795167339516_slbdl",
+          "event_title": "Международный конкурс алкоголя"
         }
       ]
     },
     "VNG": {
       "current_anchor": {
-        "timestamp": 1795096870508,
-        "price": 93.4664,
-        "drift": 0.0047,
+        "timestamp": 1795167650781,
+        "price": 94.0388,
+        "drift": 0.0035,
         "volatility": 0.005,
-        "decay": 0.9,
-        "event_id": "evt_1795096870508_qq9te",
-        "event_title": "Спортивные итоги: плей-офф и группы"
+        "decay": 0.85,
+        "event_id": "evt_1795167650781_kypvf",
+        "event_title": "20 ноября — 7-й тур | Группа А:\n• Негеция — Гро..."
       },
       "history_anchors": [
-        {
-          "timestamp": 1790958632000,
-          "price": 66.4911,
-          "drift": -0.0082,
-          "volatility": 0.015,
-          "decay": 0.91,
-          "event_id": "evt_1790958632000_message1608",
-          "event_title": "С особой ненавистью к негецийцам относится насе..."
-        },
         {
           "timestamp": 1790967660000,
           "price": 58.3799,
@@ -3418,18 +3421,27 @@
           "decay": 0.9,
           "event_id": "evt_1795081190576_laqzz",
           "event_title": "6-й тур чемпионата: дерби и матчи групп"
+        },
+        {
+          "timestamp": 1795096870508,
+          "price": 93.4664,
+          "drift": 0.0047,
+          "volatility": 0.005,
+          "decay": 0.9,
+          "event_id": "evt_1795096870508_qq9te",
+          "event_title": "Спортивные итоги: плей-офф и группы"
         }
       ]
     },
     "YRL": {
       "current_anchor": {
-        "timestamp": 1795167339516,
-        "price": 74.1516,
+        "timestamp": 1795167650781,
+        "price": 75.4784,
         "drift": 0.0033,
         "volatility": 0.005,
-        "decay": 0.9,
-        "event_id": "evt_1795167339516_slbdl",
-        "event_title": "Международный конкурс алкоголя"
+        "decay": 0.85,
+        "event_id": "evt_1795167650781_kypvf",
+        "event_title": "20 ноября — 7-й тур | Группа А:\n• Негеция — Гро..."
       },
       "history_anchors": [
         {
@@ -4016,6 +4028,15 @@
           "decay": 0.9,
           "event_id": "evt_1795166897104_6g44l",
           "event_title": "Международный конкурс алкоголя в Проционе"
+        },
+        {
+          "timestamp": 1795167339516,
+          "price": 74.1516,
+          "drift": 0.0033,
+          "volatility": 0.005,
+          "decay": 0.9,
+          "event_id": "evt_1795167339516_slbdl",
+          "event_title": "Международный конкурс алкоголя"
         }
       ]
     },
@@ -4484,24 +4505,15 @@
     },
     "OIL": {
       "current_anchor": {
-        "timestamp": 1795167339516,
-        "price": 54.5013,
+        "timestamp": 1795167650781,
+        "price": 54.9011,
         "drift": 0.0032,
         "volatility": 0.005,
-        "decay": 0.9,
-        "event_id": "evt_1795167339516_slbdl",
-        "event_title": "Международный конкурс алкоголя"
+        "decay": 0.85,
+        "event_id": "evt_1795167650781_kypvf",
+        "event_title": "20 ноября — 7-й тур | Группа А:\n• Негеция — Гро..."
       },
       "history_anchors": [
-        {
-          "timestamp": 1793624499172,
-          "price": 63.4781,
-          "drift": 0.0032,
-          "volatility": 0.005,
-          "decay": 0.85,
-          "event_id": "evt_1793624499172_lhf7j",
-          "event_title": "Аурумберг и Процион сыграют в перспективе до 7 ..."
-        },
         {
           "timestamp": 1793624514325,
           "price": 63.9124,
@@ -5392,18 +5404,27 @@
           "decay": 0.9,
           "event_id": "evt_1795166897104_6g44l",
           "event_title": "Международный конкурс алкоголя в Проционе"
+        },
+        {
+          "timestamp": 1795167339516,
+          "price": 54.5013,
+          "drift": 0.0032,
+          "volatility": 0.005,
+          "decay": 0.9,
+          "event_id": "evt_1795167339516_slbdl",
+          "event_title": "Международный конкурс алкоголя"
         }
       ]
     },
     "VTN": {
       "current_anchor": {
-        "timestamp": 1795096870508,
-        "price": 47.4314,
-        "drift": -0.003,
+        "timestamp": 1795167650781,
+        "price": 43.6732,
+        "drift": 0.003,
         "volatility": 0.005,
-        "decay": 0.9,
-        "event_id": "evt_1795096870508_qq9te",
-        "event_title": "Спортивные итоги: плей-офф и группы"
+        "decay": 0.85,
+        "event_id": "evt_1795167650781_kypvf",
+        "event_title": "20 ноября — 7-й тур | Группа А:\n• Негеция — Гро..."
       },
       "history_anchors": [
         {
@@ -5684,18 +5705,27 @@
           "decay": 0.9,
           "event_id": "evt_1795081190576_laqzz",
           "event_title": "6-й тур чемпионата: дерби и матчи групп"
+        },
+        {
+          "timestamp": 1795096870508,
+          "price": 47.4314,
+          "drift": -0.003,
+          "volatility": 0.005,
+          "decay": 0.9,
+          "event_id": "evt_1795096870508_qq9te",
+          "event_title": "Спортивные итоги: плей-офф и группы"
         }
       ]
     },
     "RVN": {
       "current_anchor": {
-        "timestamp": 1795097232313,
-        "price": 34.0522,
-        "drift": 0.0005,
+        "timestamp": 1795167650781,
+        "price": 34.9071,
+        "drift": 0.0029,
         "volatility": 0.005,
-        "decay": 0.9,
-        "event_id": "evt_1795097232313_9zyod",
-        "event_title": "❗Технический нюанс: | 🤩 | Хисолия на 5, | 🤩 |..."
+        "decay": 0.85,
+        "event_id": "evt_1795167650781_kypvf",
+        "event_title": "20 ноября — 7-й тур | Группа А:\n• Негеция — Гро..."
       },
       "history_anchors": [
         {
@@ -5922,6 +5952,15 @@
           "decay": 0.9,
           "event_id": "evt_1795081190576_laqzz",
           "event_title": "6-й тур чемпионата: дерби и матчи групп"
+        },
+        {
+          "timestamp": 1795097232313,
+          "price": 34.0522,
+          "drift": 0.0005,
+          "volatility": 0.005,
+          "decay": 0.9,
+          "event_id": "evt_1795097232313_9zyod",
+          "event_title": "❗Технический нюанс: | 🤩 | Хисолия на 5, | 🤩 |..."
         }
       ]
     },
@@ -6376,13 +6415,13 @@
     },
     "RSH": {
       "current_anchor": {
-        "timestamp": 1795096870508,
-        "price": 18.1158,
-        "drift": -0.0025,
+        "timestamp": 1795167650781,
+        "price": 18.053,
+        "drift": 0.0025,
         "volatility": 0.005,
-        "decay": 0.9,
-        "event_id": "evt_1795096870508_qq9te",
-        "event_title": "Спортивные итоги: плей-офф и группы"
+        "decay": 0.85,
+        "event_id": "evt_1795167650781_kypvf",
+        "event_title": "20 ноября — 7-й тур | Группа А:\n• Негеция — Гро..."
       },
       "history_anchors": [
         {
@@ -6690,6 +6729,15 @@
           "decay": 0.9,
           "event_id": "evt_1795081190576_laqzz",
           "event_title": "6-й тур чемпионата: дерби и матчи групп"
+        },
+        {
+          "timestamp": 1795096870508,
+          "price": 18.1158,
+          "drift": -0.0025,
+          "volatility": 0.005,
+          "decay": 0.9,
+          "event_id": "evt_1795096870508_qq9te",
+          "event_title": "Спортивные итоги: плей-офф и группы"
         }
       ]
     },
@@ -7576,13 +7624,13 @@
     },
     "ETW": {
       "current_anchor": {
-        "timestamp": 1795096870508,
-        "price": 40.3943,
-        "drift": -0.0027,
+        "timestamp": 1795167650781,
+        "price": 41.9665,
+        "drift": 0.0027,
         "volatility": 0.005,
-        "decay": 0.9,
-        "event_id": "evt_1795096870508_qq9te",
-        "event_title": "Спортивные итоги: плей-офф и группы"
+        "decay": 0.85,
+        "event_id": "evt_1795167650781_kypvf",
+        "event_title": "20 ноября — 7-й тур | Группа А:\n• Негеция — Гро..."
       },
       "history_anchors": [
         {
@@ -7773,18 +7821,27 @@
           "decay": 0.9,
           "event_id": "evt_1795081190576_laqzz",
           "event_title": "6-й тур чемпионата: дерби и матчи групп"
+        },
+        {
+          "timestamp": 1795096870508,
+          "price": 40.3943,
+          "drift": -0.0027,
+          "volatility": 0.005,
+          "decay": 0.9,
+          "event_id": "evt_1795096870508_qq9te",
+          "event_title": "Спортивные итоги: плей-офф и группы"
         }
       ]
     },
     "AZM": {
       "current_anchor": {
-        "timestamp": 1795081190576,
-        "price": 12.7682,
+        "timestamp": 1795167650781,
+        "price": 12.5245,
         "drift": 0.0024,
         "volatility": 0.005,
-        "decay": 0.9,
-        "event_id": "evt_1795081190576_laqzz",
-        "event_title": "6-й тур чемпионата: дерби и матчи групп"
+        "decay": 0.85,
+        "event_id": "evt_1795167650781_kypvf",
+        "event_title": "20 ноября — 7-й тур | Группа А:\n• Негеция — Гро..."
       },
       "history_anchors": [
         {
@@ -8191,18 +8248,27 @@
           "decay": 0.9,
           "event_id": "evt_1794969332268_s023t",
           "event_title": "Антикоррупционная реформа в Асмаине"
+        },
+        {
+          "timestamp": 1795081190576,
+          "price": 12.7682,
+          "drift": 0.0024,
+          "volatility": 0.005,
+          "decay": 0.9,
+          "event_id": "evt_1795081190576_laqzz",
+          "event_title": "6-й тур чемпионата: дерби и матчи групп"
         }
       ]
     },
     "HRN": {
       "current_anchor": {
-        "timestamp": 1795097232313,
-        "price": 10.2973,
-        "drift": 0.0005,
+        "timestamp": 1795167650781,
+        "price": 10.0049,
+        "drift": 0.0023,
         "volatility": 0.005,
-        "decay": 0.9,
-        "event_id": "evt_1795097232313_9zyod",
-        "event_title": "❗Технический нюанс: | 🤩 | Хисолия на 5, | 🤩 |..."
+        "decay": 0.85,
+        "event_id": "evt_1795167650781_kypvf",
+        "event_title": "20 ноября — 7-й тур | Группа А:\n• Негеция — Гро..."
       },
       "history_anchors": [
         {
@@ -8717,18 +8783,27 @@
           "decay": 0.9,
           "event_id": "evt_1795081190576_laqzz",
           "event_title": "6-й тур чемпионата: дерби и матчи групп"
+        },
+        {
+          "timestamp": 1795097232313,
+          "price": 10.2973,
+          "drift": 0.0005,
+          "volatility": 0.005,
+          "decay": 0.9,
+          "event_id": "evt_1795097232313_9zyod",
+          "event_title": "❗Технический нюанс: | 🤩 | Хисолия на 5, | 🤩 |..."
         }
       ]
     },
     "URE": {
       "current_anchor": {
-        "timestamp": 1795167582335,
-        "price": 25.6383,
+        "timestamp": 1795167650781,
+        "price": 25.7186,
         "drift": 0.0026,
         "volatility": 0.005,
-        "decay": 0.9,
-        "event_id": "evt_1795167582335_mawkk",
-        "event_title": "Международная выставка кошек в Урии"
+        "decay": 0.85,
+        "event_id": "evt_1795167650781_kypvf",
+        "event_title": "20 ноября — 7-й тур | Группа А:\n• Негеция — Гро..."
       },
       "history_anchors": [
         {
@@ -9207,6 +9282,15 @@
           "decay": 0.9,
           "event_id": "evt_1795096870508_qq9te",
           "event_title": "Спортивные итоги: плей-офф и группы"
+        },
+        {
+          "timestamp": 1795167582335,
+          "price": 25.6383,
+          "drift": 0.0026,
+          "volatility": 0.005,
+          "decay": 0.9,
+          "event_id": "evt_1795167582335_mawkk",
+          "event_title": "Международная выставка кошек в Урии"
         }
       ]
     },
@@ -10506,13 +10590,13 @@
     },
     "FRZ": {
       "current_anchor": {
-        "timestamp": 1795081190576,
-        "price": 8.4628,
+        "timestamp": 1795167650781,
+        "price": 8.312,
         "drift": 0.0024,
         "volatility": 0.005,
-        "decay": 0.9,
-        "event_id": "evt_1795081190576_laqzz",
-        "event_title": "6-й тур чемпионата: дерби и матчи групп"
+        "decay": 0.85,
+        "event_id": "evt_1795167650781_kypvf",
+        "event_title": "20 ноября — 7-й тур | Группа А:\n• Негеция — Гро..."
       },
       "history_anchors": [
         {
@@ -10685,11 +10769,127 @@
           "decay": 0.9,
           "event_id": "evt_1794931877673_vlp6l",
           "event_title": "17 ноября — 4-й тур | Группа А:\n• Негеция — Асм..."
+        },
+        {
+          "timestamp": 1795081190576,
+          "price": 8.4628,
+          "drift": 0.0024,
+          "volatility": 0.005,
+          "decay": 0.9,
+          "event_id": "evt_1795081190576_laqzz",
+          "event_title": "6-й тур чемпионата: дерби и матчи групп"
         }
       ]
     }
   },
   "events": [
+    {
+      "id": "evt_1795167650781_kypvf",
+      "timestamp": 1795167650781,
+      "title": "20 ноября — 7-й тур | Группа А:\n• Негеция — Гро...",
+      "raw_text": "20 ноября — 7-й тур | Группа А:\n• Негеция — Гросс\n• Аустра — Процион\n• Расшатай — Этрория\n• Асмаин — Урия | Группа Б:\n• Вергилия — Люменария\n• Войфтенн — Ферондия\n• Ярландия — Роха\n• Хисолия — Критания | Сегодня последний тур ЧМ по хоккею! Сегодня определятся 4 сборные из каждой группы, которые пройдут в плей-офф потом поборясь за выход в полуфинал",
+      "impacts": [
+        {
+          "ticker": "ETH",
+          "drift": 0.0046,
+          "volatility": 0.005,
+          "decay": 0.85,
+          "reason": "Позитивные геополитические или экономические факторы"
+        },
+        {
+          "ticker": "VYN",
+          "drift": 0.0043,
+          "volatility": 0.005,
+          "decay": 0.85,
+          "reason": "Позитивные геополитические или экономические факторы"
+        },
+        {
+          "ticker": "NEL",
+          "drift": 0.0043,
+          "volatility": 0.005,
+          "decay": 0.85,
+          "reason": "Позитивные геополитические или экономические факторы"
+        },
+        {
+          "ticker": "VNG",
+          "drift": 0.0035,
+          "volatility": 0.005,
+          "decay": 0.85,
+          "reason": "Позитивные геополитические или экономические факторы"
+        },
+        {
+          "ticker": "YRL",
+          "drift": 0.0033,
+          "volatility": 0.005,
+          "decay": 0.85,
+          "reason": "Позитивные геополитические или экономические факторы"
+        },
+        {
+          "ticker": "OIL",
+          "drift": 0.0032,
+          "volatility": 0.005,
+          "decay": 0.85,
+          "reason": "Позитивные геополитические или экономические факторы"
+        },
+        {
+          "ticker": "VTN",
+          "drift": 0.003,
+          "volatility": 0.005,
+          "decay": 0.85,
+          "reason": "Позитивные геополитические или экономические факторы"
+        },
+        {
+          "ticker": "RVN",
+          "drift": 0.0029,
+          "volatility": 0.005,
+          "decay": 0.85,
+          "reason": "Позитивные геополитические или экономические факторы"
+        },
+        {
+          "ticker": "RSH",
+          "drift": 0.0025,
+          "volatility": 0.005,
+          "decay": 0.85,
+          "reason": "Позитивные геополитические или экономические факторы"
+        },
+        {
+          "ticker": "ETW",
+          "drift": 0.0027,
+          "volatility": 0.005,
+          "decay": 0.85,
+          "reason": "Позитивные геополитические или экономические факторы"
+        },
+        {
+          "ticker": "AZM",
+          "drift": 0.0024,
+          "volatility": 0.005,
+          "decay": 0.85,
+          "reason": "Позитивные геополитические или экономические факторы"
+        },
+        {
+          "ticker": "HRN",
+          "drift": 0.0023,
+          "volatility": 0.005,
+          "decay": 0.85,
+          "reason": "Позитивные геополитические или экономические факторы"
+        },
+        {
+          "ticker": "URE",
+          "drift": 0.0026,
+          "volatility": 0.005,
+          "decay": 0.85,
+          "reason": "Позитивные геополитические или экономические факторы"
+        },
+        {
+          "ticker": "FRZ",
+          "drift": 0.0024,
+          "volatility": 0.005,
+          "decay": 0.85,
+          "reason": "Позитивные геополитические или экономические факторы"
+        }
+      ],
+      "source": "regex"
+    },
     {
       "id": "evt_1795167582335_mawkk",
       "timestamp": 1795167582335,
@@ -14155,29 +14355,6 @@
           "volatility": 0.005,
           "decay": 0.92,
           "reason": "Ожидаемый визит главы Негеции после периода отчуждения"
-        }
-      ],
-      "source": "groq"
-    },
-    {
-      "id": "evt_1794270876573_vz5lk",
-      "timestamp": 1794270876573,
-      "title": "Переговоры Негеции и Фертенберга",
-      "raw_text": "Негеция так же хочет провести встречу с Фертенбергом и обсудить торговлю и отношения между странами\n\nНегеция так же хочет провести встречу с Фертенбергом и обсудить торговлю и отношения между странами @OmegaNeutral",
-      "impacts": [
-        {
-          "ticker": "NEL",
-          "drift": 0.0057,
-          "volatility": 0.006,
-          "decay": 0.9,
-          "reason": "Инициация торговых переговоров с Фертенбергом"
-        },
-        {
-          "ticker": "FRT",
-          "drift": 0.0033,
-          "volatility": 0.006,
-          "decay": 0.9,
-          "reason": "Участие в торговых переговорах с Негецией"
         }
       ],
       "source": "groq"
